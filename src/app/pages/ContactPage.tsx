@@ -175,7 +175,7 @@ export function ContactPage() {
                       onChange={handleChange}
                       required
                       className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0a3674] transition-all text-gray-900 dark:text-white font-bold"
-                      placeholder="Ikboljon Boltaboyev"
+                      placeholder="Ismingiz va familiyangiz"
                     />
                   </div>
                   <div>

@@ -14,29 +14,24 @@ export function AboutPage() {
 
   const generalInfo = [
     {
-      icon: Building2,
-      label: t('about.director'),
-      value: 'Boltaboyev Iqboljon Tursunaliyevich'
-    },
-    {
       icon: Calendar,
       label: t('about.established'),
-      value: t('about.establishedDate')
+      value: t('about.establishedDate', '1998-yil')
     },
     {
       icon: MapPin,
       label: t('about.address'),
-      value: siteName.address || t('footer.address')
+      value: siteName.address || "Farg'ona shahar, Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)"
     },
     {
       icon: Phone,
       label: t('about.phone'),
-      value: contactInfo.phone || '+998 73 244 55 66'
+      value: contactInfo.phone || '+998 94 512 75 53'
     },
     {
       icon: GraduationCap,
       label: t('about.founder'),
-      value: t('about.founderValue')
+      value: t('about.founderValue', "O'zbekiston Respublikasi Oliy ta'lim, fan va innovatsiyalar vazirligi")
     }
   ];
 
