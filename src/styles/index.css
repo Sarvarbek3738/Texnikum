@@ -1,0 +1,54 @@
+@import './fonts.css';
+@import './tailwind.css';
+@import './theme.css';
+
+/* AOS Animation System (Animate On Scroll) */
+[data-aos] {
+  opacity: 0;
+  transform: translateY(60px);
+  transition-property: opacity, transform;
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-duration: 800ms;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile Menu Animation */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.mobile-menu-open {
+  animation: slideInRight 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  scroll-margin-top: 100px;
+}
+
+/* Barcha elementlar uchun silliq transition */
+*, *::before, *::after {
+  transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Card hover animatsiyalari uchun global optimizatsiya */
+[class*="group"]:hover * {
+  transition-duration: inherit;
+  transition-timing-function: inherit;
+}

@@ -1,0 +1,372 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Texnikum haqida",
+    "admission": "Qabul",
+    "news": "Yangiliklar",
+    "teachers": "O'qituvchilar",
+    "contact": "Bog'lanish",
+    "leadership": "Rahbariyat",
+    "structure": "Tuzilma",
+    "departments": "Kafedralar",
+    "activity": "Faoliyat",
+    "subjects": "Fanlar",
+    "gallery": "Galereya",
+    "photos": "Foto lavhalar",
+    "videos": "Video lavhalar",
+    "infrastructure": "Texnikumning moddiy-texnik bazasi",
+    "programs": "O'quv dasturlari",
+    "education": "Ta'lim",
+    "schedule": "Dars jadvali",
+    "library": "Axborot-kutubxona"
+  },
+  "seo": {
+    "defaultTitle": "5-son Politexnika Texnikumi",
+    "titleTemplate": "%s | 5-son Politexnika Texnikumi",
+    "defaultDescription": "Farg'ona viloyati 5-sonli politexnika texnikumi — zamonaviy texnik, muhandislik va axborot texnologiyalari ta'lim muassasasi. Sifatli ta'lim va zamonaviy ustaxonalar.",
+    "keywords": "5-son texnikum, politexnika texnikumi, Farg'ona texnikum, ta'lim, kasb-hunar, qabul 2026, texnika kolleji"
+  },
+  "footer": {
+    "about": "Farg'ona viloyati 5-sonli politexnika texnikumi — zamonaviy texnik, muhandislik va axborot texnologiyalari ta'lim muassasasi.",
+    "quickLinks": "Tezkor havolalar",
+    "contact": "Bog'lanish",
+    "socials": "Ijtimoiy tarmoqlar",
+    "workTime": "Ish vaqti:",
+    "days": "Dushanba - Shanba",
+    "rights": "Barcha huquqlar himoyalangan.",
+    "address": "Farg'ona viloyati, Farg'ona shahri, Sanoat ko'chasi, 5-uy"
+  },
+  "home": {
+    "heroTitle": "Farg'ona viloyati 5-sonli politexnika texnikumi",
+    "heroDesc": "Zamonaviy texnika, muhandislik, axborot texnologiyalari va amaliy kasbiy ta'lim sharoitlari bilan sizning muvaffaqiyatli kelajagingizni quramiz.",
+    "admissionBtn": "Qabul 2026",
+    "moreBtn": "Batafsil ma'lumot",
+    "yearsExperience": "Yillik tajriba",
+    "aboutTitle": "TEXNIKUM HAQIDA",
+    "aboutSubtitle": "Farg'ona viloyati 5-sonli politexnika texnikumi",
+    "decreeTitle": "Faoliyat asosi:",
+    "decreeText": "5-sonli politexnika texnikumi O'zbekiston Respublikasining professional ta'lim tizimini rivojlantirish to'g'risidagi davlat dasturi doirasida faoliyat olib boradi.",
+    "aboutDesc": "Texnikumimiz zamonaviy talablarga mos ravishda axborot texnologiyalari, elektrotexnika, avtomobillarga texnik xizmat ko'rsatish va iqtisodiy yo'nalishlar bo'yicha yuqori malakali mutaxassislar tayyorlaydi. O'quvchilarimiz nazariy bilimlarni ilg'or laboratoriya va ustaxonalarda amaliyot bilan mustahkamlaydilar.",
+    "readMore": "Batafsil ma'lumot",
+    "features": {
+      "quality": "Yuqori sifatli ta'lim",
+      "qualityDesc": "Zamonaviy o'quv dasturlari va innovatsion ta'lim texnologiyalari",
+      "teachers": "Malakali o'qituvchilar",
+      "teachersDesc": "40+ dan ortiq yuqori malakali, ilmiy darajali va sertifikatli pedagog kadrlar",
+      "subjects": "Keng qamrovli fanlar",
+      "subjectsDesc": "Aniq fanlar, tabiiy fanlar, chet tillari va STEM yo'nalishlari",
+      "result": "95%+ natija",
+      "resultDesc": "Bitiruvchilarning 95% dan ortig'i nufuzli oliy ta'lim muassasalariga o'qishga kiradi"
+    },
+    "whyUs": {
+      "badge": "BIZNING AFZALLIKLARIMIZ",
+      "title": "Nima uchun aynan biz?",
+      "subtitle": "Texnikumimizni tanlash uchun asosiy sabablar",
+      "students": "Talab yuqori bo'lgan zamonaviy kasblar",
+      "studentsDesc": "Texnikum bitiruvchilari yetakchi sanoat korxonalarida yuqori maoshli ish bilan ta'minlanadi yoki OTMlarda o'qishni davom ettiradi.",
+      "english": "Ingliz tili sertifikatlari",
+      "englishDesc": "Kuchaytirilgan chet tili dasturi orqali o'quvchilarimiz IELTS va CEFR B2/C1 natijalariga erishadilar.",
+      "stem": "Zamonaviy STEM va laboratoriyalar",
+      "stemDesc": "Yangi jihozlangan laboratoriyalarda amaliy tajribalar va ilmiy loyihalar amalga oshiriladi.",
+      "courses": "Bepul qo'shimcha to'garaklar",
+      "coursesDesc": "Olimpiada matematikasi, 'English club', 'Yosh kimyogarlar' va sport to'garaklari mutlaqo bepul.",
+      "cooperation": "Korxonalar va OTMlar bilan integratsiya",
+      "cooperationDesc": "Yetakchi ishlab chiqarish korxonalari va oliy ta'lim muassasalari bilan yaqin hamkorlik hamda amaliyot dasturlari."
+    },
+    "stats": {
+      "title": "Statistika",
+      "subtitle": "Texnikum yutuqlari va faoliyati statistikasi"
+    }
+  },
+  "theme": {
+    "light": "Yorug' rejim",
+    "dark": "Tungi rejim"
+  },
+  "common": {
+    "language": "Tashrif tili",
+    "loadMore": "Yana yuklash",
+    "views": "ko'rildi",
+    "notFound": "Ma'lumot topilmadi"
+  },
+  "statistics": {
+    "students": "O'quvchilar",
+    "teachers": "O'qituvchilar",
+    "clubs": "To'garaklar",
+    "rooms": "Sinfxonalar"
+  },
+  "faq": {
+    "badge": "SAVOLLAR VA JAVOBLAR",
+    "title": "Eng ko'p berilgan savollar",
+    "subtitle": "Texnikum haqida tez-tez so'raladigan savollarga javoblar",
+    "item1": {
+      "question": "Texnikumga qanday qabul qilinadi?",
+      "answer": "Texnikumga qabul my.edu.uz portali orqali yoki bevosita qabul komissiyasiga hujjat topshirish yo'li bilan amalga oshiriladi. 9- va 11-sinf bitiruvchilari qabul qilinadi."
+    },
+    "item2": {
+      "question": "O'quv to'lovi bormi?",
+      "answer": "Texnikumimizda ta'lim davlat granti (bepul) hamda to'lov-shartnoma asosida tashkil etilgan. Iqtidorli yoshlar davlat granti asosida bepul tahsil oladilar."
+    },
+    "item3": {
+      "question": "Texnikum qaysi yo'nalishlar bo'yicha ta'lim beradi?",
+      "answer": "Texnikumimizda axborot texnologiyalari va dasturlash, elektrotexnika, avtomobillarni ta'mirlash va xizmat ko'rsatish, buxgalteriya va moliya sohalari bo'yicha ta'lim beriladi."
+    },
+    "item4": {
+      "question": "Texnikumni bitirgach nimalar qilish mumkin?",
+      "answer": "Bitiruvchilarga davlat namunasidagi diplom beriladi. Ushbu diplom bilan soha korxonalarida ishlash yoki mos yo'nalishdagi OTMlarga 2-kursdan suhbat asosida o'qishga kirish mumkin."
+    },
+    "item5": {
+      "question": "Texnikumda qanday to'garaklar mavjud?",
+      "answer": "Texnikumimizda 'Yosh dasturchilar', 'Robototexnika', 'Elektrotexnika', 'Avtomobil ustaxonasi', 'English club' va sport seksiyalari bepul faoliyat yuritadi."
+    },
+    "item6": {
+      "question": "Texnikum qayerda joylashgan?",
+      "answer": "Texnikumimiz Farg'ona viloyati, Farg'ona shahri, Sanoat ko'chasi, 5-uyda joylashgan. Transport aloqasi juda qulay."
+    }
+  },
+  "leadership": {
+    "pageSubtitle": "Farg'ona viloyati 5-sonli politexnika texnikumining rahbar xodimlari",
+    "receptionHours": "Qabul kunlari",
+    "academicDegree": "Ilmiy darajasi",
+    "receptionNote": "* Oldindan telefon orqali vaqt belgilash tavsiya etiladi",
+    "bio": "Biografiya"
+  },
+  "announcements": {
+    "important": "MUHIM",
+    "pageSubtitle": "Texnikum bo'yicha muhim e'lonlar va xabarnomalar",
+    "contentTitle": "E'lon mazmuni",
+    "backToList": "Barcha e'lonlarga qaytish",
+    "notFound": "E'lon topilmadi",
+    "author": "Muallif",
+    "share": "Ulashish",
+    "item1": {
+      "title": "2026-2027 o'quv yili uchun qabul boshlandi",
+      "excerpt": "Hurmatli yoshlar! 2026-2027 o'quv yili uchun texnikumimizga qabul my.edu.uz portali orqali amalga oshiriladi."
+    },
+    "item2": {
+      "title": "Imtihon jadvali e'lon qilindi",
+      "excerpt": "Saralash va imtihon sinovlari jadvali texnikum rasmiy veb-sayti va telegram kanalida e'lon qilinadi."
+    },
+    "item3": {
+      "title": "Bepul qo'shimcha to'garaklar uchun ro'yxatdan o'tish",
+      "excerpt": "Texnikum o'quvchilari uchun bepul dasturlash, robototexnika va chet tili to'garaklari ochiladi."
+    }
+  },
+  "about": {
+    "pageSubtitle": "Farg'ona viloyati 5-sonli politexnika texnikumi — zamonaviy texnik va kasbiy ta'lim beruvchi yetakchi muassasa.",
+    "generalInfo": "Umumiy ma'lumotlar",
+    "established": "Tashkil etilgan sana",
+    "establishedDate": "1998-yil 24-fevral (VM 77-sonli qarori) / 2000-yil 1-avgust",
+    "director": "Direktor",
+    "address": "Manzil",
+    "phone": "Telefon",
+    "founder": "Ta’sischi va huquqiy asos",
+    "founderValue": "O‘zbekiston Respublikasi Vazirlar Mahkamasining 1998-yil 24-fevraldagi 77-sonli qarori",
+    "decreeTitle": "Tashkil etilishining huquqiy asoslari:",
+    "history": "Texnikum tarixi",
+    "historyP1": "5-sonli politexnika texnikumi hududdagi yoshlarga texnik, muhandislik va kasbiy ta'lim berish maqsadida tashkil etilgan. Muassasa yillar davomida minglab malakali texnik mutaxassislarni tarbiyalab chiqardi.",
+    "historyP2": "Texnikumda Axborot texnologiyalari, Muhandislik va mexanika, Elektrotexnika hamda Ijtimoiy-iqtisodiy fanlar yo'nalishlarida ilg'or ta'lim dasturlari joriy etilgan.",
+    "historyP3": "Hozirgi kunda texnikum zamonaviy ishlab chiqarish korxonalari bilan mustahkam aloqalar o'rnatgan bo'lib, o'quvchilar nazariya va amaliyotni birgalikda o'rganmoqdalar.",
+    "mission": "Maqsadlar va qadriyatlar",
+    "goalTitle": "Maqsadimiz",
+    "goalDesc": "Har bir o‘quvchini chuqur bilimga ega, ijodiy fikrlash qobiliyatiga ega va oliy ta’limga tayyor shaxs sifatida tarbiyalash.",
+    "missionTitle": "Vazifamiz",
+    "missionDesc": "Zamonaviy sanoat va raqamli iqtisodiyot uchun yuqori malakali texnik mutaxassislar va amaliyotchi kadrlarni tayyorlash.",
+    "valuesTitle": "Qadriyatlarimiz",
+    "valuesDesc": "Halollik, mas’uliyat, innovatsion yondashuv, ilimga hurmat va doimiy o‘z-o‘zini takomillashtirish.",
+    "advantages": "Bizning afzalliklarimiz",
+    "adv1": "Farg'ona viloyatidagi eng zamonaviy politexnika texnikumi",
+    "adv2": "Tajribali muhandis-pedagoglar va soha mutaxassislari",
+    "adv3": "Chuqurlashtirilgan aniq, tabiiy va chet tillari dasturlari",
+    "adv4": "Qulay sharoitdagi yotoqxona",
+    "adv5": "3 mahal imtiyozli ovqatlanish tizimi",
+    "adv6": "Zamonaviy sport maydonchalari va inshootlari",
+    "adv7": "Zamonaviy ustaxonalar va amaliyot bazalari",
+    "adv8": "Har yili 95% dan ortiq bitiruvchilar oliy ta’limga kiradi"
+  },
+  "admission": {
+    "pageSubtitle": "Farg'ona viloyati 5-sonli politexnika texnikumiga qabul tartibi, yo'nalishlar va talablar",
+    "importantInfo": "Muhim ma'lumot",
+    "importantDesc": "Politexnika texnikumiga qabul my.edu.uz portali orqali va texnikum qabul komissiyasida amalga oshiriladi.",
+    "stepsTitle": "Qabul bosqichlari",
+    "step1Title": "my.edu.uz portalidan ro‘yxatdan o‘tish",
+    "step1Desc": "my.edu.uz portaliga o'tib 5-sonli politexnika texnikumiga ariza topshiring",
+    "step2Title": "Vaqtni belgilash",
+    "step2Desc": "Test topshirish vaqtini tanlang va xatoni saqlab oling",
+    "step3Title": "Test sinovi",
+    "step3Desc": "Texnikum binosida belgilangan test sinovlari yoki kasbiy suhbatdan o'ting",
+    "step4Title": "Natijalarni kuzatish",
+    "step4Desc": "Reyting natijalari e'lon qilingach, o‘tingizni tasdiqlang",
+    "testTitle": "Test sinovi",
+    "iqTitle": "Mantiqiy fikrlash (IQ)",
+    "iqQuestions": "20 ta savol",
+    "iqScore": "46 ball",
+    "subject1Title": "1-asosiy fan",
+    "subject1Questions": "20 ta savol",
+    "subject1Score": "50 ball",
+    "subject2Title": "2-asosiy fan",
+    "subject2Questions": "20 ta savol",
+    "subject2Score": "50 ball",
+    "totalTitle": "Umumiy ko'rsatkichlar",
+    "totalQuestions": "Jami savollar:",
+    "totalQuestionsValue": "60 ta",
+    "maxScore": "Maksimal ball:",
+    "maxScoreValue": "146 ball",
+    "duration": "Test davomiyligi:",
+    "durationValue": "2 soat",
+    "directionsTitle": "Kasbiy yo'nalishlar",
+    "natural": "Muhandislik va texnika",
+    "exact": "Axborot texnologiyalari va dasturlash",
+    "testLocation": "Sinovlar 5-sonli politexnika texnikumi binosidagi maxsus tayyorlangan auditoriyalarda o'tkaziladi.",
+    "documentsTitle": "Kerakli hujjatlar",
+    "req1": "9-sinf bitiruvchisi bo‘lish",
+    "req2": "my.edu.uz portalidan ro‘yxatdan o‘tganlik",
+    "req3": "Pasport yoki tug‘ilganlik guvohnomasi",
+    "req4": "3x4 o‘lchamdagi elektron rasm",
+    "req5": "Tibbiy ma’lumotnoma (086-u shakl)",
+    "portalTitle": "Ro'yxatdan o'tish portali",
+    "portalDesc": "Qabul bo'yicha eng to'liq va rasmiy ma'lumotlarni my.edu.uz portalidan oling. Arizalar onlayn qabul qilinadi.",
+    "portalBtn": "MY.EDU.UZ PORTALI",
+    "telegramBadge": "Rasmiy Qabul Kanali",
+    "telegramTitle": "Qabul jarayoni bo'yicha tezkor yangiliklar",
+    "telegramDesc": "Imtihon muddatlari, ro'yxatdan o'tish, saralash bosqichlari va natijalarni rasmiy Telegram kanalimizda kuzatib boring:",
+    "telegramBtn": "Kanalga a'zo bo'lish"
+  },
+  "teachers": {
+    "pageSubtitle": "Farg'ona viloyati 5-sonli politexnika texnikumining malakali muhandis-pedagog va o'qituvchilar jamoasi",
+    "ctaTitle": "O'qituvchilarimiz bilan bog'lanish",
+    "ctaDesc": "Savol yoki takliflaringiz bo'lsa, texnikum ma'muriyati bilan bog'laning.",
+    "academicDegree": "Ilmiy daraja",
+    "academicRank": "Ilmiy unvon",
+    "experience": "Ish tajribasi",
+    "years": "yil",
+    "category": "Toifasi",
+    "achievements": "Yutuqlari",
+    "bio": "Tarjimayi hol"
+  },
+  "contact": {
+    "pageSubtitle": "Savollaringiz bormi? Biz bilan bog'laning, mutaxassislarimiz sizga yordam berishadi.",
+    "addressTitle": "Manzilimiz",
+    "phoneTitle": "Telefon raqamlarimiz",
+    "emailTitle": "Elektron pochta",
+    "formTitle": "Xabar yuboring",
+    "formSubtitle": "Savol yoki takliflaringiz bo'lsa, quyidagi formani to'ldiring.",
+    "name": "Ismingiz",
+    "email": "Email manzilingiz",
+    "phone": "Telefon raqamingiz",
+    "subject": "Mavzu",
+    "message": "Xabaringiz",
+    "send": "Xabarni yuborish",
+    "success": "Xabaringiz muvaffaqiyatli yuborildi!",
+    "subjects": {
+      "admission": "Qabul bo'yicha savol",
+      "education": "Ta'lim bo'yicha savol",
+      "other": "Boshqa savollar"
+    }
+  },
+  "library": {
+    "pageSubtitle": "Texnikumimizning axborot-kutubxona markazi va elektron o'quv resurslari",
+    "books": "Kitoblar",
+    "resources": "Elektron resurslar",
+    "journals": "Jurnallar",
+    "guides": "O'quv qo'llanmalari",
+    "searchTitle": "Resurslarni qidirish",
+    "searchPlaceholder": "Kitob, mualliflar yoki mavzu bo'yicha qidiring...",
+    "searchBtn": "Qidirish",
+    "popularResources": "Mashhur resurslar",
+    "textbooks": "Darsliklar",
+    "manuals": "Qo'llanmalar",
+    "languages": "Tillar",
+    "practical": "Amaliy qo'llanmalar",
+    "format": "Format",
+    "download": "Yuklab olish",
+    "author": "Muallif",
+    "hoursTitle": "Kutubxona ish vaqti",
+    "libraryNote": "Kutubxonadan foydalanish uchun o'quvchilik ID-kartasi talab qilinadi."
+  },
+  "schedule": {
+    "pageSubtitle": "Texnikumimizning dars jadvali va o'quv rejasi",
+    "infoTitle": "Dars jadvali haqida",
+    "infoDesc": "Darslar Dushanba - Shanba kunlari o'tkaziladi. Har bir dars 45 daqiqa davom etadi. Tanaffuslar 5 daqiqa, tushlik tanaffusi 20 daqiqa.",
+    "timeTitle": "Darslar vaqti",
+    "lesson": "dars",
+    "break": "Tanaffus (tushlik)",
+    "downloadBtn": "To'liq dars jadvalini yuklab olish"
+  },
+  "departments": {
+    "pageSubtitle": "Texnikumimizning kafedralari va bo'limlari faoliyati",
+    "head": "Kafedra mudiri",
+    "subjects": "Fanlar",
+    "room": "Xona",
+    "phone": "Telefon",
+    "email": "Email",
+    "teachers": "O'qituvchilar soni"
+  },
+  "gallery": {
+    "pageSubtitle": "Texnikum hayotidan yorqin lavhalar, amaliyot jarayonlari va tadbirlar",
+    "photos": "rasmlar",
+    "viewMore": "Barchasini ko'rish",
+    "date": "Sana"
+  },
+  "programs": {
+    "pageSubtitle": "5-sonli politexnika texnikumining asosiy kasbiy ta'lim dasturlari",
+    "exactSciences": {
+      "title": "Axborot texnologiyalari va dasturlash",
+      "desc": "Dasturiy ta'minot ishlab chiqish, kompyuter tarmoqlari, veb-dasturlash va axborot xavfsizligi asoslari."
+    },
+    "naturalSciences": {
+      "title": "Avtomobilsozlik va mexanika",
+      "desc": "Avtomobillarni ta'mirlash va ularga texnik xizmat ko'rsatish, transport vositalari diagnostikasi."
+    },
+    "foreignLanguages": {
+      "title": "Elektrotexnika va avtomatika",
+      "desc": "Elektr qurilmalari, sanoat elektronikasi va avtomatlashtirilgan boshqaruv tizimlari."
+    },
+    "socialHumanities": {
+      "title": "Iqtisodiyot va buxgalteriya",
+      "desc": "Buxgalteriya hisobi, moliya, audit va kichik biznes boshqaruvi."
+    }
+  },
+  "subjects": {
+    "pageSubtitle": "Texnikumimizda o'qitiladigan asosiy umumkasbiy va maxsus fanlar",
+    "weeklyHours": "Haftalik yuklama",
+    "hoursPerWeek": "soat/hafta",
+    "math": {
+      "name": "Oliy va amaliy matematika",
+      "desc": "Muhandislik hisob-kitoblari va amaliy masalalarni yechish."
+    },
+    "physics": {
+      "name": "Texnik fizika va mexanika",
+      "desc": "Amaliy fizika, mexanika va elektrodinamika asoslari."
+    },
+    "chemistry": {
+      "name": "Kimyo",
+      "desc": "Organik va anorganik kimyo, kimyoviy reaksiyalar va laboratoriya tajribalari."
+    },
+    "english": {
+      "name": "Ingliz tili",
+      "desc": "IELTS va CEFR standarti bo'yicha ingliz tili, grammatika va lug'at boyitish."
+    },
+    "it": {
+      "name": "Dasturlash va IT tizimlar",
+      "desc": "Python, Web dasturlash, ma'lumotlar bazasi va tarmoq texnologiyalari."
+    },
+    "biology": {
+      "name": "Biologiya",
+      "desc": "Molekulyar biologiya, genetika, ekologiya va tirik organizmlar anatomiyasi."
+    }
+  },
+  "photos": {
+    "pageSubtitle": "Litseymizning hayotidan lavhalar va muhim tadbirlar",
+    "graduation": "Bitiruvchilar marosimi 2025",
+    "olympiad": "Respublika olimpiadasi",
+    "sports": "Sport tadbirlari",
+    "stem": "STEM laboratoriya ochilishi",
+    "others": "Boshqa"
+  },
+  "notFound": {
+    "title": "Sahifa topilmadi",
+    "desc": "Kechirasiz, siz qidirayotgan sahifa mavjud emas yoki o'chirilgan.",
+    "homeBtn": "Bosh sahifaga",
+    "backBtn": "Orqaga"
+  }
+}
