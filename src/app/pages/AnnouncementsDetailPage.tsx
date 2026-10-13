@@ -32,7 +32,7 @@ export function AnnouncementsDetailPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
-        <Loader2 className="w-12 h-12 text-[#0d89b1] animate-spin" />
+        <Loader2 className="w-12 h-12 text-[#0a3674] animate-spin" />
       </div>
     );
   }
@@ -41,7 +41,7 @@ export function AnnouncementsDetailPage() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-950 px-4 text-center">
         <h2 className="text-3xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight">{t('announcements.notFound')}</h2>
-        <Link to="/announcements" className="text-[#0d89b1] font-black uppercase tracking-widest hover:underline">
+        <Link to="/announcements" className="text-[#0a3674] font-black uppercase tracking-widest hover:underline">
           {t('announcements.backToList')}
         </Link>
       </div>
@@ -62,15 +62,15 @@ export function AnnouncementsDetailPage() {
       {/* Header with Back Button */}
       <div className="bg-gray-50 dark:bg-gray-900 py-20 md:py-28 border-b border-gray-100 dark:border-gray-800 relative overflow-hidden">
         {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#0d89b1]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-        <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#0d89b1]/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+        <div className="absolute top-0 right-0 w-64 h-64 bg-[#0a3674]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#0a3674]/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
         <div className="container mx-auto px-4 relative z-10">
           <Link
             to="/announcements"
-            className="inline-flex items-center gap-3 text-gray-400 hover:text-[#0d89b1] transition-all font-black uppercase tracking-[0.3em] text-xs mb-12 group"
+            className="inline-flex items-center gap-3 text-gray-400 hover:text-[#0a3674] transition-all font-black uppercase tracking-[0.3em] text-xs mb-12 group"
           >
-            <div className="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center group-hover:border-[#0d89b1] transition-colors">
+            <div className="w-10 h-10 rounded-full border border-gray-200 dark:border-gray-800 flex items-center justify-center group-hover:border-[#0a3674] transition-colors">
               <ArrowLeft size={18} className="group-hover:-translate-x-1 transition-transform" />
             </div>
             {t('common.back', 'Orqaga')}
@@ -82,7 +82,7 @@ export function AnnouncementsDetailPage() {
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <div className="flex flex-wrap items-center gap-4 mb-10 text-[10px] font-black uppercase tracking-[0.2em]">
-              <div className="flex items-center gap-2 bg-[#0d89b1] text-white px-5 py-2.5 rounded-full shadow-lg shadow-[#0d89b1]/20">
+              <div className="flex items-center gap-2 bg-[#0a3674] text-white px-5 py-2.5 rounded-full shadow-lg shadow-[#0a3674]/20">
                 <Calendar size={14} />
                 <span>{date}</span>
               </div>
@@ -103,7 +103,7 @@ export function AnnouncementsDetailPage() {
             </h1>
 
             <div className="flex items-center gap-5">
-              <div className="w-14 h-14 bg-gradient-to-br from-[#0d89b1] to-[#0d89b1] rounded-2xl flex items-center justify-center text-white shadow-xl rotate-3">
+              <div className="w-14 h-14 bg-gradient-to-br from-[#0a3674] to-[#0a3674] rounded-2xl flex items-center justify-center text-white shadow-xl rotate-3">
                 <User size={28} />
               </div>
               <div>
@@ -137,7 +137,7 @@ export function AnnouncementsDetailPage() {
 
             <div className="bg-white dark:bg-gray-950 rounded-[40px] p-10 md:p-20 shadow-2xl border border-gray-50 dark:border-gray-900 relative -mt-32 z-20 mx-4 md:mx-0">
               <div className="flex flex-col md:flex-row md:items-start gap-8 mb-16 pb-16 border-b border-gray-100 dark:border-gray-800">
-                <div className="w-20 h-20 bg-[#0d89b1]/10 rounded-[30px] flex items-center justify-center text-[#0d89b1] flex-shrink-0">
+                <div className="w-20 h-20 bg-[#0a3674]/10 rounded-[30px] flex items-center justify-center text-[#0a3674] flex-shrink-0">
                   <Megaphone size={40} />
                 </div>
                 <div>
@@ -162,7 +162,7 @@ export function AnnouncementsDetailPage() {
                 
                 <Link
                   to="/announcements"
-                  className="inline-flex items-center gap-4 px-10 py-5 bg-[#0d89b1] text-white rounded-2xl hover:bg-[#0d89b1] transition-all duration-300 font-black uppercase tracking-[0.2em] text-xs shadow-xl shadow-[#0d89b1]/20 hover:-translate-y-1"
+                  className="inline-flex items-center gap-4 px-10 py-5 bg-[#0a3674] text-white rounded-2xl hover:bg-[#0a3674] transition-all duration-300 font-black uppercase tracking-[0.2em] text-xs shadow-xl shadow-[#0a3674]/20 hover:-translate-y-1"
                 >
                   {t('announcements.backToList')}
                   <ArrowRight size={18} />

@@ -38,27 +38,19 @@ export const settingsService = {
   },
 
   getTranslation(settings: SiteSettings | null, lang: string): SiteTranslations {
-    if (!settings) {
-      return {
-        short_name: lang === 'ru' ? 'Политехнический техникум №5' : '5-son Politexnika Texnikumi',
-        full_name: lang === 'ru' 
-          ? 'Политехнический техникум №5 Ферганской области' 
-          : "Farg'ona viloyati 5-sonli politexnika texnikumi",
-        address: lang === 'ru'
-          ? 'Ферганская область, г. Фергана, ул. Саноат, 5'
-          : "Farg'ona viloyati, Farg'ona shahri, Sanoat ko'chasi, 5-uy"
-      };
-    }
-
     const fallback: SiteTranslations = {
-      short_name: lang === 'ru' ? 'Политехнический техникум №5' : '5-son Politexnika Texnikumi',
+      short_name: lang === 'ru' ? 'Техникум №5' : '5-son Texnikumi',
       full_name: lang === 'ru' 
-        ? 'Политехнический техникум №5 Ферганской области' 
-        : "Farg'ona viloyati 5-sonli politexnika texnikumi",
+        ? 'Техникум №5 города Ферганы' 
+        : "Farg'ona shahar 5-son texnikumi",
       address: lang === 'ru'
-        ? 'Ферганская область, г. Фергана, ул. Саноат, 5'
-        : "Farg'ona viloyati, Farg'ona shahri, Sanoat ko'chasi, 5-uy"
+        ? 'г. Фергана, ул. Ферганская, 170 (бывш. колледж Нефти и газа)'
+        : "Farg'ona shahar, Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)"
     };
+
+    if (!settings) {
+      return fallback;
+    }
 
     if (!settings.translations) {
       return fallback;
@@ -95,19 +87,22 @@ export const settingsService = {
   getContactInfo(settings: SiteSettings | null) {
     if (!settings) {
       return {
-        phone: '+998 73 244 05 05',
+        phone: '+998 94 512 75 53',
+        phoneSecondary: '+998 88 413 22 00',
         email: 'info@5texnikum.uz',
         website: 'https://5texnikum.uz',
-        established_year: 1998
+        established_year: 1998,
+        logo: '/logo.png'
       };
     }
 
     return {
-      phone: settings.phone || '+998 73 244 05 05',
+      phone: settings.phone || '+998 94 512 75 53',
+      phoneSecondary: '+998 88 413 22 00',
       email: settings.email || 'info@5texnikum.uz',
       website: settings.website || 'https://5texnikum.uz',
       established_year: settings.established_year || 1998,
-      logo: settings.logo || '/logoicon.png'
+      logo: settings.logo || '/logo.png'
     };
   }
 };
@@ -117,21 +112,21 @@ export const defaultSettings: SiteSettings = {
   id: 1,
   translations: {
     uz: {
-      short_name: "5-son Politexnika Texnikumi",
-      full_name: "Farg'ona viloyati 5-sonli politexnika texnikumi",
-      address: "Farg'ona viloyati, Farg'ona shahri, Sanoat ko'chasi, 5-uy"
+      short_name: "5-son Texnikumi",
+      full_name: "Farg'ona shahar 5-son texnikumi",
+      address: "Farg'ona shahar, Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)"
     },
     ru: {
-      short_name: "Политехнический техникум №5",
-      full_name: "Политехнический техникум №5 Ферганской области",
-      address: "Ферганская область, г. Фергана, ул. Саноат, 5"
+      short_name: "Техникум №5",
+      full_name: "Техникум №5 города Ферганы",
+      address: "г. Фергана, ул. Ферганская, 170 (бывш. колледж Нефти и газа)"
     }
   },
   established_year: 1998,
-  phone: "+998 73 244 05 05",
+  phone: "+998 94 512 75 53",
   email: "info@5texnikum.uz",
   website: "https://5texnikum.uz",
-  logo: "/logoicon.png",
+  logo: "/logo.png",
   telegram: null,
   instagram: null,
   facebook: null,

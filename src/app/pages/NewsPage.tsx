@@ -55,7 +55,7 @@ export function NewsPage() {
         description={t('home.heroDesc')}
       />
       {/* Page Header */}
-      <div className="bg-gradient-to-r from-[#0d89b1] to-[#0d89b1] text-white py-20">
+      <div className="bg-gradient-to-r from-[#0a3674] to-[#0a3674] text-white py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">{t('nav.news')}</h1>
           <p className="text-xl text-white/90 max-w-3xl">
@@ -90,7 +90,7 @@ export function NewsPage() {
                       <span>{formatDate(item.published_at)}</span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-[#0d89b1] transition-colors">
+                    <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2 group-hover:text-[#0a3674] transition-colors">
                       {translation.title}
                     </h3>
 
@@ -100,7 +100,7 @@ export function NewsPage() {
 
                     <Link
                       to={`/news/${item.slug}`}
-                      className="inline-flex items-center gap-2 text-[#0d89b1] font-semibold hover:gap-3 transition-all"
+                      className="inline-flex items-center gap-2 text-[#0a3674] font-semibold hover:gap-3 transition-all"
                     >
                       {t('home.moreBtn', 'Batafsil o\'qish')}
                       <ArrowRight size={18} />
@@ -129,7 +129,7 @@ export function NewsPage() {
             <div className="flex justify-center mt-12">
               <button
                 onClick={() => setPage(prev => prev + 1)}
-                className="px-8 py-3 bg-[#0d89b1] text-white rounded-xl font-bold hover:bg-[#0d89b1] transition-colors shadow-lg"
+                className="px-8 py-3 bg-[#0a3674] text-white rounded-xl font-bold hover:bg-[#0a3674] transition-colors shadow-lg"
               >
                 {t('common.loadMore', 'Yana yuklash')}
               </button>

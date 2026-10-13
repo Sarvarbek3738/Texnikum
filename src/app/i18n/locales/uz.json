@@ -21,32 +21,32 @@
     "library": "Axborot-kutubxona"
   },
   "seo": {
-    "defaultTitle": "5-son Politexnika Texnikumi",
-    "titleTemplate": "%s | 5-son Politexnika Texnikumi",
-    "defaultDescription": "Farg'ona viloyati 5-sonli politexnika texnikumi — zamonaviy texnik, muhandislik va axborot texnologiyalari ta'lim muassasasi. Sifatli ta'lim va zamonaviy ustaxonalar.",
-    "keywords": "5-son texnikum, politexnika texnikumi, Farg'ona texnikum, ta'lim, kasb-hunar, qabul 2026, texnika kolleji"
+    "defaultTitle": "Farg'ona shahar 5-son texnikumi",
+    "titleTemplate": "%s | Farg'ona shahar 5-son texnikumi",
+    "defaultDescription": "Farg'ona shahar 5-son texnikumi — 9-sinf bitiruvchilari uchun kunduzgi va dual ta'lim shaklidagi zamonaviy kasb-hunar ta'lim muassasasi.",
+    "keywords": "5-son texnikum, Farg'ona 5-son texnikumi, ta'lim, kasb-hunar, qabul 2026, dual ta'lim, texnikum"
   },
   "footer": {
-    "about": "Farg'ona viloyati 5-sonli politexnika texnikumi — zamonaviy texnik, muhandislik va axborot texnologiyalari ta'lim muassasasi.",
+    "about": "Farg'ona shahar 5-son texnikumi — zamonaviy IT, elektrotexnika, qayta tiklanuvchi energiya va servis yo'nalishlarida sifatli ta'lim beruvchi davlat kasb-hunar ta'lim muassasasi.",
     "quickLinks": "Tezkor havolalar",
     "contact": "Bog'lanish",
     "socials": "Ijtimoiy tarmoqlar",
     "workTime": "Ish vaqti:",
     "days": "Dushanba - Shanba",
     "rights": "Barcha huquqlar himoyalangan.",
-    "address": "Farg'ona viloyati, Farg'ona shahri, Sanoat ko'chasi, 5-uy"
+    "address": "Farg'ona shahar, Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)"
   },
   "home": {
-    "heroTitle": "Farg'ona viloyati 5-sonli politexnika texnikumi",
-    "heroDesc": "Zamonaviy texnika, muhandislik, axborot texnologiyalari va amaliy kasbiy ta'lim sharoitlari bilan sizning muvaffaqiyatli kelajagingizni quramiz.",
-    "admissionBtn": "Qabul 2026",
+    "heroTitle": "FARG'ONA SHAHAR 5-SON TEXNIKUMI",
+    "heroDesc": "Siz bu yerda kunduzgi va dual ta'lim shakllarida zamonaviy IT, elektrotexnika, elektromobillar servisi va qayta tiklanuvchi energiya sohalarida nufuzli kasb egasi bo'lishingiz mumkin.",
+    "admissionBtn": "Qabul 2026-2027",
     "moreBtn": "Batafsil ma'lumot",
     "yearsExperience": "Yillik tajriba",
     "aboutTitle": "TEXNIKUM HAQIDA",
-    "aboutSubtitle": "Farg'ona viloyati 5-sonli politexnika texnikumi",
+    "aboutSubtitle": "Farg'ona shahar 5-son texnikumi",
     "decreeTitle": "Faoliyat asosi:",
-    "decreeText": "5-sonli politexnika texnikumi O'zbekiston Respublikasining professional ta'lim tizimini rivojlantirish to'g'risidagi davlat dasturi doirasida faoliyat olib boradi.",
-    "aboutDesc": "Texnikumimiz zamonaviy talablarga mos ravishda axborot texnologiyalari, elektrotexnika, avtomobillarga texnik xizmat ko'rsatish va iqtisodiy yo'nalishlar bo'yicha yuqori malakali mutaxassislar tayyorlaydi. O'quvchilarimiz nazariy bilimlarni ilg'or laboratoriya va ustaxonalarda amaliyot bilan mustahkamlaydilar.",
+    "decreeText": "Farg'ona shahar 5-son texnikumi O'zbekiston Respublikasining professional ta'lim tizimini rivojlantirish to'g'risidagi davlat dasturi va qarorlari doirasida faoliyat olib boradi.",
+    "aboutDesc": "Texnikumimiz zamonaviy talablarga mos ravishda raqamli axborotlar, kompyuter tarmoqlari, elektromontyorlik, elektromobillar servisi hamda qayta tiklanuvchi energiya manbalariga xizmat ko'rsatish bo'yicha yuqori malakali mutaxassislar tayyorlaydi. O'quvchilarimiz nazariy bilimlarni ilg'or ustaxona va amaliyot bazalarida mustahkamlaydilar.",
     "readMore": "Batafsil ma'lumot",
     "features": {
       "quality": "Yuqori sifatli ta'lim",
@@ -76,7 +76,9 @@
     "stats": {
       "title": "Statistika",
       "subtitle": "Texnikum yutuqlari va faoliyati statistikasi"
-    }
+    },
+    "heroBadge": "9-sinf bitiruvchilari uchun",
+    "heroSubtitle": "Yangi 2026-2027 o'quv yili uchun o'qishga taklif etadi!"
   },
   "theme": {
     "light": "Yorug' rejim",
@@ -107,8 +109,8 @@
       "answer": "Texnikumimizda ta'lim davlat granti (bepul) hamda to'lov-shartnoma asosida tashkil etilgan. Iqtidorli yoshlar davlat granti asosida bepul tahsil oladilar."
     },
     "item3": {
-      "question": "Texnikum qaysi yo'nalishlar bo'yicha ta'lim beradi?",
-      "answer": "Texnikumimizda axborot texnologiyalari va dasturlash, elektrotexnika, avtomobillarni ta'mirlash va xizmat ko'rsatish, buxgalteriya va moliya sohalari bo'yicha ta'lim beriladi."
+      "question": "Texnikumda qaysi yo'nalishlar bo'yicha ta'lim beriladi?",
+      "answer": "Kunduzgi ta'limda: Raqamli axborotlarni qayta ishlash ustasi, Kompyuter tarmoqlari va IT-servisi, Moda va tikuv, Elektromontyor, Kimyoviy tolalar, Elektrobus va elektromobillar servisi, Turar joy infratuzilmasi, Sartarosh (modeler). Dual ta'limda: Moda va tikuv, Elektromontyor, Elektromobillar servisi, Qayta tiklanuvchi energiya manbaalariga xizmat ko'rsatish."
     },
     "item4": {
       "question": "Texnikumni bitirgach nimalar qilish mumkin?",
@@ -120,11 +122,11 @@
     },
     "item6": {
       "question": "Texnikum qayerda joylashgan?",
-      "answer": "Texnikumimiz Farg'ona viloyati, Farg'ona shahri, Sanoat ko'chasi, 5-uyda joylashgan. Transport aloqasi juda qulay."
+      "answer": "Texnikumimiz Farg'ona shahar, Farg'ona ko'chasi 170-uyda (eski Neft va gaz sanoati kolleji binosi) joylashgan. Transport qatnovi juda qulay."
     }
   },
   "leadership": {
-    "pageSubtitle": "Farg'ona viloyati 5-sonli politexnika texnikumining rahbar xodimlari",
+    "pageSubtitle": "Farg'ona shahar 5-son texnikumining rahbar xodimlari",
     "receptionHours": "Qabul kunlari",
     "academicDegree": "Ilmiy darajasi",
     "receptionNote": "* Oldindan telefon orqali vaqt belgilash tavsiya etiladi",
@@ -152,18 +154,18 @@
     }
   },
   "about": {
-    "pageSubtitle": "Farg'ona viloyati 5-sonli politexnika texnikumi — zamonaviy texnik va kasbiy ta'lim beruvchi yetakchi muassasa.",
+    "pageSubtitle": "Farg'ona shahar 5-son texnikumi — zamonaviy kasb-hunar va texnik ta'lim beruvchi yetakchi muassasa.",
     "generalInfo": "Umumiy ma'lumotlar",
     "established": "Tashkil etilgan sana",
     "establishedDate": "1998-yil 24-fevral (VM 77-sonli qarori) / 2000-yil 1-avgust",
     "director": "Direktor",
-    "address": "Manzil",
+    "address": "Farg'ona shahar, Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)",
     "phone": "Telefon",
     "founder": "Ta’sischi va huquqiy asos",
     "founderValue": "O‘zbekiston Respublikasi Vazirlar Mahkamasining 1998-yil 24-fevraldagi 77-sonli qarori",
     "decreeTitle": "Tashkil etilishining huquqiy asoslari:",
     "history": "Texnikum tarixi",
-    "historyP1": "5-sonli politexnika texnikumi hududdagi yoshlarga texnik, muhandislik va kasbiy ta'lim berish maqsadida tashkil etilgan. Muassasa yillar davomida minglab malakali texnik mutaxassislarni tarbiyalab chiqardi.",
+    "historyP1": "Farg'ona shahar 5-son texnikumi hududdagi 9-sinf bitiruvchilari va yoshlarga zamonaviy texnik, muhandislik va servis sohalarida kasbiy ta'lim berish maqsadida tashkil etilgan. Muassasa yillar davomida minglab malakali mutaxassislarni tarbiyalab chiqardi.",
     "historyP2": "Texnikumda Axborot texnologiyalari, Muhandislik va mexanika, Elektrotexnika hamda Ijtimoiy-iqtisodiy fanlar yo'nalishlarida ilg'or ta'lim dasturlari joriy etilgan.",
     "historyP3": "Hozirgi kunda texnikum zamonaviy ishlab chiqarish korxonalari bilan mustahkam aloqalar o'rnatgan bo'lib, o'quvchilar nazariya va amaliyotni birgalikda o'rganmoqdalar.",
     "mission": "Maqsadlar va qadriyatlar",
@@ -174,7 +176,7 @@
     "valuesTitle": "Qadriyatlarimiz",
     "valuesDesc": "Halollik, mas’uliyat, innovatsion yondashuv, ilimga hurmat va doimiy o‘z-o‘zini takomillashtirish.",
     "advantages": "Bizning afzalliklarimiz",
-    "adv1": "Farg'ona viloyatidagi eng zamonaviy politexnika texnikumi",
+    "adv1": "Farg'ona shahridagi eng zamonaviy kasb-hunar texnikumi",
     "adv2": "Tajribali muhandis-pedagoglar va soha mutaxassislari",
     "adv3": "Chuqurlashtirilgan aniq, tabiiy va chet tillari dasturlari",
     "adv4": "Qulay sharoitdagi yotoqxona",
@@ -184,12 +186,12 @@
     "adv8": "Har yili 95% dan ortiq bitiruvchilar oliy ta’limga kiradi"
   },
   "admission": {
-    "pageSubtitle": "Farg'ona viloyati 5-sonli politexnika texnikumiga qabul tartibi, yo'nalishlar va talablar",
+    "pageSubtitle": "Farg'ona shahar 5-son texnikumiga qabul tartibi, yo'nalishlar va talablar",
     "importantInfo": "Muhim ma'lumot",
-    "importantDesc": "Politexnika texnikumiga qabul my.edu.uz portali orqali va texnikum qabul komissiyasida amalga oshiriladi.",
+    "importantDesc": "Texnikumga qabul my.edu.uz portali orqali va texnikum qabul komissiyasida amalga oshiriladi.",
     "stepsTitle": "Qabul bosqichlari",
     "step1Title": "my.edu.uz portalidan ro‘yxatdan o‘tish",
-    "step1Desc": "my.edu.uz portaliga o'tib 5-sonli politexnika texnikumiga ariza topshiring",
+    "step1Desc": "my.edu.uz portaliga o'tib Farg'ona shahar 5-son texnikumiga ariza topshiring",
     "step2Title": "Vaqtni belgilash",
     "step2Desc": "Test topshirish vaqtini tanlang va xatoni saqlab oling",
     "step3Title": "Test sinovi",
@@ -216,7 +218,7 @@
     "directionsTitle": "Kasbiy yo'nalishlar",
     "natural": "Muhandislik va texnika",
     "exact": "Axborot texnologiyalari va dasturlash",
-    "testLocation": "Sinovlar 5-sonli politexnika texnikumi binosidagi maxsus tayyorlangan auditoriyalarda o'tkaziladi.",
+    "testLocation": "Sinovlar Farg'ona shahar 5-son texnikumi binosidagi maxsus tayyorlangan auditoriyalarda o'tkaziladi.",
     "documentsTitle": "Kerakli hujjatlar",
     "req1": "9-sinf bitiruvchisi bo‘lish",
     "req2": "my.edu.uz portalidan ro‘yxatdan o‘tganlik",
@@ -232,7 +234,7 @@
     "telegramBtn": "Kanalga a'zo bo'lish"
   },
   "teachers": {
-    "pageSubtitle": "Farg'ona viloyati 5-sonli politexnika texnikumining malakali muhandis-pedagog va o'qituvchilar jamoasi",
+    "pageSubtitle": "Farg'ona shahar 5-son texnikumining malakali pedagog va ustozlar jamoasi",
     "ctaTitle": "O'qituvchilarimiz bilan bog'lanish",
     "ctaDesc": "Savol yoki takliflaringiz bo'lsa, texnikum ma'muriyati bilan bog'laning.",
     "academicDegree": "Ilmiy daraja",
@@ -308,7 +310,7 @@
     "date": "Sana"
   },
   "programs": {
-    "pageSubtitle": "5-sonli politexnika texnikumining asosiy kasbiy ta'lim dasturlari",
+    "pageSubtitle": "Farg'ona shahar 5-son texnikumining kunduzgi va dual ta'lim dasturlari",
     "exactSciences": {
       "title": "Axborot texnologiyalari va dasturlash",
       "desc": "Dasturiy ta'minot ishlab chiqish, kompyuter tarmoqlari, veb-dasturlash va axborot xavfsizligi asoslari."
@@ -356,7 +358,7 @@
     }
   },
   "photos": {
-    "pageSubtitle": "Litseymizning hayotidan lavhalar va muhim tadbirlar",
+    "pageSubtitle": "Texnikumimiz hayotidan lavhalar va muhim tadbirlar",
     "graduation": "Bitiruvchilar marosimi 2025",
     "olympiad": "Respublika olimpiadasi",
     "sports": "Sport tadbirlari",

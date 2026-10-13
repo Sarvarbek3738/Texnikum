@@ -36,7 +36,7 @@ export function WhyUsSection() {
     <section className="py-20 bg-white dark:bg-gray-950 overflow-hidden transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16" data-aos="fade-up">
-          <div className="inline-block px-5 py-2 bg-[#0d89b1]/10 text-[#0d89b1] rounded-full text-xs font-black mb-4 uppercase tracking-[0.2em]">
+          <div className="inline-block px-5 py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full text-xs font-black mb-4 uppercase tracking-[0.2em] shadow-md shadow-orange-500/20">
             {t('home.whyUs.badge')}
           </div>
           <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white mb-6 uppercase tracking-tight">
@@ -55,13 +55,13 @@ export function WhyUsSection() {
                 key={index}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
-                className="group relative bg-white dark:bg-gray-900 rounded-lg p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:border-[#0d89b1]/30"
+                className="group relative bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-800 hover:border-[#0a3674]/40"
               >
-                <div className="w-16 h-16 bg-[#0d89b1]/10 rounded-md flex items-center justify-center mb-8 group-hover:bg-[#0d89b1] group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
-                  <Icon size={32} className="text-[#0d89b1] group-hover:text-white" />
+                <div className="w-16 h-16 bg-blue-50 dark:bg-blue-950/60 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-[#0a3674] group-hover:text-white transition-all duration-500 transform group-hover:rotate-6 shadow-sm">
+                  <Icon size={32} className="text-[#0a3674] dark:text-blue-400 group-hover:text-white" />
                 </div>
                 <h3 className="text-xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-wider">{t(reason.title)}</h3>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium">
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed font-medium text-sm">
                   {t(reason.description)}
                 </p>
               </div>

@@ -30,12 +30,12 @@ export function Footer() {
                 {contactInfo.logo ? (
                   <ImageWithFallback src={contactInfo.logo} alt={siteName.short_name} className="w-full h-full" objectFit="contain" />
                 ) : (
-                  <img src="/logoicon.png" alt={siteName.short_name} className="w-full h-full object-contain" />
+                  <img src="/logo.png" alt={siteName.short_name} className="w-full h-full object-contain" />
                 )}
               </div>
               <div>
                 <div className="font-black text-white text-lg tracking-tight leading-tight">{siteName.short_name}</div>
-                <div className="text-xs text-[#0d89b1] font-bold uppercase tracking-widest">{t('nav.leadership')}</div>
+                <div className="text-xs text-amber-400 font-bold uppercase tracking-widest">{t('nav.leadership')}</div>
               </div>
             </div>
             <p className="text-sm leading-relaxed text-gray-400 font-medium">
@@ -59,7 +59,7 @@ export function Footer() {
           {/* Quick Links */}
           <div>
             <h3 className="text-white font-black text-lg mb-8 uppercase tracking-widest text-sm flex items-center gap-2">
-              <span className="w-8 h-px bg-[#0d89b1]"></span>
+              <span className="w-8 h-px bg-[#0a3674]"></span>
               {t('footer.quickLinks')}
             </h3>
             <ul className="grid grid-cols-1 gap-4 text-sm font-bold">
@@ -71,8 +71,8 @@ export function Footer() {
                 { to: "/contact", label: t('nav.contact') }
               ].map((link, idx) => (
                 <li key={idx}>
-                  <Link to={link.to} className="text-gray-400 hover:text-[#0d89b1] transition-colors flex items-center gap-2 group">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#0d89b1] scale-0 group-hover:scale-100 transition-transform"></span>
+                  <Link to={link.to} className="text-gray-400 hover:text-[#0a3674] transition-colors flex items-center gap-2 group">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#0a3674] scale-0 group-hover:scale-100 transition-transform"></span>
                     {link.label}
                   </Link>
                 </li>
@@ -83,30 +83,33 @@ export function Footer() {
           {/* Contact Info */}
           <div>
             <h3 className="text-white font-black text-lg mb-8 uppercase tracking-widest text-sm flex items-center gap-2">
-              <span className="w-8 h-px bg-[#0d89b1]"></span>
+              <span className="w-8 h-1 bg-amber-500 rounded-full"></span>
               {t('footer.contact')}
             </h3>
             <ul className="space-y-5 text-sm font-medium">
               <li className="flex items-start gap-4 group">
-                <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-[#0d89b1] group-hover:bg-[#0d89b1] group-hover:text-white transition-all">
+                <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-amber-400 group-hover:bg-[#0a3674] group-hover:text-white transition-all flex-shrink-0">
                   <MapPin size={20} />
                 </div>
-                <span className="text-gray-400 leading-relaxed">{siteName.address || t('footer.address')}</span>
+                <span className="text-gray-400 leading-relaxed text-xs">
+                  {siteName.address || "Farg'ona shahar, Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)"}
+                </span>
               </li>
-              {contactInfo.phone && (
-                <li className="flex items-center gap-4 group">
-                  <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-[#0d89b1] group-hover:bg-[#0d89b1] group-hover:text-white transition-all">
-                    <Phone size={20} />
-                  </div>
-                  <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="text-gray-400 hover:text-[#0d89b1] transition-colors font-bold">{contactInfo.phone}</a>
-                </li>
-              )}
+              <li className="flex items-center gap-4 group">
+                <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-amber-400 group-hover:bg-[#0a3674] group-hover:text-white transition-all flex-shrink-0">
+                  <Phone size={20} />
+                </div>
+                <div className="flex flex-col text-xs font-bold">
+                  <a href="tel:+998945127553" className="text-gray-300 hover:text-amber-400 transition-colors">94-512-75-53</a>
+                  <a href="tel:+998884132200" className="text-gray-300 hover:text-amber-400 transition-colors">88-413-22-00</a>
+                </div>
+              </li>
               {contactInfo.email && (
                 <li className="flex items-center gap-4 group">
-                  <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-[#0d89b1] group-hover:bg-[#0d89b1] group-hover:text-white transition-all">
+                  <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-amber-400 group-hover:bg-[#0a3674] group-hover:text-white transition-all flex-shrink-0">
                     <Mail size={20} />
                   </div>
-                  <a href={`mailto:${contactInfo.email}`} className="text-gray-400 hover:text-[#0d89b1] transition-colors font-bold">{contactInfo.email}</a>
+                  <a href={`mailto:${contactInfo.email}`} className="text-gray-300 hover:text-amber-400 transition-colors font-bold text-xs">{contactInfo.email}</a>
                 </li>
               )}
             </ul>
@@ -115,15 +118,15 @@ export function Footer() {
           {/* Working Hours & Map Mini */}
           <div>
             <h3 className="text-white font-black text-lg mb-8 uppercase tracking-widest text-sm flex items-center gap-2">
-              <span className="w-8 h-px bg-[#0d89b1]"></span>
+              <span className="w-8 h-1 bg-amber-500 rounded-full"></span>
               {t('footer.workTime')}
             </h3>
-            <div className="bg-white/5 rounded-2xl p-6 mb-6">
+            <div className="bg-white/5 rounded-2xl p-6 mb-6 border border-white/5">
               <div className="flex items-center gap-3 text-white mb-2">
-                <Clock size={18} className="text-[#0d89b1]" />
-                <span className="font-bold">{t('footer.days')}</span>
+                <Clock size={18} className="text-amber-400" />
+                <span className="font-bold text-sm">{t('footer.days')}</span>
               </div>
-              <p className="text-2xl font-black text-[#0d89b1]">08:00 - 17:00</p>
+              <p className="text-2xl font-black text-amber-400">08:00 - 17:00</p>
             </div>
             {/* Small Google Map */}
             <div className="rounded-2xl overflow-hidden h-48 w-full border border-white/10 transition-all duration-500">

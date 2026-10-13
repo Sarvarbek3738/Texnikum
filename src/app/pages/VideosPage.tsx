@@ -37,7 +37,7 @@ export function VideosPage() {
       <div className="bg-gray-50 dark:bg-gray-900/50 border-b border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center gap-2 text-sm font-medium">
-            <Link to="/" className="text-gray-500 hover:text-[#0d89b1] transition-colors flex items-center gap-1">
+            <Link to="/" className="text-gray-500 hover:text-[#0a3674] transition-colors flex items-center gap-1">
               <Home size={16} />
               <span>{t('nav.home')}</span>
             </Link>
@@ -79,7 +79,7 @@ export function VideosPage() {
           ) : videos.length === 0 ? (
             <div className="text-center max-w-md mx-auto">
               <div className="w-20 h-20 bg-blue-50 dark:bg-blue-900/20 rounded-full flex items-center justify-center mx-auto mb-8">
-                <Play className="text-[#0d89b1] w-10 h-10 ml-1" />
+                <Play className="text-[#0a3674] w-10 h-10 ml-1" />
               </div>
               <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight">
                 {t('common.notFound', 'Hozircha videolar mavjud emas')}
@@ -137,8 +137,8 @@ export function VideosPage() {
                           
                           {/* Play Button Overlay */}
                           <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="w-16 h-16 rounded-full bg-[#0d89b1] flex items-center justify-center shadow-lg group-hover/thumb:scale-110 transition-all duration-500 group-hover/thumb:bg-white">
-                              <Play className="w-6 h-6 text-white group-hover/thumb:text-[#0d89b1] fill-current ml-1 transition-colors" />
+                            <div className="w-16 h-16 rounded-full bg-[#0a3674] flex items-center justify-center shadow-lg group-hover/thumb:scale-110 transition-all duration-500 group-hover/thumb:bg-white">
+                              <Play className="w-6 h-6 text-white group-hover/thumb:text-[#0a3674] fill-current ml-1 transition-colors" />
                             </div>
                           </div>
 
@@ -168,13 +168,13 @@ export function VideosPage() {
                     
                     <div className="p-6 md:p-8">
                       <div className="flex items-center gap-2 mb-3">
-                        <div className="w-1.5 h-1.5 bg-[#0d89b1] rounded-full" />
-                        <span className="text-[10px] font-bold text-[#0d89b1] uppercase tracking-[0.2em]">
+                        <div className="w-1.5 h-1.5 bg-[#0a3674] rounded-full" />
+                        <span className="text-[10px] font-bold text-[#0a3674] uppercase tracking-[0.2em]">
                           {t('nav.videos')}
                         </span>
                       </div>
                       
-                      <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3 line-clamp-2 leading-tight uppercase tracking-tight group-hover:text-[#0d89b1] transition-colors">
+                      <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3 line-clamp-2 leading-tight uppercase tracking-tight group-hover:text-[#0a3674] transition-colors">
                         {trans.title || t('nav.videos')}
                       </h3>
                       

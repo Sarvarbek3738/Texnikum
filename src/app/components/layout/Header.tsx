@@ -71,25 +71,30 @@ export function Header() {
   return (
     <header className="bg-white dark:bg-gray-950 shadow-md sticky top-0 z-50 transition-colors duration-300">
       {/* Top Bar */}
-      <div className="bg-[#0d89b1] text-white hidden sm:block">
+      <div className="bg-[#0a3674] text-white hidden sm:block border-b border-blue-900/60">
         <div className="container mx-auto px-4 py-2">
           <div className="flex items-center justify-between text-sm">
-            <div className="flex items-center gap-4">
-              {contactInfo.phone && (
-                <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="flex items-center gap-2 hover:opacity-80 transition-opacity font-bold">
-                  <Phone size={14} />
-                  <span>{contactInfo.phone}</span>
-                </a>
-              )}
+            <div className="flex items-center gap-6">
+              <a href="tel:+998945127553" className="flex items-center gap-2 hover:text-amber-400 transition-colors font-bold text-xs">
+                <Phone size={13} className="text-amber-400" />
+                <span>94-512-75-53</span>
+              </a>
+              <a href="tel:+998884132200" className="flex items-center gap-2 hover:text-amber-400 transition-colors font-bold text-xs">
+                <Phone size={13} className="text-amber-400" />
+                <span>88-413-22-00</span>
+              </a>
+              <span className="text-white/70 text-xs hidden xl:inline font-medium">
+                📍 Farg'ona shahar, Farg'ona ko'chasi 170-uy
+              </span>
             </div>
             <div className="flex items-center gap-6">
               {/* Language Switcher Desktop */}
               <div className="relative">
                 <button 
                   onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                  className="flex items-center gap-2 hover:text-white/80 transition-colors font-bold uppercase tracking-widest text-xs"
+                  className="flex items-center gap-2 hover:text-amber-400 transition-colors font-bold uppercase tracking-widest text-xs"
                 >
-                  <Globe size={14} />
+                  <Globe size={14} className="text-amber-400" />
                   <span>{currentLanguage.label}</span>
                   <ChevronDown size={12} className={`transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
@@ -100,7 +105,7 @@ export function Header() {
                       onClick={() => changeLanguage(lang.code)}
                       className={`w-full text-left px-4 py-2.5 text-xs font-bold transition-colors flex items-center gap-2 ${
                         i18n.language === lang.code 
-                          ? 'bg-blue-50 dark:bg-blue-900/30 text-[#0d89b1]' 
+                          ? 'bg-blue-50 dark:bg-blue-900/30 text-[#0a3674] dark:text-blue-400' 
                           : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
                       }`}
                     >
@@ -111,21 +116,21 @@ export function Header() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 ml-6 pl-6 relative">
+              <div className="flex items-center gap-4 ml-4 pl-4 relative">
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-white/40 rounded-full"></div>
                 {socialLinks.instagram && (
-                  <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" title="Instagram">
-                    <Instagram size={16} />
+                  <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors" title="Instagram">
+                    <Instagram size={15} />
                   </a>
                 )}
                 {socialLinks.telegram && (
-                  <a href={socialLinks.telegram} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" title="Telegram">
-                    <Send size={16} />
+                  <a href={socialLinks.telegram} target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors" title="Telegram">
+                    <Send size={15} />
                   </a>
                 )}
                 {socialLinks.youtube && (
-                  <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity" title="YouTube">
-                    <Youtube size={16} />
+                  <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors" title="YouTube">
+                    <Youtube size={15} />
                   </a>
                 )}
               </div>
@@ -140,7 +145,7 @@ export function Header() {
           {/* Logo */}
            <Link to="/" className="flex items-center gap-2 md:gap-3 group shrink-0">
              <div className="relative overflow-hidden rounded-lg p-1 bg-gray-50 dark:bg-gray-900 group-hover:bg-blue-50 dark:group-hover:bg-blue-900/20 transition-colors shadow-sm">
-               <img src={contactInfo.logo || "/logoicon.png"} alt={siteName.short_name} className="w-8 h-8 md:w-14 md:h-14 object-contain" />
+               <img src={contactInfo.logo || "/logo.png"} alt={siteName.short_name} className="w-8 h-8 md:w-14 md:h-14 object-contain" />
              </div>
              <div>
                <div className="text-xs md:text-lg font-black text-gray-900 dark:text-white leading-tight uppercase tracking-tight max-w-[120px] md:max-w-none">
@@ -160,8 +165,8 @@ export function Header() {
               >
                 <Link
                   to={item.href}
-                  className={`px-4 py-2 hover:text-[#0d89b1] transition-colors font-black text-xs uppercase tracking-widest flex items-center gap-1.5 ${
-                    location.pathname === item.href ? 'text-[#0d89b1]' : 'text-gray-700 dark:text-gray-300'
+                  className={`px-3.5 py-2 hover:text-[#0a3674] dark:hover:text-blue-400 transition-colors font-black text-xs uppercase tracking-widest flex items-center gap-1.5 ${
+                    location.pathname === item.href ? 'text-[#0a3674] dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'
                   }`}
                 >
                   {t(item.label)}
@@ -179,8 +184,8 @@ export function Header() {
                         to={child.href}
                         className={`block px-6 py-3.5 text-xs font-bold uppercase tracking-widest transition-colors ${
                           location.pathname === child.href 
-                            ? 'bg-blue-50 dark:bg-blue-900/30 text-[#0d89b1]' 
-                            : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-[#0d89b1]'
+                            ? 'bg-blue-50 dark:bg-blue-900/30 text-[#0a3674] dark:text-blue-400' 
+                            : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 hover:text-[#0a3674] dark:hover:text-blue-400'
                         }`}
                       >
                         {t(child.label)}
@@ -190,23 +195,26 @@ export function Header() {
                 )}
               </div>
             ))}
+
+            <Link
+              to="/admission"
+              className="ml-3 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white font-black text-xs uppercase tracking-wider shadow-md shadow-orange-500/20 hover:shadow-lg transition-all transform hover:-translate-y-0.5"
+            >
+              {t('home.admissionBtn', 'Qabul 2026-2027')}
+            </Link>
           </nav>
 
           {/* Mobile Actions */}
           <div className="flex items-center gap-2 lg:hidden">
-            {/* Theme Switcher 
-            {mounted && (
-              <button
-                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-                className="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
-              >
-                {theme === 'dark' ? <Sun size={24} /> : <Moon size={24} />}
-              </button>
-            )}
-            */}
+            <Link
+              to="/admission"
+              className="px-3 py-1.5 rounded-lg bg-gradient-to-r from-amber-500 to-orange-600 text-white font-black text-[10px] uppercase tracking-wider shadow-sm"
+            >
+              Qabul
+            </Link>
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className="p-2 text-gray-700 dark:text-gray-300 hover:text-[#0d89b1] hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
+              className="p-2 text-gray-700 dark:text-gray-300 hover:text-[#0a3674] hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg"
             >
               <Menu size={28} />
             </button>
@@ -228,8 +236,8 @@ export function Header() {
         >
           <div className="flex items-center justify-between p-4 border-b dark:border-gray-800">
             <div className="flex items-center gap-2">
-              <img src="/logoicon.png" alt="Logo" className="w-10 h-10 object-contain" />
-              <span className="font-black text-[#0d89b1] uppercase tracking-tight">{siteName.short_name}</span>
+              <img src="/logo.png" alt="Logo" className="w-10 h-10 object-contain" />
+              <span className="font-black text-[#0a3674] dark:text-blue-400 uppercase tracking-tight">{siteName.short_name}</span>
             </div>
             <button 
               onClick={() => setIsMobileMenuOpen(false)} 
@@ -250,7 +258,7 @@ export function Header() {
                     onClick={() => changeLanguage(lang.code)}
                     className={`flex items-center justify-center gap-2 py-3 rounded-xl border text-xs font-black uppercase transition-all ${
                       i18n.language === lang.code 
-                        ? 'bg-[#0d89b1] text-white border-[#0d89b1] shadow-lg shadow-[#0d89b1]/20' 
+                        ? 'bg-[#0a3674] text-white border-[#0a3674] shadow-lg shadow-[#0a3674]/20' 
                         : 'bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-100 dark:border-gray-800'
                     }`}
                   >
@@ -268,7 +276,7 @@ export function Header() {
                       <button
                         onClick={() => setExpandedItem(expandedItem === item.label ? null : item.label)}
                         className={`w-full flex items-center justify-between px-4 py-4 rounded-2xl font-black text-xs uppercase tracking-[0.1em] transition-colors ${
-                          expandedItem === item.label ? 'bg-blue-50 dark:bg-blue-900/20 text-[#0d89b1]' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900'
+                          expandedItem === item.label ? 'bg-blue-50 dark:bg-blue-900/20 text-[#0a3674]' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900'
                         }`}
                       >
                         <span>{t(item.label)}</span>
@@ -280,7 +288,7 @@ export function Header() {
                             key={child.label}
                             to={child.href}
                             className={`block px-6 py-4 text-[11px] font-bold uppercase tracking-wider rounded-xl transition-colors ${
-                              location.pathname === child.href ? 'text-[#0d89b1] font-black bg-white dark:bg-gray-800 shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:text-[#0d89b1]'
+                              location.pathname === child.href ? 'text-[#0a3674] font-black bg-white dark:bg-gray-800 shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:text-[#0a3674]'
                             }`}
                             onClick={() => setIsMobileMenuOpen(false)}
                           >
@@ -293,7 +301,7 @@ export function Header() {
                     <Link
                       to={item.href}
                       className={`block px-4 py-4 rounded-2xl font-black text-xs uppercase tracking-[0.1em] transition-colors ${
-                        location.pathname === item.href ? 'bg-blue-50 dark:bg-blue-900/20 text-[#0d89b1]' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900'
+                        location.pathname === item.href ? 'bg-blue-50 dark:bg-blue-900/20 text-[#0a3674]' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900'
                       }`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
@@ -309,7 +317,7 @@ export function Header() {
             <div className="flex flex-col gap-4">
               {contactInfo.phone && (
                 <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="flex items-center gap-4 text-gray-700 dark:text-gray-300 font-black text-sm">
-                  <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-2xl shadow-sm flex items-center justify-center text-[#0d89b1]">
+                  <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-2xl shadow-sm flex items-center justify-center text-[#0a3674]">
                     <Phone size={20} />
                   </div>
                   {contactInfo.phone}

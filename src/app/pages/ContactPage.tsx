@@ -90,16 +90,19 @@ export function ContactPage() {
         description={t('contact.pageSubtitle')}
       />
       {/* Page Header */}
-      <div className="bg-gradient-to-r from-[#0d89b1] to-[#0d89b1] text-white py-24 md:py-32 relative">
-        <div className="absolute inset-0 bg-black/10"></div>
+      <div className="bg-gradient-to-r from-[#0a2558] via-[#0a3674] to-[#0d47a1] text-white py-20 md:py-28 relative">
+        <div className="absolute inset-0 bg-black/15"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="text-4xl md:text-7xl font-black mb-6 tracking-tight uppercase">{t('nav.contact')}</h1>
-            <p className="text-lg md:text-2xl text-white/90 max-w-3xl leading-relaxed font-bold opacity-90 uppercase tracking-widest">
+            <span className="inline-block px-4 py-1.5 bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-widest rounded-full mb-4 shadow-lg">
+              Bog'lanish
+            </span>
+            <h1 className="text-3xl md:text-6xl font-black mb-4 tracking-tight uppercase">{t('nav.contact')}</h1>
+            <p className="text-base md:text-xl text-blue-100 max-w-3xl leading-relaxed font-semibold">
               {t('contact.pageSubtitle')}
             </p>
           </motion.div>
@@ -111,40 +114,45 @@ export function ContactPage() {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {/* Contact Cards */}
-            <div className="bg-white dark:bg-gray-950 rounded-lg p-10 shadow-lg border border-gray-100 dark:border-gray-800 group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-aos="fade-up">
-              <div className="w-16 h-16 bg-[#0d89b1]/10 rounded-md flex items-center justify-center mb-8 group-hover:bg-[#0d89b1] group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
-                <MapPin size={32} className="text-[#0d89b1] group-hover:text-white" />
+            <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-aos="fade-up">
+              <div className="w-16 h-16 bg-blue-50 dark:bg-blue-950/50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#0a3674] group-hover:text-white transition-all duration-500">
+                <MapPin size={30} className="text-[#0a3674] dark:text-blue-400 group-hover:text-white" />
               </div>
-              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight">{t('contact.addressTitle')}</h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg font-bold">
-                {siteName.address || t('footer.address')}
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3 uppercase tracking-tight">{t('contact.addressTitle')}</h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-sm md:text-base font-medium">
+                {siteName.address || "Farg'ona shahar, Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)"}
               </p>
             </div>
 
-            <div className="bg-white dark:bg-gray-950 rounded-lg p-10 shadow-lg border border-gray-100 dark:border-gray-800 group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
-              <div className="w-16 h-16 bg-[#0d89b1]/10 rounded-md flex items-center justify-center mb-8 group-hover:bg-[#0d89b1] group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
-                <Phone size={32} className="text-[#0d89b1] group-hover:text-white" />
+            <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="100">
+              <div className="w-16 h-16 bg-amber-50 dark:bg-amber-950/30 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-amber-500 group-hover:text-slate-950 transition-all duration-500">
+                <Phone size={30} className="text-amber-600 dark:text-amber-400 group-hover:text-slate-950" />
               </div>
-              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight">{t('contact.phoneTitle')}</h3>
-              <div className="space-y-3">
-                {contactInfo.phone && (
-                  <a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} className="block text-gray-600 dark:text-gray-400 hover:text-[#0d89b1] text-lg font-black transition-colors">
-                    {contactInfo.phone}
-                  </a>
-                )}
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3 uppercase tracking-tight">{t('contact.phoneTitle')}</h3>
+              <div className="space-y-2">
+                <a href="tel:+998945127553" className="block text-gray-900 dark:text-gray-100 hover:text-amber-600 text-lg font-black transition-colors">
+                  +998 94 512 75 53
+                </a>
+                <a href="tel:+998884132200" className="block text-gray-900 dark:text-gray-100 hover:text-amber-600 text-lg font-black transition-colors">
+                  +998 88 413 22 00
+                </a>
+                <span className="inline-block text-xs font-semibold text-gray-500 uppercase tracking-wider">
+                  Qabul komissiyasi / Ma'lumot
+                </span>
               </div>
             </div>
 
-            <div className="bg-white dark:bg-gray-950 rounded-lg p-10 shadow-lg border border-gray-100 dark:border-gray-800 group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
-              <div className="w-16 h-16 bg-[#0d89b1]/10 rounded-md flex items-center justify-center mb-8 group-hover:bg-[#0d89b1] group-hover:text-white transition-all duration-500 transform group-hover:rotate-6">
-                <Mail size={32} className="text-[#0d89b1] group-hover:text-white" />
+            <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2" data-aos="fade-up" data-aos-delay="200">
+              <div className="w-16 h-16 bg-blue-50 dark:bg-blue-950/50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#0a3674] group-hover:text-white transition-all duration-500">
+                <Mail size={30} className="text-[#0a3674] dark:text-blue-400 group-hover:text-white" />
               </div>
-              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight">{t('contact.emailTitle')}</h3>
-              {contactInfo.email && (
-                <a href={`mailto:${contactInfo.email}`} className="text-gray-600 dark:text-gray-400 hover:text-[#0d89b1] text-lg font-black transition-colors break-all">
-                  {contactInfo.email}
-                </a>
-              )}
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3 uppercase tracking-tight">{t('contact.emailTitle')}</h3>
+              <a href="mailto:info@5texnikum.uz" className="text-gray-900 dark:text-gray-100 hover:text-[#0a3674] text-lg font-black transition-colors break-all">
+                info@5texnikum.uz
+              </a>
+              <p className="text-xs text-gray-500 mt-2 font-medium">
+                Rasmiy elektron murojaatlar uchun
+              </p>
             </div>
           </div>
 
@@ -166,7 +174,7 @@ export function ContactPage() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0d89b1] transition-all text-gray-900 dark:text-white font-bold"
+                      className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0a3674] transition-all text-gray-900 dark:text-white font-bold"
                       placeholder="Ikboljon Boltaboyev"
                     />
                   </div>
@@ -178,7 +186,7 @@ export function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0d89b1] transition-all text-gray-900 dark:text-white font-bold"
+                      className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0a3674] transition-all text-gray-900 dark:text-white font-bold"
                       placeholder="example@mail.com"
                     />
                   </div>
@@ -193,7 +201,7 @@ export function ContactPage() {
                       value={formData.phone}
                       onChange={handleChange}
                       required
-                      className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0d89b1] transition-all text-gray-900 dark:text-white font-bold"
+                      className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0a3674] transition-all text-gray-900 dark:text-white font-bold"
                       placeholder="+998 90 123 45 67"
                     />
                   </div>
@@ -204,7 +212,7 @@ export function ContactPage() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0d89b1] transition-all text-gray-900 dark:text-white font-bold appearance-none"
+                      className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0a3674] transition-all text-gray-900 dark:text-white font-bold appearance-none"
                     >
                       <option value="">{t('contact.subject')}</option>
                       <option value="admission">{t('contact.subjects.admission')}</option>
@@ -222,7 +230,7 @@ export function ContactPage() {
                     onChange={handleChange}
                     required
                     rows={6}
-                    className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0d89b1] transition-all text-gray-900 dark:text-white font-bold resize-none"
+                    className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0a3674] transition-all text-gray-900 dark:text-white font-bold resize-none"
                     placeholder={t('contact.message')}
                   ></textarea>
                 </div>
@@ -233,7 +241,7 @@ export function ContactPage() {
                   className={`w-full py-5 rounded-lg font-black uppercase tracking-widest transition-all duration-300 shadow-xl ${
                     submitted 
                       ? 'bg-green-500 text-white cursor-default' 
-                      : 'bg-[#0d89b1] text-white hover:bg-[#0d89b1] hover:shadow-2xl transform hover:-translate-y-1'
+                      : 'bg-[#0a3674] text-white hover:bg-[#0a3674] hover:shadow-2xl transform hover:-translate-y-1'
                   }`}
                 >
                   {submitted ? (

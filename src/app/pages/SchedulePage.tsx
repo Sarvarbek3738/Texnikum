@@ -37,7 +37,7 @@ export function SchedulePage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
-        <Loader2 className="w-12 h-12 text-[#0d89b1] animate-spin" />
+        <Loader2 className="w-12 h-12 text-[#0a3674] animate-spin" />
       </div>
     );
   }
@@ -51,7 +51,7 @@ export function SchedulePage() {
       <div className="bg-gray-50 dark:bg-gray-900/50 border-b border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center gap-2 text-sm font-medium">
-            <Link to="/" className="text-gray-500 hover:text-[#0d89b1] transition-colors flex items-center gap-1">
+            <Link to="/" className="text-gray-500 hover:text-[#0a3674] transition-colors flex items-center gap-1">
               <Home size={16} />
               <span>{t('nav.home')}</span>
             </Link>
@@ -99,7 +99,7 @@ export function SchedulePage() {
                       className="flex items-center justify-between p-6 bg-gray-50 dark:bg-gray-900 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-all group border border-gray-100 dark:border-gray-800"
                     >
                       <div className="flex items-center gap-4">
-                        <div className="p-3 bg-[#0d89b1]/10 text-[#0d89b1] rounded-lg group-hover:bg-[#0d89b1] group-hover:text-white transition-colors">
+                        <div className="p-3 bg-[#0a3674]/10 text-[#0a3674] rounded-lg group-hover:bg-[#0a3674] group-hover:text-white transition-colors">
                           <FileText size={24} />
                         </div>
                         <div>
@@ -111,7 +111,7 @@ export function SchedulePage() {
                           </p>
                         </div>
                       </div>
-                      <div className="p-2.5 bg-white dark:bg-gray-800 rounded-lg shadow-sm group-hover:bg-[#0d89b1] group-hover:text-white transition-colors">
+                      <div className="p-2.5 bg-white dark:bg-gray-800 rounded-lg shadow-sm group-hover:bg-[#0a3674] group-hover:text-white transition-colors">
                         <Download size={20} className="text-gray-400 group-hover:text-white" />
                       </div>
                     </a>
@@ -144,7 +144,7 @@ export function SchedulePage() {
                           </p>
                         )}
                       </div>
-                      <div className="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm group-hover:bg-[#0d89b1] group-hover:text-white transition-colors">
+                      <div className="p-2 bg-white dark:bg-gray-800 rounded-lg shadow-sm group-hover:bg-[#0a3674] group-hover:text-white transition-colors">
                         <Download size={20} className="text-gray-400 group-hover:text-white" />
                       </div>
                     </a>

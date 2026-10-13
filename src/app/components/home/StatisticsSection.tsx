@@ -15,9 +15,16 @@ const iconMap: Record<string, any> = {
   togaraklar: Trophy,
 };
 
+const defaultStatsList: StatItem[] = [
+  { id: 1, value: '450+', translations: { uz: { label: "O'quvchilar soni" }, ru: { label: "Количество учащихся" } }, icon: 'users', sort_order: 1 },
+  { id: 2, value: '45+', translations: { uz: { label: "Malakali o'qituvchilar" }, ru: { label: "Квалифицированные педагоги" } }, icon: 'graduation-cap', sort_order: 2 },
+  { id: 3, value: '12', translations: { uz: { label: "Kasbiy ta'lim yo'nalishlari" }, ru: { label: "Направления обучения" } }, icon: 'school', sort_order: 3 },
+  { id: 4, value: '15+', translations: { uz: { label: "Zamonaviy ustaxonalar" }, ru: { label: "Современные мастерские" } }, icon: 'trophy', sort_order: 4 },
+];
+
 export function StatisticsSection() {
   const { t, i18n } = useTranslation();
-  const [stats, setStats] = useState<StatItem[]>([]);
+  const [stats, setStats] = useState<StatItem[]>(defaultStatsList);
   const [loading, setLoading] = useState(true);
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -29,9 +36,10 @@ export function StatisticsSection() {
       try {
         const data = await statisticService.getStatistics();
         const list: StatItem[] = Array.isArray(data) ? data : ((data as any)?.results || []);
-        // Sort by sort_order
-        const sortedStats = [...list].sort((a, b) => (a.sort_order ?? 0) - (b.sort_order ?? 0));
-        setStats(sortedStats);
+        if (list.length > 0) {
+          const sortedStats = [...list].sort((a, b) => (a.sort_order ?? 0) - (b.sort_order ?? 0));
+          setStats(sortedStats);
+        }
       } catch (error) {
         console.error('Error fetching statistics:', error);
       } finally {
@@ -42,42 +50,32 @@ export function StatisticsSection() {
     fetchStats();
   }, []);
 
-  if (loading) {
-    return (
-      <section className="relative py-24 bg-gray-900 flex items-center justify-center min-h-[400px]">
-        <Loader2 className="w-12 h-12 text-[#0d89b1] animate-spin" />
-      </section>
-    );
-  }
-
-  if (stats.length === 0) {
-    return null;
-  }
+  const displayStats = stats.length > 0 ? stats : defaultStatsList;
 
   return (
-    <section className="relative py-24 bg-gray-900 overflow-hidden" ref={ref}>
+    <section className="relative py-24 bg-[#0a2558] overflow-hidden" ref={ref}>
       {/* Background with overlay */}
       <div className="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1bml2ZXJzaXR5JTIwYnVpbGRpbmd8ZW58MXx8fHwxNzc1NDU4MzM1fDA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Statistika"
-          className="w-full h-full object-cover opacity-20"
+          className="w-full h-full object-cover opacity-15"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d89b1]/40 to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a2558]/90 via-[#0a2558] to-gray-950"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20" data-aos="fade-up">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-8 uppercase tracking-tight leading-tight">
-            {t('home.stats.title', 'Litseyimiz raqamlarda')}
+        <div className="text-center mb-16 md:mb-20" data-aos="fade-up">
+          <div className="inline-block px-5 py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full text-xs font-black mb-4 uppercase tracking-[0.2em] shadow-lg shadow-orange-500/20">
+            {t('home.stats.subtitle', 'Faoliyatimiz raqamlarda')}
+          </div>
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tight leading-tight">
+            {t('home.stats.title', 'Texnikumimiz raqamlarda')}
           </h2>
-          <p className="text-white/70 text-lg md:text-xl max-w-3xl mx-auto font-bold uppercase tracking-[0.2em] opacity-80">
-            {t('home.stats.subtitle', 'Bizning yutuqlarimiz va ko\'rsatkichlarimiz')}
-          </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {stats.map((stat, index) => {
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
+          {displayStats.map((stat, index) => {
             const Icon = iconMap[stat.icon] || Users;
             const translation = statisticService.getTranslation(stat, i18n.language);
             
@@ -91,26 +89,26 @@ export function StatisticsSection() {
                 key={stat.id}
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
-                className="group relative bg-white/5 backdrop-blur-xl rounded-xl p-8 text-center border border-white/10 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] overflow-hidden"
+                className="group relative bg-white/5 backdrop-blur-xl rounded-3xl p-8 text-center border border-white/10 hover:bg-white/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] overflow-hidden"
               >
                 {/* Decorative glow */}
-                <div className="absolute -top-12 -right-12 w-24 h-24 bg-[#0d89b1]/10 rounded-full blur-2xl group-hover:bg-[#0d89b1]/20 transition-all duration-500"></div>
+                <div className="absolute -top-12 -right-12 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all duration-500"></div>
                 
                 <div className="relative z-10">
-                  <div className="w-14 h-14 bg-white/10 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:bg-[#0d89b1] group-hover:text-white transition-all duration-500 transform group-hover:scale-110 shadow-xl border border-white/5">
-                    <Icon size={24} className="text-[#0d89b1] group-hover:text-white transition-colors duration-500" />
+                  <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-gradient-to-r group-hover:from-amber-500 group-hover:to-orange-500 text-amber-400 group-hover:text-white transition-all duration-500 transform group-hover:scale-110 shadow-xl border border-white/5">
+                    <Icon size={28} />
                   </div>
                   
-                  <div className="text-4xl md:text-5xl font-black text-white mb-2 tracking-tighter">
+                  <div className="text-4xl sm:text-5xl font-black text-white mb-3 tracking-tighter">
                     {inView ? (
-                      <CountUp end={numericValue} duration={3} suffix={suffix} />
+                      <CountUp end={numericValue} duration={2.5} suffix={suffix} />
                     ) : (
-                      '0'
+                      stat.value
                     )}
                   </div>
                   
-                  <div className="text-[10px] md:text-xs font-black text-[#0d89b1] uppercase tracking-[0.2em] opacity-80 group-hover:opacity-100 transition-opacity">
-                    {translation.label}
+                  <div className="text-xs font-black text-amber-400 uppercase tracking-[0.2em] opacity-90 group-hover:opacity-100 transition-opacity">
+                    {translation.label || (stat.translations as any)?.[i18n.language]?.label || "Ko'rsatkich"}
                   </div>
                 </div>
               </div>

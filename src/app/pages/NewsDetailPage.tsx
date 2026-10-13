@@ -46,7 +46,7 @@ export function NewsDetailPage() {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
         <div className="flex flex-col items-center gap-4">
-          <Loader2 className="animate-spin text-[#0d89b1]" size={48} />
+          <Loader2 className="animate-spin text-[#0a3674]" size={48} />
           <p className="text-gray-500 font-medium animate-pulse">Yuklanmoqda...</p>
         </div>
       </div>
@@ -61,7 +61,7 @@ export function NewsDetailPage() {
           <p className="text-gray-600 dark:text-gray-400 mb-8 font-medium">{t('common.notFound', 'Kechirasiz, ushbu yangilik topilmadi yoki o\'chirilgan.')}</p>
           <Link 
             to="/news" 
-            className="inline-flex items-center justify-center gap-2 w-full py-4 bg-[#0d89b1] text-white rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-[#0d89b1] transition-all shadow-lg shadow-[#0d89b1]/20"
+            className="inline-flex items-center justify-center gap-2 w-full py-4 bg-[#0a3674] text-white rounded-2xl font-black uppercase tracking-widest text-sm hover:bg-[#0a3674] transition-all shadow-lg shadow-[#0a3674]/20"
           >
             <ArrowLeft size={20} />
             {t('nav.news', 'Yangiliklarga qaytish')}
@@ -89,7 +89,7 @@ export function NewsDetailPage() {
             <nav className="mb-8">
               <Link
                 to="/news"
-                className="inline-flex items-center gap-2 text-gray-500 hover:text-[#0d89b1] transition-colors font-bold uppercase tracking-widest text-[10px]"
+                className="inline-flex items-center gap-2 text-gray-500 hover:text-[#0a3674] transition-colors font-bold uppercase tracking-widest text-[10px]"
               >
                 <ArrowLeft size={14} />
                 {t('nav.news', 'Yangiliklar')}
@@ -104,12 +104,12 @@ export function NewsDetailPage() {
             {/* Meta Info */}
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-gray-500 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-6">
               <div className="flex items-center gap-2.5">
-                <Calendar size={18} className="text-[#0d89b1]" />
+                <Calendar size={18} className="text-[#0a3674]" />
                 <span className="text-sm font-semibold tracking-wide">{formatDate(news.published_at)}</span>
               </div>
 
               <div className="flex items-center gap-2.5">
-                <Eye size={18} className="text-[#0d89b1]" />
+                <Eye size={18} className="text-[#0a3674]" />
                 <span className="text-sm font-semibold tracking-wide">{news.views_count} {t('common.views', 'marta ko\'rildi')}</span>
               </div>
 
@@ -146,7 +146,7 @@ export function NewsDetailPage() {
             </div>
             {translation.short_description && (
               <figcaption className="mt-6 px-4 md:px-0">
-                <p className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-400 leading-relaxed italic bg-[#0d89b1]/5 p-6 rounded-xl border border-[#0d89b1]/10">
+                <p className="text-xl md:text-2xl font-medium text-gray-600 dark:text-gray-400 leading-relaxed italic bg-[#0a3674]/5 p-6 rounded-xl border border-[#0a3674]/10">
                   {translation.short_description}
                 </p>
               </figcaption>
@@ -162,7 +162,7 @@ export function NewsDetailPage() {
                 prose-headings:font-bold prose-headings:text-gray-900 dark:prose-headings:text-white
                 prose-p:mb-8
                 prose-img:rounded-xl prose-img:shadow-md
-                prose-a:text-[#0d89b1] prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
+                prose-a:text-[#0a3674] prose-a:font-semibold prose-a:no-underline hover:prose-a:underline
                 prose-strong:text-gray-900 dark:prose-strong:text-white prose-strong:font-bold"
             >
               {translation.content}
@@ -172,7 +172,7 @@ export function NewsDetailPage() {
             <footer className="mt-24 pt-10 border-t border-gray-100 dark:border-gray-800 flex flex-col md:flex-row items-center justify-between gap-8">
               <Link
                 to="/news"
-                className="flex items-center gap-2.5 text-gray-400 hover:text-[#0d89b1] transition-colors font-bold uppercase tracking-widest text-[11px]"
+                className="flex items-center gap-2.5 text-gray-400 hover:text-[#0a3674] transition-colors font-bold uppercase tracking-widest text-[11px]"
               >
                 <ArrowLeft size={16} />
                 Barcha yangiliklarga qaytish
@@ -187,7 +187,7 @@ export function NewsDetailPage() {
                       onClick={() => {
                         window.open(`https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(translation.title)}`, '_blank');
                       }}
-                      className="text-xs font-bold text-gray-600 dark:text-gray-400 hover:text-[#0d89b1] dark:hover:text-[#0d89b1] transition-colors uppercase tracking-widest flex items-center gap-1.5"
+                      className="text-xs font-bold text-gray-600 dark:text-gray-400 hover:text-[#0a3674] dark:hover:text-[#0a3674] transition-colors uppercase tracking-widest flex items-center gap-1.5"
                     >
                       {platform}
                     </button>

@@ -31,7 +31,7 @@ export function ProgramsPage() {
   return (
     <div className="min-h-screen overflow-hidden bg-white dark:bg-gray-950 transition-colors duration-300">
       {/* Page Header */}
-      <div className="bg-gradient-to-r from-[#0d89b1] to-[#0d89b1] text-white py-24 md:py-32 relative">
+      <div className="bg-gradient-to-r from-[#0a3674] to-[#0a3674] text-white py-24 md:py-32 relative">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -63,11 +63,11 @@ export function ProgramsPage() {
                   className="bg-white dark:bg-gray-950 rounded-2xl p-10 shadow-xl border border-gray-100 dark:border-gray-800 hover:shadow-2xl transition-all group"
                 >
                   <div className="flex flex-col md:flex-row items-start gap-8">
-                    <div className="w-20 h-20 bg-[#0d89b1]/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#0d89b1] group-hover:text-white transition-all duration-500 transform group-hover:rotate-6 shadow-inner">
-                      <Icon size={40} className="text-[#0d89b1] group-hover:text-white" />
+                    <div className="w-20 h-20 bg-[#0a3674]/10 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:bg-[#0a3674] group-hover:text-white transition-all duration-500 transform group-hover:rotate-6 shadow-inner">
+                      <Icon size={40} className="text-[#0a3674] group-hover:text-white" />
                     </div>
                     <div>
-                      <h2 className="text-3xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight group-hover:text-[#0d89b1] transition-colors">
+                      <h2 className="text-3xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight group-hover:text-[#0a3674] transition-colors">
                         {program.title}
                       </h2>
                       <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg font-medium">

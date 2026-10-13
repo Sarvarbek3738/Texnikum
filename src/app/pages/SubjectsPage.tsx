@@ -44,7 +44,7 @@ export function SubjectsPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
-        <Loader2 className="w-12 h-12 text-[#0d89b1] animate-spin" />
+        <Loader2 className="w-12 h-12 text-[#0a3674] animate-spin" />
       </div>
     );
   }
@@ -52,7 +52,7 @@ export function SubjectsPage() {
   return (
     <div className="min-h-screen overflow-hidden bg-white dark:bg-gray-950 transition-colors duration-300">
       {/* Page Header */}
-      <div className="bg-gradient-to-r from-[#0d89b1] to-[#0a6d8f] text-white py-24 md:py-32 relative">
+      <div className="bg-gradient-to-r from-[#0a3674] to-[#0a6d8f] text-white py-24 md:py-32 relative">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -86,16 +86,16 @@ export function SubjectsPage() {
                   className="bg-white dark:bg-gray-950 rounded-2xl p-8 shadow-lg border border-gray-100 dark:border-gray-800 hover:shadow-2xl transition-all group"
                 >
                   <div className="flex items-center gap-6 mb-8">
-                    <div className="w-16 h-16 bg-[#0d89b1]/10 rounded-xl flex items-center justify-center group-hover:bg-[#0d89b1] group-hover:text-white transition-all duration-500 transform group-hover:rotate-6 shadow-inner">
-                      <Icon size={32} className="text-[#0d89b1] group-hover:text-white" />
+                    <div className="w-16 h-16 bg-[#0a3674]/10 rounded-xl flex items-center justify-center group-hover:bg-[#0a3674] group-hover:text-white transition-all duration-500 transform group-hover:rotate-6 shadow-inner">
+                      <Icon size={32} className="text-[#0a3674] group-hover:text-white" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-black text-gray-900 dark:text-white uppercase tracking-tight group-hover:text-[#0d89b1] transition-colors">
+                      <h3 className="text-2xl font-black text-gray-900 dark:text-white uppercase tracking-tight group-hover:text-[#0a3674] transition-colors">
                         {translation.subject_name}
                       </h3>
                       <div className="flex items-center gap-2 text-xs font-black text-gray-400 dark:text-gray-500 uppercase tracking-widest">
                         <span>{subject.subject_type_display}:</span>
-                        <span className="text-[#0d89b1]">{subject.max_score} {t('subjects.maxScore', 'ball')}</span>
+                        <span className="text-[#0a3674]">{subject.max_score} {t('subjects.maxScore', 'ball')}</span>
                       </div>
                     </div>
                   </div>

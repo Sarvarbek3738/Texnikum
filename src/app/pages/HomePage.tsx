@@ -1,4 +1,5 @@
 import { HeroSection } from '../components/home/HeroSection';
+import { SpecialtiesSection } from '../components/home/SpecialtiesSection';
 import { StatisticsSection } from '../components/home/StatisticsSection';
 import { AboutSection } from '../components/home/AboutSection';
 import { WhyUsSection } from '../components/home/WhyUsSection';
@@ -12,6 +13,7 @@ export function HomePage() {
     <div>
       <SEO />
       <HeroSection />
+      <SpecialtiesSection />
       <StatisticsSection />
       <AboutSection />
       <WhyUsSection />

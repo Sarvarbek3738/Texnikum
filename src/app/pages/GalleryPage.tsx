@@ -44,7 +44,7 @@ export function GalleryPage() {
       <div className="bg-gray-50 dark:bg-gray-900/50 border-b border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center gap-2 text-sm font-medium">
-            <Link to="/" className="text-gray-500 hover:text-[#0d89b1] transition-colors flex items-center gap-1">
+            <Link to="/" className="text-gray-500 hover:text-[#0a3674] transition-colors flex items-center gap-1">
               <Home size={16} />
               <span>{t('nav.home')}</span>
             </Link>

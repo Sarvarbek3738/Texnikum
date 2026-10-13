@@ -14,7 +14,7 @@ export const SEO = ({
   title,
   description,
   keywords,
-  image = '/litseylogo.png',
+  image = '/logo.png',
   url = window.location.href,
   type = 'website',
 }: SEOProps) => {

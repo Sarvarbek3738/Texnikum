@@ -35,7 +35,7 @@ export function LibraryPage() {
   return (
     <div className="min-h-screen overflow-hidden bg-white dark:bg-gray-950 transition-colors duration-300">
       {/* Page Header */}
-      <div className="bg-gradient-to-r from-[#0d89b1] to-[#0d89b1] text-white py-24 md:py-32 relative">
+      <div className="bg-gradient-to-r from-[#0a3674] to-[#0a3674] text-white py-24 md:py-32 relative">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -64,7 +64,7 @@ export function LibraryPage() {
                 { label: t('library.guides'), value: '100+' }
               ].map((stat, idx) => (
                 <div key={idx} className="bg-white dark:bg-gray-950 rounded-lg p-8 text-center shadow-lg border border-gray-100 dark:border-gray-800 group hover:-translate-y-1 transition-all">
-                  <div className="text-4xl font-black text-[#0d89b1] mb-2 tracking-tighter">{stat.value}</div>
+                  <div className="text-4xl font-black text-[#0a3674] mb-2 tracking-tighter">{stat.value}</div>
                   <div className="text-gray-400 dark:text-gray-500 font-black uppercase tracking-widest text-xs">{stat.label}</div>
                 </div>
               ))}
@@ -79,10 +79,10 @@ export function LibraryPage() {
                   <input
                     type="text"
                     placeholder={t('library.searchPlaceholder')}
-                    className="w-full pl-12 pr-6 py-5 bg-gray-50 dark:bg-gray-900 border-none rounded-lg focus:ring-2 focus:ring-[#0d89b1] outline-none text-gray-900 dark:text-white font-bold"
+                    className="w-full pl-12 pr-6 py-5 bg-gray-50 dark:bg-gray-900 border-none rounded-lg focus:ring-2 focus:ring-[#0a3674] outline-none text-gray-900 dark:text-white font-bold"
                   />
                 </div>
-                <button className="px-10 py-5 bg-[#0d89b1] text-white rounded-lg hover:bg-[#0d89b1] transition-all font-black uppercase tracking-widest shadow-lg">
+                <button className="px-10 py-5 bg-[#0a3674] text-white rounded-lg hover:bg-[#0a3674] transition-all font-black uppercase tracking-widest shadow-lg">
                   {t('library.searchBtn')}
                 </button>
               </div>
@@ -90,7 +90,7 @@ export function LibraryPage() {
 
             {/* Resources List */}
             <div className="bg-white dark:bg-gray-950 rounded-lg shadow-2xl overflow-hidden border border-gray-100 dark:border-gray-800">
-              <div className="bg-gradient-to-r from-[#0d89b1] to-[#0d89b1] p-8 text-white">
+              <div className="bg-gradient-to-r from-[#0a3674] to-[#0a3674] p-8 text-white">
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 bg-white/20 backdrop-blur-md rounded-md flex items-center justify-center">
                     <BookOpen size={28} />
@@ -105,15 +105,15 @@ export function LibraryPage() {
                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
                       <div className="flex-1">
                         <div className="flex items-center gap-3 mb-2">
-                          <span className="px-3 py-1 bg-[#0d89b1]/10 text-[#0d89b1] text-[10px] font-black uppercase tracking-widest rounded-full">
+                          <span className="px-3 py-1 bg-[#0a3674]/10 text-[#0a3674] text-[10px] font-black uppercase tracking-widest rounded-full">
                             {resource.category}
                           </span>
                           <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">{resource.format}</span>
                         </div>
-                        <h3 className="text-xl font-black text-gray-900 dark:text-white mb-1 uppercase tracking-tight group-hover:text-[#0d89b1] transition-colors">{resource.title}</h3>
+                        <h3 className="text-xl font-black text-gray-900 dark:text-white mb-1 uppercase tracking-tight group-hover:text-[#0a3674] transition-colors">{resource.title}</h3>
                         <p className="text-gray-500 dark:text-gray-400 font-medium">{t('library.author')}: {resource.author}</p>
                       </div>
-                      <button className="flex items-center gap-3 px-8 py-4 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg hover:bg-[#0d89b1] hover:text-white transition-all font-black uppercase tracking-widest text-xs">
+                      <button className="flex items-center gap-3 px-8 py-4 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg hover:bg-[#0a3674] hover:text-white transition-all font-black uppercase tracking-widest text-xs">
                         <Download size={18} />
                         {t('library.download')}
                       </button>
@@ -133,17 +133,17 @@ export function LibraryPage() {
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-bl-full"></div>
             <div className="flex flex-col md:flex-row items-center gap-10 relative z-10">
               <div className="w-20 h-20 bg-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <Clock size={40} className="text-[#0d89b1]" />
+                <Clock size={40} className="text-[#0a3674]" />
               </div>
               <div>
                 <h3 className="text-2xl font-black mb-4 uppercase tracking-tight">{t('library.hoursTitle')}</h3>
                 <div className="grid grid-cols-2 gap-8 text-white/80 font-bold uppercase tracking-widest text-sm">
                   <div>
-                    <div className="text-[#0d89b1] mb-1">DUSHANBA - JUMA</div>
+                    <div className="text-[#0a3674] mb-1">DUSHANBA - JUMA</div>
                     <div>08:30 - 17:00</div>
                   </div>
                   <div>
-                    <div className="text-[#0d89b1] mb-1">SHANBA</div>
+                    <div className="text-[#0a3674] mb-1">SHANBA</div>
                     <div>08:30 - 14:00</div>
                   </div>
                 </div>

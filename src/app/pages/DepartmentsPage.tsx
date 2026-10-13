@@ -37,7 +37,7 @@ export function DepartmentsPage() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
-        <Loader2 className="w-12 h-12 text-[#0d89b1] animate-spin" />
+        <Loader2 className="w-12 h-12 text-[#0a3674] animate-spin" />
       </div>
     );
   }
@@ -48,7 +48,7 @@ export function DepartmentsPage() {
       <div className="bg-gray-50 dark:bg-gray-900/50 border-b border-gray-100 dark:border-gray-800">
         <div className="container mx-auto px-4 py-4">
           <nav className="flex items-center gap-2 text-sm font-medium">
-            <Link to="/" className="text-gray-500 hover:text-[#0d89b1] transition-colors flex items-center gap-1">
+            <Link to="/" className="text-gray-500 hover:text-[#0a3674] transition-colors flex items-center gap-1">
               <Home size={16} />
               <span>{t('nav.home')}</span>
             </Link>
@@ -87,8 +87,8 @@ export function DepartmentsPage() {
                   transition={{ delay: index * 0.1 }}
                   className={`overflow-hidden rounded-xl transition-all duration-300 ${
                     isExpanded 
-                      ? 'bg-gray-50 dark:bg-gray-900 shadow-md ring-1 ring-[#0d89b1]/20' 
-                      : 'bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-800 hover:border-[#0d89b1]/30'
+                      ? 'bg-gray-50 dark:bg-gray-900 shadow-md ring-1 ring-[#0a3674]/20' 
+                      : 'bg-white dark:bg-gray-950 border border-gray-100 dark:border-gray-800 hover:border-[#0a3674]/30'
                   }`}
                 >
                   {/* Header */}
@@ -97,13 +97,13 @@ export function DepartmentsPage() {
                     className="w-full flex items-center justify-between p-6 md:p-8 text-left transition-colors"
                   >
                     <h3 className={`text-lg md:text-xl font-black uppercase tracking-tight transition-colors ${
-                      isExpanded ? 'text-[#0d89b1]' : 'text-gray-900 dark:text-white'
+                      isExpanded ? 'text-[#0a3674]' : 'text-gray-900 dark:text-white'
                     }`}>
                       {translation.name}
                     </h3>
                     <div className={`flex-shrink-0 ml-4 transition-transform duration-300 ${isExpanded ? 'rotate-0' : 'rotate-0'}`}>
                       {isExpanded ? (
-                        <Minus className="w-6 h-6 text-[#0d89b1]" />
+                        <Minus className="w-6 h-6 text-[#0a3674]" />
                       ) : (
                         <Plus className="w-6 h-6 text-blue-500" />
                       )}
@@ -125,7 +125,7 @@ export function DepartmentsPage() {
                             {(dept.subjects || []).map((subject, idx) => (
                               <div 
                                 key={idx}
-                                className="py-4 border-b border-gray-100 dark:border-gray-800/50 text-gray-600 dark:text-gray-400 font-bold text-sm md:text-base hover:text-[#0d89b1] dark:hover:text-[#0d89b1] transition-colors pl-2"
+                                className="py-4 border-b border-gray-100 dark:border-gray-800/50 text-gray-600 dark:text-gray-400 font-bold text-sm md:text-base hover:text-[#0a3674] dark:hover:text-[#0a3674] transition-colors pl-2"
                               >
                                 {subject}
                               </div>
@@ -135,7 +135,7 @@ export function DepartmentsPage() {
                           {/* Extra Info Grid */}
                           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 p-6 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800 shadow-sm">
                             <div className="flex items-center gap-4">
-                              <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center text-[#0d89b1]">
+                              <div className="w-10 h-10 bg-blue-50 dark:bg-blue-900/20 rounded-lg flex items-center justify-center text-[#0a3674]">
                                 <User size={20} />
                               </div>
                               <div>
@@ -166,7 +166,7 @@ export function DepartmentsPage() {
                           </div>
                           
                           <div className="mt-6 flex items-center gap-3">
-                            <div className="w-2 h-2 rounded-full bg-[#0d89b1]"></div>
+                            <div className="w-2 h-2 rounded-full bg-[#0a3674]"></div>
                             <p className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-widest">
                               {translation.description}
                             </p>

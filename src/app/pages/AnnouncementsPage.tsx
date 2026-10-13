@@ -31,7 +31,7 @@ export function AnnouncementsPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
       {/* Page Header */}
-      <div className="bg-gradient-to-r from-[#0d89b1] to-[#0d89b1] text-white py-20 md:py-32 relative">
+      <div className="bg-gradient-to-r from-[#0a3674] to-[#0a3674] text-white py-20 md:py-32 relative">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -91,7 +91,7 @@ export function AnnouncementsPage() {
                           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                         />
                       ) : (
-                        <div className="w-full h-full bg-gradient-to-br from-[#0d89b1] to-[#0d89b1] flex items-center justify-center">
+                        <div className="w-full h-full bg-gradient-to-br from-[#0a3674] to-[#0a3674] flex items-center justify-center">
                           <Megaphone size={64} className="text-white/20" />
                         </div>
                       )}
@@ -104,7 +104,7 @@ export function AnnouncementsPage() {
                       )}
 
                       <div className="absolute top-4 right-4 flex items-center gap-2 text-[10px] font-black bg-white/90 dark:bg-gray-950/90 backdrop-blur-md text-gray-900 dark:text-white px-4 py-2 rounded-full uppercase tracking-[0.2em] border border-white/20 shadow-lg z-20">
-                        <Calendar size={14} className="text-[#0d89b1]" />
+                        <Calendar size={14} className="text-[#0a3674]" />
                         <span>{date}</span>
                       </div>
 
@@ -116,7 +116,7 @@ export function AnnouncementsPage() {
                     </div>
 
                     <div className="p-8 flex flex-col flex-grow">
-                      <h3 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white mb-4 line-clamp-2 leading-tight uppercase tracking-tight group-hover:text-[#0d89b1] transition-colors">
+                      <h3 className="text-xl md:text-2xl font-black text-gray-900 dark:text-white mb-4 line-clamp-2 leading-tight uppercase tracking-tight group-hover:text-[#0a3674] transition-colors">
                         {translation.title}
                       </h3>
 
@@ -127,7 +127,7 @@ export function AnnouncementsPage() {
                       <div className="mt-auto flex items-center justify-between">
                         <Link
                           to={`/announcements/${announcement.slug}`}
-                          className="inline-flex items-center gap-2 text-[#0d89b1] font-black uppercase tracking-[0.2em] text-xs hover:gap-4 transition-all group/link"
+                          className="inline-flex items-center gap-2 text-[#0a3674] font-black uppercase tracking-[0.2em] text-xs hover:gap-4 transition-all group/link"
                         >
                           {t('home.announcements.details', 'Batafsil')}
                           <ArrowRight size={20} className="group-hover/link:translate-x-1 transition-transform" />

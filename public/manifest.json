@@ -1,11 +1,11 @@
 {
-  "name": "5-son Politexnika Texnikumi",
-  "short_name": "5-son Texnikum",
-  "description": "Farg'ona viloyati 5-sonli politexnika texnikumi rasmiy veb-sayti",
+  "name": "Farg'ona shahar 5-son texnikumi",
+  "short_name": "5-son Texnikumi",
+  "description": "Farg'ona shahar 5-son texnikumi rasmiy veb-sayti",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0d89b1",
+  "theme_color": "#0a3674",
   "icons": [
     {
       "src": "/pwa-192x192.png",
@@ -15,12 +15,6 @@
     },
     {
       "src": "/pwa-512x512.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/logoicon1.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

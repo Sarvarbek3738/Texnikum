@@ -8,84 +8,135 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { faqService } from '../../services/faqService';
 import { FAQItem } from '../../types';
-import { Loader2, HelpCircle } from 'lucide-react';
+import { HelpCircle } from 'lucide-react';
+
+const defaultFaqsList: FAQItem[] = [
+  {
+    id: 1,
+    sort_order: 1,
+    is_active: true,
+    translations: {
+      uz: {
+        question: "Farg'ona shahar 5-son texnikumiga qabul qanday tartibda amalga oshiriladi?",
+        answer: "Texnikumga qabul 9-sinf bitiruvchilari uchun my.edu.uz portali orqali onlayn yoki texnikum binosidagi qabul komissiyasida bevosita hujjat topshirish yo'li bilan amalga oshiriladi."
+      },
+      ru: {
+        question: "Как осуществляется прием в Техникум №5 города Ферганы?",
+        answer: "Прием выпускников 9-х классов осуществляется онлайн через государственный портал my.edu.uz или непосредственно в приемной комиссии в здании техникума."
+      }
+    }
+  },
+  {
+    id: 2,
+    sort_order: 2,
+    is_active: true,
+    translations: {
+      uz: {
+        question: "Texnikumda qanday ta'lim shakllari va yo'nalishlar mavjud?",
+        answer: "Texnikumimizda 2 xil ta'lim shakli mavjud: 1) Kunduzgi ta'lim (8 ta yo'nalish: IT, kompyuter tarmoqlari, moda va tikuv, elektromontyor, kimyoviy tolalar, elektromobillar servisi, turar joy infratuzilmasi, sartarosh). 2) Dual ta'lim (4 ta yo'nalish: tikuvchilik, elektromontyor, elektromobillar servisi, qayta tiklanuvchi energiya)."
+      },
+      ru: {
+        question: "Какие формы и направления обучения есть в техникуме?",
+        answer: "Обучение ведется по двум формам: Дневная (8 направлений: IT, сети, швейное дело, электромонтаж, химволокно, электромобили, инфраструктура, стилистика) и Дуальная (4 направления: швейное дело, электромонтаж, электромобили, возобновляемая энергетика)."
+      }
+    }
+  },
+  {
+    id: 3,
+    sort_order: 3,
+    is_active: true,
+    translations: {
+      uz: {
+        question: "Dual ta'lim shaklining afzalligi nimada?",
+        answer: "Dual ta'limda o'quvchi nazariyani texnikumda o'qiydi va amaliy kunlari korxonalarda haq to'lanadigan ish o'rnida ishlaydi. Bitirganda ham diplom, ham 1-2 yillik rasmiy mehnat staji va tajribaga ega bo'ladi."
+      },
+      ru: {
+        question: "В чем преимущество дуального образования?",
+        answer: "При дуальном обучении учащиеся совмещают учебу с оплачиваемой практикой на реальных предприятиях и выпускаются с официальным трудовым стажем."
+      }
+    }
+  },
+  {
+    id: 4,
+    sort_order: 4,
+    is_active: true,
+    translations: {
+      uz: {
+        question: "Texnikum manzili qayerda va qanday bog'lanish mumkin?",
+        answer: "Manzil: Farg'ona shahar, Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji binosi). Ma'lumot uchun telefonlar: 94-512-75-53, 88-413-22-00."
+      },
+      ru: {
+        question: "Где находится техникум и как связаться?",
+        answer: "Адрес: г. Фергана, ул. Ферганская, 170 (бывш. колледж Нефти и газа). Телефоны для справок: 94-512-75-53, 88-413-22-00."
+      }
+    }
+  }
+];
 
 export function FAQSection() {
   const { t, i18n } = useTranslation();
-  const [faqs, setFaqs] = useState<FAQItem[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [faqs, setFaqs] = useState<FAQItem[]>(defaultFaqsList);
 
   useEffect(() => {
     const fetchFaqs = async () => {
       try {
         const data = await faqService.getFAQs();
         const list: FAQItem[] = Array.isArray(data) ? data : ((data as any)?.results || []);
-        // Filter active FAQs and sort by sort_order
         const activeFaqs = list
           .filter(faq => faq.is_active)
           .sort((a, b) => (a.sort_order ?? 0) - (b.sort_order ?? 0));
-        setFaqs(activeFaqs);
+        if (activeFaqs.length > 0) {
+          setFaqs(activeFaqs);
+        }
       } catch (error) {
         console.error('Error fetching FAQs:', error);
-      } finally {
-        setLoading(false);
       }
     };
 
     fetchFaqs();
   }, []);
 
-  if (loading) {
-    return (
-      <section className="py-20 bg-gray-50 dark:bg-gray-900 flex items-center justify-center min-h-[400px]">
-        <Loader2 className="w-12 h-12 text-[#0d89b1] animate-spin" />
-      </section>
-    );
-  }
-
-  if (faqs.length === 0) {
-    return null;
-  }
+  const displayFaqs = faqs.length > 0 ? faqs : defaultFaqsList;
 
   return (
-    <section className="py-24 bg-white dark:bg-gray-950 overflow-hidden transition-colors duration-300 relative">
+    <section className="py-20 md:py-28 bg-white dark:bg-gray-950 overflow-hidden transition-colors duration-300 relative">
       {/* Decorative background elements */}
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[#0d89b1]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-      <div className="absolute bottom-0 left-0 w-1/4 h-1/4 bg-[#0d89b1]/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20" data-aos="fade-up">
-          <div className="inline-flex items-center gap-2 px-6 py-2 bg-[#0d89b1]/10 text-[#0d89b1] rounded-full text-xs font-black mb-6 uppercase tracking-[0.3em]">
+        <div className="text-center mb-16 md:mb-20" data-aos="fade-up">
+          <div className="inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full text-xs font-black mb-5 uppercase tracking-[0.2em] shadow-md shadow-orange-500/20">
             <HelpCircle size={14} />
-            {t('faq.badge', 'Ko\'p beriladigan savollar')}
+            {t('faq.badge', "Ko'p beriladigan savollar")}
           </div>
-          <h2 className="text-4xl md:text-6xl font-black text-gray-900 dark:text-white mb-8 leading-tight uppercase tracking-tight">
+          <h2 className="text-3xl sm:text-5xl font-black text-gray-900 dark:text-white uppercase tracking-tight leading-tight">
             {t('faq.title', 'Savollaringiz bormi?')}
           </h2>
-          <p className="text-gray-500 dark:text-gray-400 text-lg md:text-xl max-w-3xl mx-auto font-bold uppercase tracking-widest opacity-80">
+          <p className="text-gray-500 dark:text-gray-400 text-base sm:text-lg max-w-2xl mx-auto font-medium mt-4">
             {t('faq.subtitle', 'Biz sizga yordam berishga tayyormiz')}
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto" data-aos="fade-up">
-          <Accordion type="single" collapsible className="space-y-4 md:space-y-6">
-            {faqs.map((faq, index) => {
+          <Accordion type="single" collapsible className="space-y-4 md:space-y-5">
+            {displayFaqs.map((faq, index) => {
               const translation = faqService.getTranslation(faq, i18n.language);
               return (
                 <AccordionItem
                   key={faq.id}
                   value={`item-${faq.id}`}
-                  className="bg-gray-50 dark:bg-gray-900 rounded-2xl md:rounded-3xl border-none px-5 md:px-12 shadow-sm hover:shadow-xl transition-all duration-500 group overflow-hidden"
+                  className="bg-slate-50 dark:bg-gray-900 rounded-2xl md:rounded-3xl border border-slate-100 dark:border-gray-800 px-6 md:px-10 shadow-sm hover:shadow-md transition-all duration-300 group overflow-hidden"
                 >
-                  <AccordionTrigger className="text-left font-black text-gray-900 dark:text-white hover:text-[#0d89b1] dark:hover:text-[#0d89b1] py-6 md:py-8 text-lg md:text-2xl leading-snug uppercase tracking-tight hover:no-underline border-none">
-                    <span className="flex items-start gap-3 md:gap-4">
-                      <span className="text-[#0d89b1]/20 group-hover:text-[#0d89b1] transition-colors duration-300 shrink-0">
-                        {String(index + 1).padStart(2, '0')}
+                  <AccordionTrigger className="text-left font-black text-gray-900 dark:text-white hover:text-[#0a3674] dark:hover:text-blue-400 py-6 text-base sm:text-xl leading-snug uppercase tracking-tight hover:no-underline border-none">
+                    <span className="flex items-start gap-4">
+                      <span className="text-amber-500 dark:text-amber-400 font-extrabold shrink-0">
+                        {String(index + 1).padStart(2, '0')}.
                       </span>
                       <span className="flex-grow">{translation.question}</span>
                     </span>
                   </AccordionTrigger>
-                  <AccordionContent className="text-gray-600 dark:text-gray-400 leading-relaxed pb-6 md:pb-10 text-base md:text-xl font-medium border-t border-gray-100 dark:border-gray-800 pt-5 md:pt-6">
+                  <AccordionContent className="text-gray-600 dark:text-gray-300 leading-relaxed pb-6 text-sm sm:text-base font-medium border-t border-gray-100 dark:border-gray-800 pt-4">
                     {translation.answer}
                   </AccordionContent>
                 </AccordionItem>

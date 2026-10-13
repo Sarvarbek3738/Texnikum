@@ -41,7 +41,7 @@ export function TeachersPage() {
         description={t('teachers.pageSubtitle')}
       />
       {/* Page Header */}
-      <div className="bg-gradient-to-r from-[#0d89b1] to-[#0d89b1] text-white py-24 md:py-32 relative">
+      <div className="bg-gradient-to-r from-[#0a3674] to-[#0a3674] text-white py-24 md:py-32 relative">
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="container mx-auto px-4 relative z-10">
           <motion.div
@@ -161,7 +161,7 @@ export function TeachersPage() {
       {/* CTA Section */}
       <section className="py-24 bg-white dark:bg-gray-950 transition-colors">
         <div className="container mx-auto px-4">
-          <div className="max-w-5xl mx-auto bg-gradient-to-br from-[#0d89b1] to-[#0d89b1] rounded-lg p-16 text-center text-white shadow-2xl relative overflow-hidden" data-aos="zoom-in">
+          <div className="max-w-5xl mx-auto bg-gradient-to-br from-[#0a3674] to-[#0a3674] rounded-lg p-16 text-center text-white shadow-2xl relative overflow-hidden" data-aos="zoom-in">
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
             <div className="relative z-10">
               <div className="w-24 h-24 bg-white/20 backdrop-blur-md rounded-lg flex items-center justify-center mx-auto mb-10 shadow-inner border border-white/20">
@@ -175,7 +175,7 @@ export function TeachersPage() {
               </p>
               <a
                 href="mailto:info@fstu.uz"
-                className="inline-flex items-center gap-4 px-12 py-6 bg-white text-[#0d89b1] rounded-lg hover:bg-gray-100 transition-all font-black shadow-2xl hover:scale-105 uppercase tracking-[0.2em] text-sm"
+                className="inline-flex items-center gap-4 px-12 py-6 bg-white text-[#0a3674] rounded-lg hover:bg-gray-100 transition-all font-black shadow-2xl hover:scale-105 uppercase tracking-[0.2em] text-sm"
               >
                 <Mail size={28} />
                 INFO@FSTU.UZ
