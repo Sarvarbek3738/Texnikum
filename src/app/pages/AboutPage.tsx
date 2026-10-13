@@ -14,6 +14,11 @@ export function AboutPage() {
 
   const generalInfo = [
     {
+      icon: Building2,
+      label: t('about.director', 'Direktor'),
+      value: 'F.M.Y'
+    },
+    {
       icon: Calendar,
       label: t('about.established'),
       value: t('about.establishedDate', '1998-yil')
@@ -26,7 +31,7 @@ export function AboutPage() {
     {
       icon: Phone,
       label: t('about.phone'),
-      value: contactInfo.phone || '+998 94 512 75 53'
+      value: '+998 94 512 75 53, +998 88 413 22 00'
     },
     {
       icon: GraduationCap,
