@@ -282,15 +282,47 @@ export function ContactPage() {
                 </div>
               </div>
 
-              <div className="bg-white dark:bg-gray-950 rounded-lg overflow-hidden shadow-2xl h-[400px] border border-gray-100 dark:border-gray-800">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.7663435134983!2d71.7828!3d40.3864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDIzJzExLjAiTiA3McKwNDYnNTguMSJF!5e0!3m2!1sen!2suz!4v1620000000000!5m2!1sen!2suz"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen={true}
-                  loading="lazy"
-                ></iframe>
+              <div className="bg-white dark:bg-gray-950 rounded-2xl overflow-hidden shadow-2xl border border-gray-100 dark:border-gray-800">
+                <div className="p-4 bg-gradient-to-r from-[#0a2558] to-[#0a3674] text-white flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <div className="font-black text-sm uppercase tracking-wide flex items-center gap-2">
+                      <MapPin size={16} className="text-amber-400" />
+                      <span>Farg'ona shahar 5-son texnikumi</span>
+                    </div>
+                    <p className="text-xs text-blue-200 mt-0.5">
+                      Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <a
+                      href="https://maps.google.com/?q=40.4233,71.7722"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-black text-xs uppercase tracking-wider rounded-lg transition-all shadow-md hover:scale-105"
+                    >
+                      Google Maps
+                    </a>
+                    <a
+                      href="https://yandex.uz/maps/?pt=71.7722,40.4233&z=17&l=map"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs uppercase tracking-wider rounded-lg transition-all border border-white/20"
+                    >
+                      Yandex
+                    </a>
+                  </div>
+                </div>
+                <div className="h-[420px] w-full">
+                  <iframe
+                    src="https://maps.google.com/maps?q=40.4233,71.7722&hl=uz&z=17&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen={true}
+                    loading="lazy"
+                    title="Farg'ona shahar 5-son texnikumi joylashuvi"
+                  ></iframe>
+                </div>
               </div>
             </div>
           </div>
