@@ -9,19 +9,20 @@ export interface NewsItem {
   slug: string;
   translations: {
     uz: NewsTranslation;
-    uz_cyrl: NewsTranslation;
-    ru: NewsTranslation;
-    en: NewsTranslation;
+    uz_cyrl?: NewsTranslation;
+    ru?: NewsTranslation;
+    en?: NewsTranslation;
+    [key: string]: NewsTranslation | undefined;
   };
   image: string;
-  views_count: number;
-  status: string;
-  status_display: string;
-  is_featured: boolean;
+  views_count?: number;
+  status?: string;
+  status_display?: string;
+  is_featured?: boolean;
   published_at: string;
-  created_at: string;
-  updated_at: string;
-  created_by: string;
+  created_at?: string;
+  updated_at?: string;
+  created_by?: string;
 }
 
 export interface NewsResponse {
@@ -42,20 +43,21 @@ export interface Announcement {
   slug: string;
   translations: {
     uz: AnnouncementTranslation;
-    ru: AnnouncementTranslation;
-    en: AnnouncementTranslation;
-    [key: string]: AnnouncementTranslation;
+    uz_cyrl?: AnnouncementTranslation;
+    ru?: AnnouncementTranslation;
+    en?: AnnouncementTranslation;
+    [key: string]: AnnouncementTranslation | undefined;
   };
   image: string;
-  views_count: number;
-  status: string;
-  status_display: string;
-  is_important: boolean;
-  is_expired: boolean;
-  expires_at: string | null;
+  views_count?: number;
+  status?: string;
+  status_display?: string;
+  is_important?: boolean;
+  is_expired?: boolean;
+  expires_at?: string | null;
   published_at: string;
-  created_at: string;
-  created_by: string;
+  created_at?: string;
+  created_by?: string;
 }
 
 export interface AnnouncementResponse {
@@ -74,23 +76,23 @@ export interface FAQItem {
   id: number;
   translations: {
     uz: FAQTranslation;
-    uz_cyrl: FAQTranslation;
-    ru: FAQTranslation;
-    en: FAQTranslation;
-    [key: string]: FAQTranslation;
+    uz_cyrl?: FAQTranslation;
+    ru?: FAQTranslation;
+    en?: FAQTranslation;
+    [key: string]: FAQTranslation | undefined;
   };
-  category: string;
-  category_display: string;
-  is_featured: boolean;
-  sort_order: number;
-  is_active: boolean;
+  category?: string;
+  category_display?: string;
+  is_featured?: boolean;
+  sort_order?: number;
+  is_active?: boolean;
 }
 
 export interface TeacherTranslation {
   position: string;
-  subject: string;
-  bio: string;
-  achievements: string;
+  subject?: string;
+  bio?: string;
+  achievements?: string;
 }
 
 export interface Teacher {
@@ -99,22 +101,24 @@ export interface Teacher {
   slug: string;
   translations: {
     uz: TeacherTranslation;
-    ru: TeacherTranslation;
-    [key: string]: TeacherTranslation;
+    uz_cyrl?: TeacherTranslation;
+    ru?: TeacherTranslation;
+    en?: TeacherTranslation;
+    [key: string]: TeacherTranslation | undefined;
   };
-  academic_degree: string;
-  academic_rank: string;
-  category: string;
-  category_display: string;
-  experience_years: number;
-  department: number | null;
-  department_name: string | null;
+  academic_degree?: string;
+  academic_rank?: string;
+  category?: string;
+  category_display?: string;
+  experience_years?: number;
+  department?: number | null;
+  department_name?: string | null;
   photo: string;
-  email: string;
+  email?: string;
   phone?: string;
-  sort_order: number;
-  is_active: boolean;
-  created_at: string;
+  sort_order?: number;
+  is_active?: boolean;
+  created_at?: string;
 }
 
 export interface TeacherResponse {
@@ -126,8 +130,8 @@ export interface TeacherResponse {
 
 export interface LeadershipTranslation {
   position: string;
-  bio: string;
-  reception_hours: string;
+  bio?: string;
+  reception_hours?: string;
 }
 
 export interface LeadershipMember {
@@ -135,21 +139,17 @@ export interface LeadershipMember {
   full_name: string;
   translations: {
     uz: LeadershipTranslation;
-    ru: LeadershipTranslation;
-    [key: string]: LeadershipTranslation;
+    uz_cyrl?: LeadershipTranslation;
+    ru?: LeadershipTranslation;
+    en?: LeadershipTranslation;
+    [key: string]: LeadershipTranslation | undefined;
   };
-  academic_degree: string;
-  phone: string;
-  email: string;
+  academic_degree?: string;
+  phone?: string;
+  email?: string;
   photo: string;
   sort_order: number;
   is_active: boolean;
-}
-
-export interface FAQItem {
-  id: number;
-  question: string;
-  answer: string;
 }
 
 export interface StatTranslation {
@@ -158,18 +158,18 @@ export interface StatTranslation {
 
 export interface StatItem {
   id: number;
-  key: string;
+  key?: string;
   value: number | string;
   translations: {
     uz: StatTranslation;
-    uz_cyrl: StatTranslation;
-    ru: StatTranslation;
-    en: StatTranslation;
-    [key: string]: StatTranslation;
+    uz_cyrl?: StatTranslation;
+    ru?: StatTranslation;
+    en?: StatTranslation;
+    [key: string]: StatTranslation | undefined;
   };
-  icon: string;
-  sort_order: number;
-  updated_at: string;
+  icon?: string;
+  sort_order?: number;
+  updated_at?: string;
 }
 
 export interface AdmissionDocumentTranslation {

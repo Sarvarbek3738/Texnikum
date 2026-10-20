@@ -23,6 +23,11 @@ const defaultAnnouncements: Announcement[] = [
         title: "Приемная комиссия на 2026-2027 учебный год начала работу в полном составе",
         short_description: "В здании техникума организованы консультационные кабинеты для абитуриентов и их родителей.",
         content: ""
+      },
+      en: {
+        title: "The Admissions Committee for 2026-2027 has commenced operations in full",
+        short_description: "Advisory and consultation rooms have been established in the technicum campus for applicants and parents.",
+        content: ""
       }
     }
   },
@@ -42,6 +47,11 @@ const defaultAnnouncements: Announcement[] = [
         title: "Пошаговая инструкция по подаче заявления через портал my.edu.uz",
         short_description: "Выпускники 9-х классов могут пройти удобную и быструю онлайн-регистрацию через государственный портал.",
         content: ""
+      },
+      en: {
+        title: "Step-by-step guide to applying via the my.edu.uz state portal",
+        short_description: "9th grade graduates can complete convenient and fast online registration through the state portal.",
+        content: ""
       }
     }
   },
@@ -60,6 +70,11 @@ const defaultAnnouncements: Announcement[] = [
       ru: {
         title: "День открытых дверей для выпускников 9-х классов и их родителей",
         short_description: "Познакомьтесь с современными мастерскими, лабораториями и преподавателями техникума.",
+        content: ""
+      },
+      en: {
+        title: "Open Doors Day for 9th grade students and parents",
+        short_description: "Explore the technicum's state-of-the-art workshops, laboratories, and meet our teachers.",
         content: ""
       }
     }
@@ -115,7 +130,8 @@ export function AnnouncementsSection() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {displayList.map((announcement, index) => {
             const translation = announcementService.getTranslation(announcement, i18n.language);
-            const date = new Date(announcement.published_at).toLocaleDateString(i18n.language === 'ru' ? 'ru-RU' : 'uz-UZ');
+            const dateLocale = i18n.language?.startsWith('en') ? 'en-US' : i18n.language === 'ru' ? 'ru-RU' : 'uz-UZ';
+            const date = new Date(announcement.published_at).toLocaleDateString(dateLocale);
             
             return (
               <div

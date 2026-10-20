@@ -72,7 +72,7 @@ export function SchedulePage() {
             {t('nav.schedule')}
           </motion.h1>
           <p className="text-sm md:text-base text-gray-500 dark:text-gray-400 mt-2 font-medium">
-            {t('schedule.pageSubtitle', "Litsey guruhlari va kurslari uchun dars jadvallari")}
+            {t('schedule.pageSubtitle', "Texnikum guruhlari va mutaxassisliklari uchun dars jadvallari")}
           </p>
         </div>
       </div>
@@ -104,10 +104,10 @@ export function SchedulePage() {
                         </div>
                         <div>
                           <span className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">
-                            {trans.title || "Dars jadvali"}
+                            {trans.title || (i18n.language === 'en' ? 'Class Schedule' : i18n.language === 'ru' ? 'Расписание уроков' : 'Dars jadvali')}
                           </span>
                           <p className="text-xs text-gray-400 mt-0.5 font-medium">
-                            PDF formatda yuklab olish
+                            {i18n.language === 'en' ? 'Download in PDF format' : i18n.language === 'ru' ? 'Скачать в формате PDF' : 'PDF formatda yuklab olish'}
                           </p>
                         </div>
                       </div>
@@ -155,7 +155,7 @@ export function SchedulePage() {
               <div className="text-center py-12">
                 <FileText className="w-12 h-12 text-gray-300 dark:text-gray-600 mx-auto mb-3" />
                 <p className="text-gray-500 dark:text-gray-400 font-medium">
-                  Hozircha dars jadvali yuklanmagan.
+                  {i18n.language === 'en' ? 'Class schedule has not been uploaded yet.' : i18n.language === 'ru' ? 'Расписание уроков пока не загружено.' : 'Hozircha dars jadvali yuklanmagan.'}
                 </p>
               </div>
             )}

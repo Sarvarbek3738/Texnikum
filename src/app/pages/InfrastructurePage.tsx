@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router';
 
 export function InfrastructurePage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
@@ -42,10 +42,10 @@ export function InfrastructurePage() {
               <Building2 className="text-emerald-500 w-10 h-10" />
             </div>
             <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight">
-              {t('common.notFound', 'Hozircha ma\'lumotlar mavjud emas')}
+              {i18n.language === 'en' ? 'Information is being updated' : i18n.language === 'ru' ? 'Информация обновляется' : "Hozircha ma'lumotlar mavjud emas"}
             </h2>
             <p className="text-gray-500 dark:text-gray-400 font-medium">
-              Bu bo'limda litseyning moddiy-texnik bazasi haqida to'liq ma'lumot beriladi.
+              {i18n.language === 'en' ? 'Comprehensive details about the modern technical and workshop facilities will be available here soon.' : i18n.language === 'ru' ? 'Подробная информация о материально-технической базе и мастерских техникума будет представлена здесь в ближайшее время.' : "Bu bo'limda texnikumning moddiy-texnik bazasi va ustaxonalari haqida to'liq ma'lumot beriladi."}
             </p>
           </div>
         </div>

@@ -16,7 +16,7 @@ export function AboutPage() {
     {
       icon: Building2,
       label: t('about.director', 'Direktor'),
-      value: 'F.M.Y'
+      value: t('about.directorName', 'Feruzaxon Murtazoxonovna Yusupova')
     },
     {
       icon: Calendar,
@@ -85,7 +85,7 @@ export function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-4 py-1.5 bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-widest rounded-full mb-4 shadow-lg">
-              Texnikum haqida
+              {t('nav.about', 'Texnikum haqida')}
             </span>
             <h1 className="text-3xl md:text-6xl font-black mb-4 tracking-tight uppercase">{t('nav.about')}</h1>
             <p className="text-base md:text-xl text-blue-100 max-w-3xl leading-relaxed font-semibold">
@@ -143,11 +143,11 @@ export function AboutPage() {
               <ul className="space-y-3 text-base text-gray-800 dark:text-gray-200 font-medium">
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-[#0a3674] mt-2 flex-shrink-0"></span>
-                  <span><strong>Kasbiy ta'lim standarti:</strong> O‘zbekiston Respublikasining kasb-hunar va texnik ta'lim tizimini rivojlantirish to‘g‘risidagi me'yoriy-huquqiy hujjatlari.</span>
+                  <span><strong>{i18n.language === 'en' ? 'Vocational standard: ' : i18n.language === 'ru' ? 'Стандарт профобразования: ' : "Kasbiy ta'lim standarti: "}</strong>{i18n.language === 'en' ? 'Normative legal acts of the Republic of Uzbekistan on the development of professional and technical education.' : i18n.language === 'ru' ? 'Нормативно-правовые акты Республики Узбекистан по развитию системы профессионального и технического образования.' : "O‘zbekiston Respublikasining kasb-hunar va texnik ta'lim tizimini rivojlantirish to‘g‘risidagi me'yoriy-huquqiy hujjatlari."}</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="w-2 h-2 rounded-full bg-[#0a3674] mt-2 flex-shrink-0"></span>
-                  <span><strong>Farg‘ona viloyati:</strong> Farg'ona shahar 5-son texnikumi zamonaviy texnik va kasbiy ta'lim muassasasi sifatida faoliyat olib bormoqda.</span>
+                  <span><strong>{i18n.language === 'en' ? 'Fergana region: ' : i18n.language === 'ru' ? 'Ферганская область: ' : "Farg‘ona viloyati: "}</strong>{i18n.language === 'en' ? 'Fergana City Technicum No. 5 operates as a modern technical and vocational education institution.' : i18n.language === 'ru' ? 'Техникум №5 города Ферганы функционирует как современное учреждение технического и профессионального образования.' : "Farg'ona shahar 5-son texnikumi zamonaviy texnik va kasbiy ta'lim muassasasi sifatida faoliyat olib bormoqda."}</span>
                 </li>
               </ul>
             </div>
@@ -213,7 +213,9 @@ export function AboutPage() {
               />
               <div className="absolute -bottom-8 -left-8 bg-[#0a3674] p-8 rounded-2xl text-white shadow-2xl border-4 border-white dark:border-gray-800 hidden md:block">
                 <div className="text-4xl font-black mb-1 tracking-tighter text-amber-400">100%</div>
-                <div className="text-xs font-black uppercase tracking-[0.2em] text-blue-200">Sifatli kasb ta'limi</div>
+                <div className="text-xs font-black uppercase tracking-[0.2em] text-blue-200">
+                  {i18n.language === 'en' ? 'Quality Vocational Education' : i18n.language === 'ru' ? 'Качественное профобразование' : "Sifatli kasb ta'limi"}
+                </div>
               </div>
             </div>
           </div>

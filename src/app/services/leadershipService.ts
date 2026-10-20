@@ -13,7 +13,7 @@ export const leadershipService = {
 
   getTranslation(member: LeadershipMember, lang: string): LeadershipTranslation {
     const translations = member?.translations || ({} as any);
-    const fallback: LeadershipTranslation = { full_name: member?.full_name || '', position: '', reception_hours: '', bio: '' };
+    const fallback: LeadershipTranslation = { position: '', reception_hours: '', bio: '' };
     
     // Map i18n codes to API codes
     if (lang === 'kr' || lang === 'uz_cyrl') {

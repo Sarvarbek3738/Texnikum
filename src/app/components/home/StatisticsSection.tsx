@@ -16,10 +16,10 @@ const iconMap: Record<string, any> = {
 };
 
 const defaultStatsList: StatItem[] = [
-  { id: 1, value: '450+', translations: { uz: { label: "O'quvchilar soni" }, ru: { label: "Количество учащихся" } }, icon: 'users', sort_order: 1 },
-  { id: 2, value: '45+', translations: { uz: { label: "Malakali o'qituvchilar" }, ru: { label: "Квалифицированные педагоги" } }, icon: 'graduation-cap', sort_order: 2 },
-  { id: 3, value: '12', translations: { uz: { label: "Kasbiy ta'lim yo'nalishlari" }, ru: { label: "Направления обучения" } }, icon: 'school', sort_order: 3 },
-  { id: 4, value: '15+', translations: { uz: { label: "Zamonaviy ustaxonalar" }, ru: { label: "Современные мастерские" } }, icon: 'trophy', sort_order: 4 },
+  { id: 1, value: '450+', translations: { uz: { label: "O'quvchilar soni" }, ru: { label: "Количество учащихся" }, en: { label: "Total Students" } }, icon: 'users', sort_order: 1 },
+  { id: 2, value: '45+', translations: { uz: { label: "Malakali o'qituvchilar" }, ru: { label: "Квалифицированные педагоги" }, en: { label: "Qualified Educators" } }, icon: 'graduation-cap', sort_order: 2 },
+  { id: 3, value: '12', translations: { uz: { label: "Kasbiy ta'lim yo'nalishlari" }, ru: { label: "Направления обучения" }, en: { label: "Vocational Programs" } }, icon: 'school', sort_order: 3 },
+  { id: 4, value: '15+', translations: { uz: { label: "Zamonaviy ustaxonalar" }, ru: { label: "Современные мастерские" }, en: { label: "Modern Workshops" } }, icon: 'trophy', sort_order: 4 },
 ];
 
 export function StatisticsSection() {
@@ -76,7 +76,7 @@ export function StatisticsSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
           {displayStats.map((stat, index) => {
-            const Icon = iconMap[stat.icon] || Users;
+            const Icon = (stat.icon && iconMap[stat.icon]) || Users;
             const translation = statisticService.getTranslation(stat, i18n.language);
             
             // Handle numeric values
@@ -108,7 +108,7 @@ export function StatisticsSection() {
                   </div>
                   
                   <div className="text-xs font-black text-amber-400 uppercase tracking-[0.2em] opacity-90 group-hover:opacity-100 transition-opacity">
-                    {translation.label || (stat.translations as any)?.[i18n.language]?.label || "Ko'rsatkich"}
+                    {translation.label || (stat.translations as any)?.[i18n.language]?.label || (i18n.language === 'en' ? 'Metric' : i18n.language === 'ru' ? 'Показатель' : "Ko'rsatkich")}
                   </div>
                 </div>
               </div>

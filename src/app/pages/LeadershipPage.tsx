@@ -92,7 +92,8 @@ export function LeadershipPage() {
                         <ImageWithFallback
                           src={member.photo}
                           alt={member.full_name}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                          style={{ objectPosition: 'center top' }}
                         />
                       </div>
                     </div>

@@ -3,29 +3,31 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 
 export function LibraryPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lang = i18n.language;
+  const l = (uz: string, ru: string, en: string) => lang === 'en' ? en : lang === 'ru' ? ru : uz;
 
   const resources = [
     {
-      title: "Matematika chuqurlashtirilgan to'garak qo'llanmasi",
+      title: l("Matematika chuqurlashtirilgan to'garak qo'llanmasi", "Пособие по углубленному курсу математики", "Advanced Mathematics Club Guide"),
       author: "M.Qo'shnazarova",
       category: t('library.manuals'),
       format: 'PDF',
     },
     {
-      title: "O'zbek tili va adabiyotidan uslubiy qo'llanma",
+      title: l("O'zbek tili va adabiyotidan uslubiy qo'llanma", "Методическое пособие по узбекскому языку и литературе", "Methodological Guide on Language & Literature"),
       author: 'O.Shamsutdinova, N.Maqsudova',
       category: t('library.textbooks'),
       format: 'PDF',
     },
     {
-      title: 'Ingliz tili: IELTS va CEFR tayyorgarlik kursi',
+      title: l('Ingliz tili: IELTS va CEFR tayyorgarlik kursi', 'Английский язык: Курс подготовки к IELTS и CEFR', 'English Language: IELTS & CEFR Preparation Course'),
       author: 'F.Nishonova, S.Xudoyberganova',
       category: t('library.languages'),
       format: 'PDF',
     },
     {
-      title: "Kimyo fanidan laboratoriya va amaliy mashg'ulotlar",
+      title: l("Kimyo fanidan laboratoriya va amaliy mashg'ulotlar", "Лабораторные и практические занятия по химии", "Chemistry Laboratory & Practical Experiments"),
       author: 'D.Mamatova, S.Samijonov',
       category: t('library.practical'),
       format: 'PDF',
@@ -139,11 +141,11 @@ export function LibraryPage() {
                 <h3 className="text-2xl font-black mb-4 uppercase tracking-tight">{t('library.hoursTitle')}</h3>
                 <div className="grid grid-cols-2 gap-8 text-white/80 font-bold uppercase tracking-widest text-sm">
                   <div>
-                    <div className="text-[#0a3674] mb-1">DUSHANBA - JUMA</div>
+                    <div className="text-[#0a3674] mb-1">{l("DUSHANBA - JUMA", "ПОНЕДЕЛЬНИК - ПЯТНИЦА", "MONDAY - FRIDAY")}</div>
                     <div>08:30 - 17:00</div>
                   </div>
                   <div>
-                    <div className="text-[#0a3674] mb-1">SHANBA</div>
+                    <div className="text-[#0a3674] mb-1">{l("SHANBA", "СУББОТА", "SATURDAY")}</div>
                     <div>08:30 - 14:00</div>
                   </div>
                 </div>

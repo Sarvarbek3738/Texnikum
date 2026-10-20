@@ -5,7 +5,7 @@ import { newsService } from '../services/newsService';
 import { NewsItem } from '../types';
 import { useTranslation } from 'react-i18next';
 import { format } from 'date-fns';
-import { uz, ru } from 'date-fns/locale';
+import { uz, ru, enUS } from 'date-fns/locale';
 import { SEO } from '../components/layout/SEO';
 
 export function NewsDetailPage() {
@@ -35,7 +35,7 @@ export function NewsDetailPage() {
   const formatDate = (dateStr: string) => {
     try {
       const date = new Date(dateStr);
-      const locale = i18n.language === 'ru' ? ru : uz;
+      const locale = i18n.language === 'en' ? enUS : (i18n.language === 'ru' ? ru : uz);
       return format(date, 'd MMMM, yyyy', { locale });
     } catch (e) {
       return dateStr;
@@ -47,7 +47,7 @@ export function NewsDetailPage() {
       <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-gray-950">
         <div className="flex flex-col items-center gap-4">
           <Loader2 className="animate-spin text-[#0a3674]" size={48} />
-          <p className="text-gray-500 font-medium animate-pulse">Yuklanmoqda...</p>
+          <p className="text-gray-500 font-medium animate-pulse">{t('common.loading', i18n.language === 'en' ? 'Loading...' : i18n.language === 'ru' ? 'Загрузка...' : 'Yuklanmoqda...')}</p>
         </div>
       </div>
     );
@@ -124,7 +124,7 @@ export function NewsDetailPage() {
                   className="flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-900 hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg transition-all border border-gray-200 dark:border-gray-700 text-xs font-bold uppercase tracking-widest shadow-sm"
                 >
                   <Share2 size={14} />
-                  Ulashish
+                  {t('common.share', i18n.language === 'en' ? 'Share' : i18n.language === 'ru' ? 'Поделиться' : 'Ulashish')}
                 </button>
               </div>
             </div>
@@ -175,11 +175,13 @@ export function NewsDetailPage() {
                 className="flex items-center gap-2.5 text-gray-400 hover:text-[#0a3674] transition-colors font-bold uppercase tracking-widest text-[11px]"
               >
                 <ArrowLeft size={16} />
-                Barcha yangiliklarga qaytish
+                {t('home.allNews', i18n.language === 'en' ? 'Back to All News' : i18n.language === 'ru' ? 'Вернуться ко всем новостям' : 'Barcha yangiliklarga qaytish')}
               </Link>
               
               <div className="flex items-center gap-6">
-                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Maqolani ulashish:</span>
+                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                  {t('news.shareArticle', i18n.language === 'en' ? 'Share article:' : i18n.language === 'ru' ? 'Поделиться статьей:' : 'Maqolani ulashish:')}
+                </span>
                 <div className="flex gap-3">
                   {['Telegram'].map(platform => (
                     <button 

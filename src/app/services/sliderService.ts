@@ -13,7 +13,7 @@ export const sliderService = {
 
   getTranslation(slider: SliderItem, lang: string): SliderTranslation {
     const translations = slider?.translations || ({} as any);
-    const fallback: SliderTranslation = { title: '', subtitle: '', button_text: '' };
+    const fallback: SliderTranslation = { title: '', description: '' };
     
     // Map i18n codes to API codes
     if (lang === 'kr' || lang === 'uz_cyrl') {

@@ -7,9 +7,84 @@ import { Announcement } from '../types';
 import { motion } from 'framer-motion';
 import { Skeleton } from '../components/ui/skeleton';
 
+const defaultAnnouncements: Announcement[] = [
+  {
+    id: 1,
+    slug: 'qabul-komissiyasi-2026',
+    image: 'https://images.unsplash.com/photo-1434030216411-0b793f4b4173?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800',
+    published_at: new Date().toISOString(),
+    is_important: true,
+    translations: {
+      uz: {
+        title: "2026-2027 o'quv yili uchun qabul komissiyasi to'liq tarkibda ish boshladi",
+        short_description: "Texnikum binosida abituriyentlar va ota-onalar uchun qabul bo'yicha konsultatsiya xonalari tashkil etildi.",
+        content: ""
+      },
+      ru: {
+        title: "Приемная комиссия на 2026-2027 учебный год начала работу в полном составе",
+        short_description: "В здании техникума организованы консультационные кабинеты для абитуриентов и их родителей.",
+        content: ""
+      },
+      en: {
+        title: "The Admissions Committee for 2026-2027 has commenced operations in full",
+        short_description: "Advisory and consultation rooms have been established in the technicum campus for applicants and parents.",
+        content: ""
+      }
+    }
+  },
+  {
+    id: 2,
+    slug: 'my-edu-uz-ariza-topshirish',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800',
+    published_at: new Date(Date.now() - 86400000 * 2).toISOString(),
+    is_important: true,
+    translations: {
+      uz: {
+        title: "my.edu.uz portali orqali ariza topshirish bo'yicha qadam-baqadam yo'riqnoma",
+        short_description: "9-sinf bitiruvchilari my.edu.uz portali orqali qulay va tezkor ro'yxatdan o'tishlari mumkin.",
+        content: ""
+      },
+      ru: {
+        title: "Пошаговая инструкция по подаче заявления через портал my.edu.uz",
+        short_description: "Выпускники 9-х классов могут пройти удобную и быструю онлайн-регистрацию через государственный портал.",
+        content: ""
+      },
+      en: {
+        title: "Step-by-step guide to applying via the my.edu.uz state portal",
+        short_description: "9th grade graduates can complete convenient and fast online registration through the state portal.",
+        content: ""
+      }
+    }
+  },
+  {
+    id: 3,
+    slug: 'ochiq-eshiklar-kuni',
+    image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=800',
+    published_at: new Date(Date.now() - 86400000 * 5).toISOString(),
+    is_important: false,
+    translations: {
+      uz: {
+        title: "9-sinf o'quvchilari va ota-onalar uchun 'Ochiq eshiklar kuni' bo'lib o'tadi",
+        short_description: "Texnikumning zamonaviy ustaxonalari, laboratoriyalari va o'qituvchilari bilan yaqindan tanishing.",
+        content: ""
+      },
+      ru: {
+        title: "День открытых дверей для выпускников 9-х классов и их родителей",
+        short_description: "Познакомьтесь с современными мастерскими, лабораториями и преподавателями техникума.",
+        content: ""
+      },
+      en: {
+        title: "Open Doors Day for 9th grade students and parents",
+        short_description: "Get acquainted with the technicum's modern workshops, laboratories, and teaching faculty.",
+        content: ""
+      }
+    }
+  }
+];
+
 export function AnnouncementsPage() {
   const { t, i18n } = useTranslation();
-  const [announcements, setAnnouncements] = useState<Announcement[]>([]);
+  const [announcements, setAnnouncements] = useState<Announcement[]>(defaultAnnouncements);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -17,7 +92,9 @@ export function AnnouncementsPage() {
       try {
         const data = await announcementService.getAllAnnouncements(1);
         const list = Array.isArray(data) ? data : (data?.results || []);
-        setAnnouncements(list);
+        if (list.length > 0) {
+          setAnnouncements(list);
+        }
       } catch (error) {
         console.error('Error fetching announcements:', error);
       } finally {
@@ -27,6 +104,9 @@ export function AnnouncementsPage() {
 
     fetchAnnouncements();
   }, []);
+
+  const displayAnnouncements = announcements.length > 0 ? announcements : defaultAnnouncements;
+  const dateLocale = i18n.language === 'en' ? 'en-US' : (i18n.language === 'ru' ? 'ru-RU' : 'uz-UZ');
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950 transition-colors duration-300">
@@ -43,7 +123,7 @@ export function AnnouncementsPage() {
               {t('home.announcements.allAnnouncements', 'Barcha e\'lonlar')}
             </h1>
             <p className="text-base md:text-2xl text-white/90 max-w-3xl leading-relaxed font-bold opacity-90 uppercase tracking-widest">
-              {t('announcements.pageSubtitle', 'Litseymiz bo\'yicha muhim e\'lonlar va xabarlar')}
+              {t('announcements.pageSubtitle', "Texnikumimiz bo'yicha muhim e'lonlar va rasmiy xabarlar")}
             </p>
           </motion.div>
         </div>
@@ -70,9 +150,9 @@ export function AnnouncementsPage() {
                 </div>
               ))
             ) : (
-              announcements.map((announcement, index) => {
+              displayAnnouncements.map((announcement, index) => {
                 const translation = announcementService.getTranslation(announcement, i18n.language);
-                const date = new Date(announcement.published_at).toLocaleDateString(i18n.language === 'ru' ? 'ru-RU' : 'uz-UZ');
+                const date = new Date(announcement.published_at).toLocaleDateString(dateLocale);
 
                 return (
                   <motion.div
@@ -133,7 +213,7 @@ export function AnnouncementsPage() {
                           <ArrowRight size={20} className="group-hover/link:translate-x-1 transition-transform" />
                         </Link>
                         
-                        {announcement.views_count > 0 && (
+                        {(announcement.views_count ?? 0) > 0 && (
                           <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest flex items-center gap-1">
                             {announcement.views_count} views
                           </span>

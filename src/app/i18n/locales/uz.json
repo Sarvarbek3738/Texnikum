@@ -55,28 +55,36 @@
       "teachersDesc": "40+ dan ortiq yuqori malakali, ilmiy darajali va sertifikatli pedagog kadrlar",
       "subjects": "Keng qamrovli fanlar",
       "subjectsDesc": "Aniq fanlar, tabiiy fanlar, chet tillari va STEM yo'nalishlari",
-      "result": "95%+ natija",
-      "resultDesc": "Bitiruvchilarning 95% dan ortig'i nufuzli oliy ta'lim muassasalariga o'qishga kiradi"
+      "result": "95%+ bandlik natijasi",
+      "resultDesc": "Bitiruvchilarning 95% dan ortig'i nufuzli korxonalarda ish o'rniga ega bo'ladi va yuqori maoshli kasb egasiga aylanadi"
     },
     "whyUs": {
       "badge": "BIZNING AFZALLIKLARIMIZ",
       "title": "Nima uchun aynan biz?",
       "subtitle": "Texnikumimizni tanlash uchun asosiy sabablar",
       "students": "Talab yuqori bo'lgan zamonaviy kasblar",
-      "studentsDesc": "Texnikum bitiruvchilari yetakchi sanoat korxonalarida yuqori maoshli ish bilan ta'minlanadi yoki OTMlarda o'qishni davom ettiradi.",
+      "studentsDesc": "Texnikum bitiruvchilari yetakchi sanoat korxonalarida rasmiy mehnat staji va yuqori maoshli ish bilan ta'minlanadi.",
       "english": "Ingliz tili sertifikatlari",
       "englishDesc": "Kuchaytirilgan chet tili dasturi orqali o'quvchilarimiz IELTS va CEFR B2/C1 natijalariga erishadilar.",
       "stem": "Zamonaviy STEM va laboratoriyalar",
       "stemDesc": "Yangi jihozlangan laboratoriyalarda amaliy tajribalar va ilmiy loyihalar amalga oshiriladi.",
       "courses": "Bepul qo'shimcha to'garaklar",
       "coursesDesc": "Olimpiada matematikasi, 'English club', 'Yosh kimyogarlar' va sport to'garaklari mutlaqo bepul.",
-      "cooperation": "Korxonalar va OTMlar bilan integratsiya",
-      "cooperationDesc": "Yetakchi ishlab chiqarish korxonalari va oliy ta'lim muassasalari bilan yaqin hamkorlik hamda amaliyot dasturlari."
+      "cooperation": "Sanoat korxonalari bilan integratsiya",
+      "cooperationDesc": "Yetakchi ishlab chiqarish zavodlari va nufuzli korxonalarda haq to'lanadigan amaliyot hamda ishga joylashish kafolati."
     },
     "stats": {
       "title": "Statistika",
       "subtitle": "Texnikum yutuqlari va faoliyati statistikasi"
     },
+    "announcements": {
+      "badge": "E'LONLAR",
+      "title": "Muhim e'lonlar",
+      "allAnnouncements": "Barcha e'lonlar",
+      "details": "Batafsil"
+    },
+    "newsTitle": "So'nggi yangiliklar",
+    "allNews": "Barcha yangiliklar",
     "heroBadge": "9-sinf bitiruvchilari uchun",
     "heroSubtitle": "Yangi 2026-2027 o'quv yili uchun o'qishga taklif etadi!"
   },
@@ -159,6 +167,7 @@
     "established": "Tashkil etilgan sana",
     "establishedDate": "1998-yil 24-fevral (VM 77-sonli qarori) / 2000-yil 1-avgust",
     "director": "Direktor",
+    "directorName": "Feruzaxon Murtazoxonovna Yusupova",
     "address": "Farg'ona shahar, Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)",
     "phone": "Telefon",
     "founder": "Ta’sischi va huquqiy asos",
@@ -170,7 +179,7 @@
     "historyP3": "Hozirgi kunda texnikum zamonaviy ishlab chiqarish korxonalari bilan mustahkam aloqalar o'rnatgan bo'lib, o'quvchilar nazariya va amaliyotni birgalikda o'rganmoqdalar.",
     "mission": "Maqsadlar va qadriyatlar",
     "goalTitle": "Maqsadimiz",
-    "goalDesc": "Har bir o‘quvchini chuqur bilimga ega, ijodiy fikrlash qobiliyatiga ega va oliy ta’limga tayyor shaxs sifatida tarbiyalash.",
+    "goalDesc": "Har bir o‘quvchini zamonaviy kasb-hunar egasi, amaliy ko‘nikmalarga ega va mehnat bozorida raqobatbardosh mutaxassis sifatida tarbiyalash.",
     "missionTitle": "Vazifamiz",
     "missionDesc": "Zamonaviy sanoat va raqamli iqtisodiyot uchun yuqori malakali texnik mutaxassislar va amaliyotchi kadrlarni tayyorlash.",
     "valuesTitle": "Qadriyatlarimiz",
@@ -183,7 +192,7 @@
     "adv5": "3 mahal imtiyozli ovqatlanish tizimi",
     "adv6": "Zamonaviy sport maydonchalari va inshootlari",
     "adv7": "Zamonaviy ustaxonalar va amaliyot bazalari",
-    "adv8": "Har yili 95% dan ortiq bitiruvchilar oliy ta’limga kiradi"
+    "adv8": "Har yili 95% dan ortiq bitiruvchilar ish bilan ta'minlanadi va nufuzli kasb egasi bo'ladi"
   },
   "admission": {
     "pageSubtitle": "Farg'ona shahar 5-son texnikumiga qabul tartibi, yo'nalishlar va talablar",
@@ -243,7 +252,30 @@
     "years": "yil",
     "category": "Toifasi",
     "achievements": "Yutuqlari",
-    "bio": "Tarjimayi hol"
+    "bio": "Tarjimayi hol",
+    "searchPlaceholder": "Ustozning ismi, fani yoki lavozimi bo'yicha qidirish...",
+    "allDepartments": "Barcha kafedralar",
+    "allCategories": "Barcha toifalar",
+    "department": "Kafedra",
+    "subject": "O'qitadigan fani",
+    "viewProfile": "Batafsil ma'lumot",
+    "fullProfile": "O'qituvchi to'liq profili",
+    "contactInfo": "Aloqa ma'lumotlari",
+    "call": "Qo'ng'iroq qilish",
+    "sendEmail": "Email yozish",
+    "copy": "Nusxa olish",
+    "copiedPhone": "Telefon raqami nusxalandi!",
+    "copiedEmail": "Email manzili nusxalandi!",
+    "notFound": "O'qituvchi topilmadi",
+    "notFoundDesc": "Qidiruv parametrlarini o'zgartirib ko'ring yoki filtrlarni tozalang.",
+    "resetFilters": "Filtrlarni tozalash",
+    "totalTeachers": "Jami o'qituvchilar",
+    "filteredCount": "Topilgan o'qituvchilar",
+    "close": "Yopish",
+    "aboutTeacher": "O'qituvchi haqida (Biografiya)",
+    "teacherAchievements": "Yutuqlar va mukofotlar",
+    "qualification": "Malaka va ilmiy daraja",
+    "activeStatus": "Faol pedagog"
   },
   "contact": {
     "pageSubtitle": "Savollaringiz bormi? Biz bilan bog'laning, mutaxassislarimiz sizga yordam berishadi.",

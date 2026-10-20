@@ -19,69 +19,72 @@ import { useTranslation } from 'react-i18next';
 
 export function SpecialtiesSection() {
   const { t, i18n } = useTranslation();
-  const isRu = i18n.language === 'ru';
+  const isEn = i18n.language === 'en' || i18n.language?.startsWith('en');
+  const isRu = i18n.language === 'ru' || i18n.language?.startsWith('ru');
+
+  const l = (uz: string, ru: string, en: string) => isEn ? en : isRu ? ru : uz;
 
   const kunduzgiList = [
     {
       id: 1,
-      title: isRu ? "Мастер цифровой обработки информации" : "Raqamli axborotlarni qayta ishlash ustasi",
-      desc: isRu ? "Компьютерные технологии, обработка баз данных и офисные программы" : "Zamonaviy IT, ma'lumotlar bazasi va dasturiy ta'minot bilan ishlash",
+      title: l("Raqamli axborotlarni qayta ishlash ustasi", "Мастер цифровой обработки информации", "Digital Information Processing Master"),
+      desc: l("Zamonaviy IT, ma'lumotlar bazasi va dasturiy ta'minot bilan ishlash", "Компьютерные технологии, обработка баз данных и офисные программы", "Modern IT, database processing, and software applications"),
       icon: Binary,
       color: "bg-blue-600 text-white",
       border: "hover:border-blue-500"
     },
     {
       id: 2,
-      title: isRu ? "Компьютерные сети и IT-сервис" : "Kompyuter tarmoqlari va IT-servisi",
-      desc: isRu ? "Настройка сетевого оборудования, системное администрирование и безопасность" : "Tarmoq qurilmalari, tizim ma'murligi va texnik IT xizmat ko'rsatish",
+      title: l("Kompyuter tarmoqlari va IT-servisi", "Компьютерные сети и IT-сервис", "Computer Networks & IT Service"),
+      desc: l("Tarmoq qurilmalari, tizim ma'murligi va texnik IT xizmat ko'rsatish", "Настройка сетевого оборудования, системное администрирование и безопасность", "Network hardware configuration, system administration, and technical IT services"),
       icon: Network,
       color: "bg-indigo-600 text-white",
       border: "hover:border-indigo-500"
     },
     {
       id: 3,
-      title: isRu ? "Технология швейного производства и моды" : "Moda va tikuv ishlab chiqarish texnologiyasi",
-      desc: isRu ? "Моделирование одежды, дизайн и современное швейное производство" : "Kiyim modellashtirish, bichish-tikish va zamonaviy to'qimachilik dizayni",
+      title: l("Moda va tikuv ishlab chiqarish texnologiyasi", "Технология швейного производства и моды", "Fashion Design & Garment Production Technology"),
+      desc: l("Kiyim modellashtirish, bichish-tikish va zamonaviy to'qimachilik dizayni", "Моделирование одежды, дизайн и современное швейное производство", "Clothing modeling, tailoring, cutting, and contemporary textile design"),
       icon: Scissors,
       color: "bg-pink-600 text-white",
       border: "hover:border-pink-500"
     },
     {
       id: 4,
-      title: isRu ? "Электромонтер" : "Elektromontyor",
-      desc: isRu ? "Монтаж, ремонт и обслуживание электрических сетей и установок" : "Sanoat va maishiy elektr tarmoqlari, xavfsizlik va avtomatika tizimlari",
+      title: l("Elektromontyor", "Электромонтер", "Electrician & Power Systems Specialist"),
+      desc: l("Sanoat va maishiy elektr tarmoqlari, xavfsizlik va avtomatika tizimlari", "Монтаж, ремонт и обслуживание электрических сетей и установок", "Installation, repair, and maintenance of electrical grids and automation systems"),
       icon: Zap,
       color: "bg-amber-600 text-white",
       border: "hover:border-amber-500"
     },
     {
       id: 5,
-      title: isRu ? "Оператор производства химических волокон" : "Kimyoviy tolalar ishlab chiqarish operatori",
-      desc: isRu ? "Технологические процессы химической промышленности и полимеров" : "Zamonaviy kimyo va polimer sanoatida texnologik liniyalarni boshqarish",
+      title: l("Kimyoviy tolalar ishlab chiqarish operatori", "Оператор производства химических волокон", "Chemical Fiber Production Operator"),
+      desc: l("Zamonaviy kimyo va polimer sanoatida texnologik liniyalarni boshqarish", "Технологические процессы химической промышленности и полимеров", "Control and operation of automated lines in chemical and polymer industries"),
       icon: FlaskConical,
       color: "bg-emerald-600 text-white",
       border: "hover:border-emerald-500"
     },
     {
       id: 6,
-      title: isRu ? "Сервис электробусов, электромобилей и электроскутеров" : "Elektrobus, elektromobillar va elektroskuterlar servisi",
-      desc: isRu ? "Диагностика, ремонт аккумуляторов и силовых систем электротранспорта" : "Zamonaviy elektr transport vositalari, akkumulyator va invertorlar diagnostikasi",
+      title: l("Elektrobus, elektromobillar va elektroskuterlar servisi", "Сервис электробусов, электромобилей и электроскутеров", "Electric Vehicle, E-Bus & E-Scooter Maintenance"),
+      desc: l("Zamonaviy elektr transport vositalari, akkumulyator va invertorlar diagnostikasi", "Диагностика, ремонт аккумуляторов и силовых систем электротранспорта", "Diagnostics and repair of high-voltage batteries, powertrains, and EV electronics"),
       icon: Car,
       color: "bg-cyan-600 text-white",
       border: "hover:border-cyan-500"
     },
     {
       id: 7,
-      title: isRu ? "Сервис жилой инфраструктуры" : "Turar joy infratuzilmasi servisi",
-      desc: isRu ? "Обслуживание инженерных систем современных жилых комплексов" : "Zamonaviy turar-joy majmualari va kommunal infratuzilmaga xizmat ko'rsatish",
+      title: l("Turar joy infratuzilmasi servisi", "Сервис жилой инфраструктуры", "Residential Building Infrastructure Service"),
+      desc: l("Zamonaviy turar-joy majmualari va kommunal infratuzilmaga xizmat ko'rsatish", "Обслуживание инженерных систем современных жилых комплексов", "Maintenance of utility and engineering systems in contemporary residential complexes"),
       icon: Building2,
       color: "bg-purple-600 text-white",
       border: "hover:border-purple-500"
     },
     {
       id: 8,
-      title: isRu ? "Парикмахер (модельер)" : "Sartarosh (modeler)",
-      desc: isRu ? "Стилистика, моделирование причесок и индустрия красоты" : "Soch turmaklash, zamonaviy stilistika va go'zallik sanoati xizmatlari",
+      title: l("Sartarosh (modeler)", "Парикмахер (модельер)", "Hairstylist & Fashion Modeler"),
+      desc: l("Soch turmaklash, zamonaviy stilistika va go'zallik sanoati xizmatlari", "Стилистика, моделирование причесок и индустрия красоты", "Hairstyling, modern image design, and beauty industry services"),
       icon: Scissors,
       color: "bg-rose-600 text-white",
       border: "hover:border-rose-500"
@@ -91,29 +94,29 @@ export function SpecialtiesSection() {
   const dualList = [
     {
       id: 101,
-      title: isRu ? "Технология швейного производства и моды" : "Moda va tikuv ishlab chiqarish texnologiyasi",
-      desc: isRu ? "Обучение на производстве в партнерских швейных фабриках" : "Yetakchi tikuvchilik va to'qimachilik korxonalarida amaliyot bilan birga o'qish",
+      title: l("Moda va tikuv ishlab chiqarish texnologiyasi", "Технология швейного производства и моды", "Fashion Design & Garment Production Technology"),
+      desc: l("Yetakchi tikuvchilik va to'qimachilik korxonalarida amaliyot bilan birga o'qish", "Обучение на производстве в партнерских швейных фабриках", "Study combined with paid internships at partner textile and garment factories"),
       icon: Scissors,
       color: "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
     },
     {
       id: 102,
-      title: isRu ? "Электромонтер" : "Elektromontyor",
-      desc: isRu ? "Практические навыки на предприятиях энергетической отрасли" : "Energetika va ishlab chiqarish korxonalarida amaliy ish o'rniga ega bo'lish",
+      title: l("Elektromontyor", "Электромонтер", "Electrician & Power Systems Specialist"),
+      desc: l("Energetika va ishlab chiqarish korxonalarida amaliy ish o'rniga ega bo'lish", "Практические навыки на предприятиях энергетической отрасли", "Acquiring practical skills and workplace jobs at energy and industrial enterprises"),
       icon: Zap,
       color: "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
     },
     {
       id: 103,
-      title: isRu ? "Сервис электробусов, электромобилей и электроскутеров" : "Elektrobus, elektromobillar va elektroskuterlar servisi",
-      desc: isRu ? "Стажировка в специализированных сервисных центрах электротранспорта" : "Elektr transporti avtoservislarida real texnikada amaliyot o'tash",
+      title: l("Elektrobus, elektromobillar va elektroskuterlar servisi", "Сервис электробусов, электромобилей и электроскутеров", "Electric Vehicle, E-Bus & E-Scooter Maintenance"),
+      desc: l("Elektr transporti avtoservislarida real texnikada amaliyot o'tash", "Стажировка в специализированных сервисных центрах электротранспорта", "Practical internships on real vehicles at specialized EV service centers"),
       icon: Car,
       color: "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
     },
     {
       id: 104,
-      title: isRu ? "Обслуживание источников возобновляемой энергии" : "Qayta tiklanuvchi energiya manbaalariga xizmat ko'rsatish",
-      desc: isRu ? "Монтаж и эксплуатация солнечных и ветровых электростанций" : "Quyosh panellari, shamol generatorlari va yashil energetika stansiyalari montaji",
+      title: l("Qayta tiklanuvchi energiya manbaalariga xizmat ko'rsatish", "Обслуживание источников возобновляемой энергии", "Renewable Energy Sources Maintenance"),
+      desc: l("Quyosh panellari, shamol generatorlari va yashil energetika stansiyalari montaji", "Монтаж и эксплуатация солнечных и ветровых электростанций", "Installation and operation of solar panels, wind turbines, and green energy plants"),
       icon: SunMedium,
       color: "bg-gradient-to-r from-amber-500 to-orange-500 text-white"
     }
@@ -135,7 +138,7 @@ export function SpecialtiesSection() {
             className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-[#ea580c] to-[#f59e0b] text-white text-xs font-black uppercase tracking-[0.25em] shadow-lg shadow-orange-500/20 mb-5"
           >
             <Sparkles size={14} className="animate-spin" style={{ animationDuration: '4s' }} />
-            {isRu ? "Для выпускников 9-х классов" : "9-sinf bitiruvchilari uchun"}
+            {l("9-sinf bitiruvchilari uchun", "Для выпускников 9-х классов", "For 9th Grade Graduates")}
           </motion.div>
 
           <motion.h2
@@ -145,9 +148,11 @@ export function SpecialtiesSection() {
             transition={{ delay: 0.1 }}
             className="text-3xl sm:text-5xl md:text-6xl font-black text-gray-900 dark:text-white uppercase tracking-tight leading-[1.15] mb-6"
           >
-            <span className="text-[#0a3674] dark:text-blue-400">{isRu ? "Направления обучения" : "Ta'lim Yo'nalishlari"}</span>
+            <span className="text-[#0a3674] dark:text-blue-400">
+              {l("Ta'lim Yo'nalishlari", "Направления обучения", "Fields of Study & Specialties")}
+            </span>
             <span className="block text-2xl sm:text-3xl md:text-4xl text-amber-600 dark:text-amber-400 font-extrabold mt-2">
-              {isRu ? "2026-2027 учебный год" : "2026-2027 o'quv yili uchun"}
+              {l("2026-2027 o'quv yili uchun", "2026-2027 учебный год", "For 2026-2027 Academic Year")}
             </span>
           </motion.h2>
 
@@ -158,9 +163,11 @@ export function SpecialtiesSection() {
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg text-gray-600 dark:text-gray-300 font-medium max-w-2xl mx-auto"
           >
-            {isRu 
-              ? "Выберите престижную и востребованную профессию в дневной или дуальной форме обучения!"
-              : "Siz Farg'ona shahar 5-son texnikumida quyidagi zamonaviy va yuqori daromadli kasbiy yo'nalishlarda tahsil olishingiz mumkin."}
+            {l(
+              "Siz Farg'ona shahar 5-son texnikumida quyidagi zamonaviy va yuqori daromadli kasbiy yo'nalishlarda tahsil olishingiz mumkin.",
+              "Выберите престижную и востребованную профессию в дневной или дуальной форме обучения!",
+              "Choose prestigious and high-demand professions in full-time or dual education programs at our technicum!"
+            )}
           </motion.p>
         </div>
 
@@ -180,11 +187,11 @@ export function SpecialtiesSection() {
               <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-[#0a3674] text-white shadow-lg shadow-blue-900/20">
                 <CheckCircle2 size={20} className="text-amber-400" />
                 <span className="text-xs sm:text-sm font-black uppercase tracking-[0.2em]">
-                  {isRu ? "Дневная форма обучения" : "KUNDUZGI TA'LIM SHAKLIDA"}
+                  {l("KUNDUZGI TA'LIM SHAKLIDA", "Дневная форма обучения", "FULL-TIME EDUCATION FORM")}
                 </span>
               </div>
               <span className="text-xs font-black px-3 py-1.5 rounded-xl bg-blue-50 dark:bg-blue-950/60 text-[#0a3674] dark:text-blue-300 uppercase tracking-widest">
-                8 {isRu ? "направлений" : "ta yo'nalish"}
+                8 {l("ta yo'nalish", "направлений", "Specialties")}
               </span>
             </div>
 
@@ -233,11 +240,11 @@ export function SpecialtiesSection() {
                 <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-lg shadow-orange-500/20">
                   <Sparkles size={20} className="text-white" />
                   <span className="text-xs sm:text-sm font-black uppercase tracking-[0.2em]">
-                    {isRu ? "Дуальная форма обучения" : "DUAL TA'LIM SHAKLIDA"}
+                    {l("DUAL TA'LIM SHAKLIDA", "Дуальная форма обучения", "DUAL EDUCATION FORM")}
                   </span>
                 </div>
                 <span className="text-xs font-black px-3 py-1.5 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-700 dark:text-amber-300 uppercase tracking-widest">
-                  4 {isRu ? "направления" : "ta yo'nalish"}
+                  4 {l("ta yo'nalish", "направления", "Specialties")}
                 </span>
               </div>
 
@@ -270,11 +277,13 @@ export function SpecialtiesSection() {
 
               <div className="mt-8 p-4 bg-gradient-to-r from-blue-50 to-amber-50 dark:from-gray-800 dark:to-gray-800 rounded-2xl border border-amber-200/50 dark:border-gray-700 text-xs text-gray-700 dark:text-gray-300 leading-relaxed">
                 <span className="font-bold text-amber-600 dark:text-amber-400 uppercase tracking-wider block mb-1">
-                  💡 {isRu ? "Что такое дуальное обучение?" : "Dual ta'lim nima?"}
+                  {l("💡 Dual ta'lim nima?", "💡 Что такое дуальное обучение?", "💡 What is Dual Education?")}
                 </span>
-                {isRu 
-                  ? "Теоретические занятия проходят в техникуме, а практические дни — прямо на производстве с официальным трудоустройством и зарплатой."
-                  : "Nazariy bilimlar texnikumda o'rganiladi, amaliyot esa to'g'ridan-to'g'ri hamkor korxona va fabrikalarda oylik maosh to'lanadigan ish o'rni bilan olib boriladi."}
+                {l(
+                  "Nazariy bilimlar texnikumda o'rganiladi, amaliyot esa to'g'ridan-to'g'ri hamkor korxona va fabrikalarda oylik maosh to'lanadigan ish o'rni bilan olib boriladi.",
+                  "Теоретические занятия проходят в техникуме, а практические дни — прямо на производстве с официальным трудоустройством и зарплатой.",
+                  "Theoretical classes take place at the technicum, while practical days are held directly at partner factories with official employment and monthly salary."
+                )}
               </div>
             </div>
 
@@ -282,22 +291,26 @@ export function SpecialtiesSection() {
             <div className="bg-gradient-to-br from-[#0a3674] to-[#042656] text-white rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
               <div className="relative z-10 space-y-4">
                 <div className="text-xs font-black uppercase tracking-[0.25em] text-amber-400">
-                  {isRu ? "КОНТАКТЫ ДЛЯ ПРИЕМА" : "BOG'LANISH VA MANZIL"}
+                  {l("BOG'LANISH VA MANZIL", "КОНТАКТЫ ДЛЯ ПРИЕМА", "ADMISSIONS & CONTACTS")}
                 </div>
                 
                 <div className="flex items-start gap-3">
                   <MapPin size={20} className="text-amber-400 flex-shrink-0 mt-0.5" />
                   <p className="text-xs sm:text-sm font-semibold text-white/90 leading-relaxed">
-                    <strong>{isRu ? "Наш адрес:" : "Bizning manzilimiz:"}</strong><br />
+                    <strong>{l("Bizning manzilimiz:", "Наш адрес:", "Our Address:")}</strong><br />
                     Farg'ona shahar, Farg'ona ko'chasi 170-uy <br />
-                    <span className="text-amber-300 font-bold">({isRu ? "бывш. колледж Нефти и газа" : "eski Neft va gaz sanoati kolleji"})</span>
+                    <span className="text-amber-300 font-bold">
+                      ({l("eski Neft va gaz sanoati kolleji", "бывш. колледж Нефти и газа", "former Oil & Gas Industry College")})
+                    </span>
                   </p>
                 </div>
 
                 <div className="flex items-start gap-3 pt-2 border-t border-white/10">
                   <Phone size={20} className="text-amber-400 flex-shrink-0 mt-0.5" />
                   <div>
-                    <span className="text-xs text-white/70 block">{isRu ? "Телефоны для справок:" : "Telefon raqamlar:"}</span>
+                    <span className="text-xs text-white/70 block">
+                      {l("Telefon raqamlar:", "Телефоны для справок:", "Inquiry Telephones:")}
+                    </span>
                     <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-1 font-black text-sm sm:text-base">
                       <a href="tel:+998945127553" className="hover:text-amber-400 transition-colors">
                         94-512-75-53
@@ -314,7 +327,7 @@ export function SpecialtiesSection() {
                     to="/admission"
                     className="inline-flex items-center justify-center gap-3 w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-xs uppercase tracking-[0.2em] shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5"
                   >
-                    {isRu ? "Подать заявку на поступление" : "Qabulga ariza topshirish"}
+                    {l("Qabulga ariza topshirish", "Подать заявку на поступление", "Apply for Admission")}
                     <ArrowRight size={16} />
                   </Link>
                 </div>

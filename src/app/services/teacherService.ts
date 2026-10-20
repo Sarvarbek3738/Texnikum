@@ -3,8 +3,8 @@ import { TeacherResponse, Teacher, TeacherTranslation } from '../types';
 import { API_BASE_URL } from '../../config/api';
 
 export const teacherService = {
-  async getAllTeachers(page = 1): Promise<TeacherResponse> {
-    const response = await fetch(`${API_BASE_URL}/teachers/?page=${page}`);
+  async getAllTeachers(page = 1, pageSize = 100): Promise<TeacherResponse> {
+    const response = await fetch(`${API_BASE_URL}/teachers/?page=${page}&page_size=${pageSize}`);
     if (!response.ok) {
       throw new Error('Failed to fetch teachers');
     }
@@ -21,7 +21,7 @@ export const teacherService = {
 
   getTranslation(teacher: Teacher, lang: string): TeacherTranslation {
     const translations = teacher?.translations || ({} as any);
-    const fallback: TeacherTranslation = { full_name: teacher?.full_name || '', position: '', bio: '', education: '', achievements: '' };
+    const fallback: TeacherTranslation = { position: '', subject: '', bio: '', achievements: '' };
     if (lang === 'kr' || lang === 'uz_cyrl') {
       return translations.uz_cyrl || translations.uz || fallback;
     }

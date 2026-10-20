@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router';
 import { 
   Phone, 
@@ -24,6 +24,7 @@ export function Header() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
   const [isLangMenuOpen, setIsLangMenuOpen] = useState(false);
+  const langMenuRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const { t, i18n } = useTranslation();
   const { theme, setTheme } = useTheme();
@@ -38,13 +39,30 @@ export function Header() {
     setMounted(true);
   }, []);
 
+  // Close language menu on click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (langMenuRef.current && !langMenuRef.current.contains(event.target as Node)) {
+        setIsLangMenuOpen(false);
+      }
+    };
+    if (isLangMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isLangMenuOpen]);
+
   const languages = [
     { code: 'uz', label: "O'zbek", flag: 'uz' },
     { code: 'ru', label: 'Русский', flag: 'ru' },
-    // { code: 'kr', label: 'Ўзбекча', flag: 'uz' },
+    { code: 'en', label: 'English', flag: 'gb' },
   ];
 
-  const currentLanguage = languages.find(l => l.code === i18n.language) || languages[0];
+  const currentLanguage = languages.find(l => 
+    l.code === i18n.language || (i18n.language && i18n.language.startsWith(l.code))
+  ) || languages[0];
 
   const changeLanguage = (code: string) => {
     i18n.changeLanguage(code);
@@ -84,35 +102,43 @@ export function Header() {
                 <span>88-413-22-00</span>
               </a>
               <span className="text-white/70 text-xs hidden xl:inline font-medium">
-                📍 Farg'ona shahar, Farg'ona ko'chasi 170-uy
+                📍 {siteName.address || t('footer.address', "Farg'ona shahar, Farg'ona ko'chasi 170-uy")}
               </span>
             </div>
             <div className="flex items-center gap-6">
               {/* Language Switcher Desktop */}
-              <div className="relative">
+              <div className="relative" ref={langMenuRef}>
                 <button 
                   onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-                  className="flex items-center gap-2 hover:text-amber-400 transition-colors font-bold uppercase tracking-widest text-xs"
+                  className="flex items-center gap-2 hover:text-amber-400 transition-colors font-bold uppercase tracking-widest text-xs py-1 px-2.5 rounded-lg hover:bg-white/10"
                 >
-                  <Globe size={14} className="text-amber-400" />
+                  <span className={`fi fi-${currentLanguage.flag} text-sm rounded-xs`}></span>
                   <span>{currentLanguage.label}</span>
-                  <ChevronDown size={12} className={`transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} />
+                  <ChevronDown size={12} className={`transition-transform duration-200 ${isLangMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
-                <div className={`absolute top-full right-0 mt-2 w-40 bg-white dark:bg-gray-900 shadow-xl rounded-xl overflow-hidden py-1 border border-gray-100 dark:border-gray-800 z-[100] transition-all duration-200 ${isLangMenuOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-2 invisible'}`}>
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => changeLanguage(lang.code)}
-                      className={`w-full text-left px-4 py-2.5 text-xs font-bold transition-colors flex items-center gap-2 ${
-                        i18n.language === lang.code 
-                          ? 'bg-blue-50 dark:bg-blue-900/30 text-[#0a3674] dark:text-blue-400' 
-                          : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
-                      }`}
-                    >
-                      <span className={`fi fi-${lang.flag}`}></span>
-                      {lang.label}
-                    </button>
-                  ))}
+                <div className={`absolute top-full right-0 mt-2 w-44 bg-white dark:bg-gray-900 shadow-2xl rounded-2xl overflow-hidden py-1.5 border border-gray-100 dark:border-gray-800 z-[100] transition-all duration-200 ${isLangMenuOpen ? 'opacity-100 translate-y-0 visible scale-100' : 'opacity-0 translate-y-2 invisible scale-95 pointer-events-none'}`}>
+                  {languages.map((lang) => {
+                    const isSelected = i18n.language === lang.code || i18n.language?.startsWith(lang.code);
+                    return (
+                      <button
+                        key={lang.code}
+                        onClick={() => changeLanguage(lang.code)}
+                        className={`w-full text-left px-4 py-2.5 text-xs font-bold transition-colors flex items-center justify-between ${
+                          isSelected 
+                            ? 'bg-blue-50 dark:bg-blue-900/30 text-[#0a3674] dark:text-blue-400 font-black' 
+                            : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                        }`}
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <span className={`fi fi-${lang.flag} text-sm rounded-xs shadow-xs`}></span>
+                          <span>{lang.label}</span>
+                        </div>
+                        {isSelected && (
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#0a3674] dark:bg-blue-400"></span>
+                        )}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
@@ -251,20 +277,24 @@ export function Header() {
             {/* Mobile Language Switcher */}
             <div className="px-4 mb-6">
               <p className="text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] mb-3 ml-1">{t('common.language')}</p>
-              <div className="grid grid-cols-2 gap-2">
-                {languages.map((lang) => (
-                  <button
-                    key={lang.code}
-                    onClick={() => changeLanguage(lang.code)}
-                    className={`flex items-center justify-center gap-2 py-3 rounded-xl border text-xs font-black uppercase transition-all ${
-                      i18n.language === lang.code 
-                        ? 'bg-[#0a3674] text-white border-[#0a3674] shadow-lg shadow-[#0a3674]/20' 
-                        : 'bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-100 dark:border-gray-800'
-                    }`}
-                  >
-                    {lang.label}
-                  </button>
-                ))}
+              <div className="grid grid-cols-3 gap-2">
+                {languages.map((lang) => {
+                  const isSelected = i18n.language === lang.code || i18n.language?.startsWith(lang.code);
+                  return (
+                    <button
+                      key={lang.code}
+                      onClick={() => changeLanguage(lang.code)}
+                      className={`flex items-center justify-center gap-1.5 py-3 px-1 rounded-xl border text-xs font-black uppercase transition-all ${
+                        isSelected 
+                          ? 'bg-[#0a3674] text-white border-[#0a3674] shadow-lg shadow-[#0a3674]/20' 
+                          : 'bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-400 border-gray-100 dark:border-gray-800 hover:bg-gray-100'
+                      }`}
+                    >
+                      <span className={`fi fi-${lang.flag} text-xs shrink-0 rounded-xs`}></span>
+                      <span className="truncate">{lang.label}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 

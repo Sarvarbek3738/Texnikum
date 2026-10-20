@@ -38,27 +38,34 @@ export const settingsService = {
   },
 
   getTranslation(settings: SiteSettings | null, lang: string): SiteTranslations {
+    const isRu = lang === 'ru' || lang.startsWith('ru');
+    const isEn = lang === 'en' || lang.startsWith('en');
+
     const fallback: SiteTranslations = {
-      short_name: lang === 'ru' ? 'Техникум №5' : '5-son Texnikumi',
-      full_name: lang === 'ru' 
+      short_name: isRu ? 'Техникум №5' : isEn ? 'Technicum No. 5' : '5-son Texnikumi',
+      full_name: isRu 
         ? 'Техникум №5 города Ферганы' 
+        : isEn
+        ? 'Fergana City Technicum No. 5'
         : "Farg'ona shahar 5-son texnikumi",
-      address: lang === 'ru'
+      address: isRu
         ? 'г. Фергана, ул. Ферганская, 170 (бывш. колледж Нефти и газа)'
+        : isEn
+        ? 'Fergana city, Fergana street 170 (former Oil and Gas Industry College)'
         : "Farg'ona shahar, Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)"
     };
 
-    if (!settings) {
-      return fallback;
-    }
-
-    if (!settings.translations) {
+    if (!settings || !settings.translations) {
       return fallback;
     }
 
     // Map kr to uz since API doesn't have kr translations
-    const apiLang = lang === 'kr' ? 'uz' : lang;
-    return settings.translations[apiLang as keyof typeof settings.translations] || settings.translations.uz || fallback;
+    const apiLang = lang === 'kr' ? 'uz' : isEn ? 'en' : isRu ? 'ru' : 'uz';
+    const chosen = (settings.translations as any)[apiLang];
+    if (chosen && chosen.short_name) {
+      return chosen;
+    }
+    return settings.translations.uz || fallback;
   },
 
   getSocialLinks(settings: SiteSettings | null) {

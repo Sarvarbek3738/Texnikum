@@ -82,10 +82,10 @@ export function VideosPage() {
                 <Play className="text-[#0a3674] w-10 h-10 ml-1" />
               </div>
               <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight">
-                {t('common.notFound', 'Hozircha videolar mavjud emas')}
+                {i18n.language === 'en' ? 'No videos available yet' : i18n.language === 'ru' ? 'Видео пока недоступны' : 'Hozircha videolar mavjud emas'}
               </h2>
               <p className="text-gray-500 dark:text-gray-400 font-medium">
-                Tez orada bu bo'limda litsey hayotiga oid qiziqarli videolar paydo bo'ladi.
+                {i18n.language === 'en' ? 'Interesting videos about technicum life will appear in this section soon.' : i18n.language === 'ru' ? 'Скоро здесь появятся интересные видео о жизни техникума.' : "Tez orada bu bo'limda texnikum hayotiga oid qiziqarli videolar paydo bo'ladi."}
               </p>
             </div>
           ) : (

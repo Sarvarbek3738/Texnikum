@@ -99,7 +99,7 @@ export function ContactPage() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block px-4 py-1.5 bg-amber-500 text-slate-950 font-black text-xs uppercase tracking-widest rounded-full mb-4 shadow-lg">
-              Bog'lanish
+              {t('nav.contact', "Bog'lanish")}
             </span>
             <h1 className="text-3xl md:text-6xl font-black mb-4 tracking-tight uppercase">{t('nav.contact')}</h1>
             <p className="text-base md:text-xl text-blue-100 max-w-3xl leading-relaxed font-semibold">
@@ -137,7 +137,7 @@ export function ContactPage() {
                   +998 88 413 22 00
                 </a>
                 <span className="inline-block text-xs font-semibold text-gray-500 uppercase tracking-wider">
-                  Qabul komissiyasi / Ma'lumot
+                  {i18n.language === 'en' ? 'Admissions Committee / Info' : i18n.language === 'ru' ? 'Приемная комиссия / Справки' : "Qabul komissiyasi / Ma'lumot"}
                 </span>
               </div>
             </div>
@@ -151,7 +151,7 @@ export function ContactPage() {
                 info@5texnikum.uz
               </a>
               <p className="text-xs text-gray-500 mt-2 font-medium">
-                Rasmiy elektron murojaatlar uchun
+                {i18n.language === 'en' ? 'For official electronic inquiries' : i18n.language === 'ru' ? 'Для официальных обращений' : "Rasmiy elektron murojaatlar uchun"}
               </p>
             </div>
           </div>
@@ -175,7 +175,7 @@ export function ContactPage() {
                       onChange={handleChange}
                       required
                       className="w-full bg-gray-50 dark:bg-gray-900 border-none rounded-lg px-6 py-4 focus:ring-2 focus:ring-[#0a3674] transition-all text-gray-900 dark:text-white font-bold"
-                      placeholder="Ismingiz va familiyangiz"
+                      placeholder={i18n.language === 'en' ? 'Your full name' : i18n.language === 'ru' ? 'Ваше имя и фамилия' : 'Ismingiz va familiyangiz'}
                     />
                   </div>
                   <div>
@@ -287,10 +287,10 @@ export function ContactPage() {
                   <div>
                     <div className="font-black text-sm uppercase tracking-wide flex items-center gap-2">
                       <MapPin size={16} className="text-amber-400" />
-                      <span>Farg'ona shahar 5-son texnikumi</span>
+                      <span>{siteName.short_name || (i18n.language === 'en' ? 'Fergana City Technicum No. 5' : i18n.language === 'ru' ? 'Техникум №5 города Ферганы' : "Farg'ona shahar 5-son texnikumi")}</span>
                     </div>
                     <p className="text-xs text-blue-200 mt-0.5">
-                      Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)
+                      {siteName.address || (i18n.language === 'en' ? 'Fergana street 170 (former Oil and Gas Industry College)' : i18n.language === 'ru' ? 'ул. Ферганская, 170 (бывш. колледж Нефти и газа)' : "Farg'ona ko'chasi 170-uy (eski Neft va gaz sanoati kolleji)")}
                     </p>
                   </div>
                   <div className="flex items-center gap-2">

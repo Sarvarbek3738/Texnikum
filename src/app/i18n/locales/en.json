@@ -1,0 +1,407 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Technicum",
+    "admission": "Admission",
+    "news": "News",
+    "teachers": "Teachers",
+    "contact": "Contact",
+    "leadership": "Leadership",
+    "structure": "Structure",
+    "departments": "Departments",
+    "activity": "Activities",
+    "subjects": "Subjects",
+    "gallery": "Gallery",
+    "photos": "Photo Gallery",
+    "videos": "Video Gallery",
+    "infrastructure": "Material & Technical Base",
+    "programs": "Educational Programs",
+    "education": "Education",
+    "schedule": "Class Schedule",
+    "library": "Information & Library"
+  },
+  "seo": {
+    "defaultTitle": "Fergana City Technicum No. 5",
+    "titleTemplate": "%s | Fergana City Technicum No. 5",
+    "defaultDescription": "Fergana City Technicum No. 5 — modern professional education institution offering full-time and dual education programs for 9th grade graduates.",
+    "keywords": "Technicum No. 5, Fergana Technicum No. 5, professional education, admission 2026, dual education, vocational school"
+  },
+  "footer": {
+    "about": "Fergana City Technicum No. 5 — state professional education institution providing high-quality training in IT, electrical engineering, renewable energy, and service sectors.",
+    "quickLinks": "Quick Links",
+    "contact": "Contact",
+    "socials": "Social Media",
+    "workTime": "Working Hours:",
+    "days": "Monday - Saturday",
+    "rights": "All rights reserved.",
+    "address": "Fergana city, Fergana street 170 (former Oil and Gas Industry College)"
+  },
+  "home": {
+    "heroTitle": "FERGANA CITY TECHNICUM NO. 5",
+    "heroDesc": "Here, you can master prestigious professions in modern IT, electrical engineering, electric vehicle maintenance, and renewable energy through full-time and dual education forms.",
+    "admissionBtn": "Admission 2026-2027",
+    "moreBtn": "Learn More",
+    "yearsExperience": "Years of Experience",
+    "aboutTitle": "ABOUT THE TECHNICUM",
+    "aboutSubtitle": "Fergana City Technicum No. 5",
+    "decreeTitle": "Legal Basis of Operation:",
+    "decreeText": "Fergana City Technicum No. 5 operates under state programs and decrees on the development of the professional education system of the Republic of Uzbekistan.",
+    "aboutDesc": "Our technicum trains highly qualified specialists according to modern requirements in digital information processing, computer networks, electrical installation, electric vehicle servicing, and renewable energy maintenance. Our students reinforce theoretical knowledge in state-of-the-art workshops and practical facilities.",
+    "readMore": "Learn More",
+    "features": {
+      "quality": "High Quality Education",
+      "qualityDesc": "Modern curricula and innovative educational technologies",
+      "teachers": "Qualified Educators",
+      "teachersDesc": "40+ highly qualified, certified educators and subject specialists",
+      "subjects": "Comprehensive Disciplines",
+      "subjectsDesc": "Exact sciences, natural sciences, foreign languages, and STEM disciplines",
+      "result": "95%+ Employment Placement",
+      "resultDesc": "Over 95% of graduates secure high-demand jobs at leading enterprises and commence successful professional careers"
+    },
+    "whyUs": {
+      "badge": "OUR ADVANTAGES",
+      "title": "Why Choose Us?",
+      "subtitle": "Key reasons to pursue your vocational education at our technicum",
+      "students": "High-Demand Modern Professions",
+      "studentsDesc": "Technicum graduates are provided with paid workplaces at leading industrial enterprises and gain official work experience.",
+      "english": "English Language Certificates",
+      "englishDesc": "With intensive language programs, students achieve IELTS and CEFR B2/C1 proficiency certifications.",
+      "stem": "Modern STEM & Laboratories",
+      "stemDesc": "Practical experiments and innovative research projects conducted in newly equipped laboratory facilities.",
+      "courses": "Free Extracurricular Clubs",
+      "coursesDesc": "Olympiad mathematics, English club, Young Chemists, and sports clubs are completely free.",
+      "cooperation": "Integration with Industrial Enterprises",
+      "cooperationDesc": "Close partnership with manufacturing plants, paid industrial internships, and guaranteed employment opportunities."
+    },
+    "stats": {
+      "title": "Our Numbers",
+      "subtitle": "Technicum accomplishments and activities in numbers"
+    },
+    "announcements": {
+      "important": "IMPORTANT",
+      "badge": "ANNOUNCEMENTS",
+      "title": "Important Announcements",
+      "allAnnouncements": "All Announcements",
+      "details": "Details"
+    },
+    "newsTitle": "Latest News",
+    "allNews": "All News",
+    "heroBadge": "For 9th Grade Graduates",
+    "heroSubtitle": "Invites you to enroll for the new 2026-2027 academic year!"
+  },
+  "theme": {
+    "light": "Light Mode",
+    "dark": "Dark Mode"
+  },
+  "common": {
+    "language": "Language",
+    "loadMore": "Load More",
+    "views": "views",
+    "notFound": "Information not found"
+  },
+  "statistics": {
+    "students": "Students",
+    "teachers": "Teachers",
+    "clubs": "Clubs & Circles",
+    "rooms": "Workshops & Classrooms"
+  },
+  "faq": {
+    "badge": "FREQUENTLY ASKED QUESTIONS",
+    "title": "Most Common Questions",
+    "subtitle": "Answers to frequently asked questions about our technicum",
+    "item1": {
+      "question": "How is admission to the technicum conducted?",
+      "answer": "Admission is conducted online via the my.edu.uz portal or directly through the technicum admissions committee. 9th and 11th grade graduates are accepted."
+    },
+    "item2": {
+      "question": "Is there a tuition fee?",
+      "answer": "Education is organized on both state grant (free of charge) and contract-fee bases. Talented youth study free of charge under state education grants."
+    },
+    "item3": {
+      "question": "What study programs and specialties are offered?",
+      "answer": "Full-time programs: Digital Information Processing Master, Computer Networks and IT Service, Fashion and Tailoring, Electrician, Chemical Fibers, Electric Bus and Electric Vehicle Service, Residential Infrastructure, Hairdressing (Stylist). Dual education programs: Fashion and Tailoring, Electrician, Electric Vehicle Service, Renewable Energy Maintenance."
+    },
+    "item4": {
+      "question": "What opportunities exist after graduating from the technicum?",
+      "answer": "Graduates receive a state-recognized diploma. With this diploma, they can work at industrial enterprises or enroll into 2nd-year university programs based on interview assessment."
+    },
+    "item5": {
+      "question": "What extracurricular clubs are available?",
+      "answer": "Free clubs operate in our technicum: 'Young Programmers', 'Robotics', 'Electrical Engineering', 'Auto Workshop', 'English Club', and sports sections."
+    },
+    "item6": {
+      "question": "Where is the technicum located?",
+      "answer": "Our technicum is located at 170 Fergana Street, Fergana City (the former Oil and Gas Industry College building). Easily accessible by public transport."
+    }
+  },
+  "leadership": {
+    "pageSubtitle": "Leadership and management team of Fergana City Technicum No. 5",
+    "receptionHours": "Reception Hours",
+    "academicDegree": "Academic Degree",
+    "receptionNote": "* Prior telephone appointment is recommended",
+    "bio": "Biography"
+  },
+  "announcements": {
+    "important": "IMPORTANT",
+    "pageSubtitle": "Important announcements and notifications from the technicum",
+    "contentTitle": "Announcement Details",
+    "backToList": "Back to all announcements",
+    "notFound": "Announcement not found",
+    "author": "Author",
+    "share": "Share",
+    "item1": {
+      "title": "Admissions started for the 2026-2027 academic year",
+      "excerpt": "Dear youth! Admissions to our technicum for the 2026-2027 academic year are open via the my.edu.uz portal."
+    },
+    "item2": {
+      "title": "Examination schedule announced",
+      "excerpt": "The selection and testing examination schedule will be published on the technicum official website and Telegram channel."
+    },
+    "item3": {
+      "title": "Registration open for free extracurricular clubs",
+      "excerpt": "Free programming, robotics, and foreign language courses are open to all technicum students."
+    }
+  },
+  "about": {
+    "pageSubtitle": "Fergana City Technicum No. 5 — leading institution providing modern vocational and technical education.",
+    "generalInfo": "General Information",
+    "established": "Establishment Date",
+    "establishedDate": "February 24, 1998 (Cabinet of Ministers Resolution No. 77) / August 1, 2000",
+    "director": "Director",
+    "directorName": "Feruzakhon Murtazokhonovna Yusupova",
+    "address": "Fergana city, Fergana street 170 (former Oil and Gas Industry College)",
+    "phone": "Phone",
+    "founder": "Founder and Legal Basis",
+    "founderValue": "Resolution of the Cabinet of Ministers of the Republic of Uzbekistan No. 77 dated February 24, 1998",
+    "decreeTitle": "Legal basis for establishment:",
+    "history": "History of the Technicum",
+    "historyP1": "Fergana City Technicum No. 5 was established to provide regional 9th grade graduates and youth with modern vocational education in technical, engineering, and service fields. Over the years, the institution has educated thousands of skilled specialists.",
+    "historyP2": "Advanced educational curricula have been introduced in Information Technology, Engineering and Mechanics, Electrical Engineering, and Socio-Economic disciplines.",
+    "historyP3": "Today, the technicum maintains strong ties with modern industrial enterprises, allowing students to learn theory and practice hand in hand.",
+    "mission": "Goals & Values",
+    "goalTitle": "Our Goal",
+    "goalDesc": "To educate each student into a well-rounded professional with modern vocational skills, creative thinking, and competitive advantages in the labor market.",
+    "missionTitle": "Our Mission",
+    "missionDesc": "To train highly qualified technical specialists and practitioners for the modern industrial and digital economy.",
+    "valuesTitle": "Our Values",
+    "valuesDesc": "Integrity, responsibility, innovative mindset, respect for knowledge, and continuous self-improvement.",
+    "advantages": "Our Advantages",
+    "adv1": "The most modern vocational technicum in Fergana city",
+    "adv2": "Experienced engineer-pedagogues and industry professionals",
+    "adv3": "Intensive programs in STEM, exact sciences, and foreign languages",
+    "adv4": "Comfortable and secure dormitory facilities",
+    "adv5": "Subsidized 3-meal nutritious dining system",
+    "adv6": "Modern sports grounds and athletic facilities",
+    "adv7": "State-of-the-art workshops and hands-on training centers",
+    "adv8": "Over 95% of graduates achieve high-paying job placements and prestigious careers annually"
+  },
+  "admission": {
+    "pageSubtitle": "Admission guidelines, specializations, and requirements for Fergana City Technicum No. 5",
+    "importantInfo": "Important Information",
+    "importantDesc": "Admission to the technicum is carried out via the my.edu.uz portal and at the technicum admissions office.",
+    "stepsTitle": "Admission Stages",
+    "step1Title": "Registration on the my.edu.uz portal",
+    "step1Desc": "Visit the my.edu.uz portal and submit your application for Fergana City Technicum No. 5",
+    "step2Title": "Scheduling testing time",
+    "step2Desc": "Select your examination session time and save your registration receipt",
+    "step3Title": "Testing examination",
+    "step3Desc": "Take the designated tests or professional interview at the technicum campus",
+    "step4Title": "Monitoring results",
+    "step4Desc": "Check the rating results once announced and confirm your enrollment",
+    "testTitle": "Testing Examination",
+    "iqTitle": "Logical Thinking (IQ)",
+    "iqQuestions": "20 questions",
+    "iqScore": "46 points",
+    "subject1Title": "1st Major Subject",
+    "subject1Questions": "20 questions",
+    "subject1Score": "50 points",
+    "subject2Title": "2nd Major Subject",
+    "subject2Questions": "20 questions",
+    "subject2Score": "50 points",
+    "totalTitle": "General Metrics",
+    "totalQuestions": "Total Questions:",
+    "totalQuestionsValue": "60 questions",
+    "maxScore": "Maximum Score:",
+    "maxScoreValue": "146 points",
+    "duration": "Test Duration:",
+    "durationValue": "2 hours",
+    "directionsTitle": "Vocational Fields",
+    "natural": "Engineering and Technology",
+    "exact": "Information Technology and Software",
+    "testLocation": "Examinations are held in specially equipped lecture halls within Fergana City Technicum No. 5.",
+    "documentsTitle": "Required Documents",
+    "req1": "9th grade graduation certificate",
+    "req2": "Registration through the my.edu.uz portal",
+    "req3": "Passport or birth certificate",
+    "req4": "Electronic photo (3x4 cm)",
+    "req5": "Medical certificate (Form 086-u)",
+    "portalTitle": "Online Registration Portal",
+    "portalDesc": "Get official and comprehensive admission guidelines on the my.edu.uz portal. Applications are accepted online.",
+    "portalBtn": "MY.EDU.UZ PORTAL",
+    "telegramBadge": "Official Admission Channel",
+    "telegramTitle": "Instant news and updates on admissions",
+    "telegramDesc": "Follow exam dates, registration procedures, selection rounds, and ranking results on our official Telegram channel:",
+    "telegramBtn": "Join Channel"
+  },
+  "teachers": {
+    "pageSubtitle": "Experienced faculty and teaching staff of Fergana City Technicum No. 5",
+    "ctaTitle": "Contact our teachers",
+    "ctaDesc": "If you have questions or proposals, please contact the technicum administration.",
+    "academicDegree": "Academic Degree",
+    "academicRank": "Academic Rank",
+    "experience": "Work Experience",
+    "years": "years",
+    "category": "Category",
+    "achievements": "Achievements",
+    "bio": "Biography",
+    "searchPlaceholder": "Search by name, subject, or position...",
+    "allDepartments": "All Departments",
+    "allCategories": "All Categories",
+    "department": "Department",
+    "subject": "Taught Subject",
+    "viewProfile": "Detailed Info",
+    "fullProfile": "Full Teacher Profile",
+    "contactInfo": "Contact Information",
+    "call": "Call",
+    "sendEmail": "Send Email",
+    "copy": "Copy",
+    "copiedPhone": "Phone number copied!",
+    "copiedEmail": "Email address copied!",
+    "notFound": "No teachers found",
+    "notFoundDesc": "Try adjusting your search criteria or resetting filters.",
+    "resetFilters": "Reset Filters",
+    "totalTeachers": "Total Teachers",
+    "filteredCount": "Found Teachers",
+    "close": "Close",
+    "aboutTeacher": "About the Teacher (Biography)",
+    "teacherAchievements": "Achievements and Awards",
+    "qualification": "Qualification and Academic Degree",
+    "activeStatus": "Active Faculty Member"
+  },
+  "contact": {
+    "pageSubtitle": "Have questions? Contact us and our specialists will be delighted to assist you.",
+    "addressTitle": "Our Address",
+    "phoneTitle": "Phone Numbers",
+    "emailTitle": "Email Address",
+    "formTitle": "Send a Message",
+    "formSubtitle": "Fill out the form below for any questions or inquiries.",
+    "name": "Your Name",
+    "email": "Your Email Address",
+    "phone": "Your Phone Number",
+    "subject": "Subject",
+    "message": "Your Message",
+    "send": "Send Message",
+    "success": "Your message has been sent successfully!",
+    "subjects": {
+      "admission": "Question about admission",
+      "education": "Question about education",
+      "other": "Other questions"
+    }
+  },
+  "library": {
+    "pageSubtitle": "Information & Library Center and digital learning resources of our technicum",
+    "books": "Books",
+    "resources": "Digital Resources",
+    "journals": "Periodicals",
+    "guides": "Study Guides",
+    "searchTitle": "Search Resources",
+    "searchPlaceholder": "Search by book title, author, or subject...",
+    "searchBtn": "Search",
+    "popularResources": "Popular Resources",
+    "textbooks": "Textbooks",
+    "manuals": "Manuals",
+    "languages": "Languages",
+    "practical": "Practical Guides",
+    "format": "Format",
+    "download": "Download",
+    "author": "Author",
+    "hoursTitle": "Library Working Hours",
+    "libraryNote": "A student ID card is required to access the library."
+  },
+  "schedule": {
+    "pageSubtitle": "Class schedule and curriculum plan of our technicum",
+    "infoTitle": "About the Class Schedule",
+    "infoDesc": "Classes are held Monday through Saturday. Each lesson lasts 45 minutes with 5-minute breaks and a 20-minute lunch recess.",
+    "timeTitle": "Class Hours",
+    "lesson": "lesson",
+    "break": "Break (Lunch)",
+    "downloadBtn": "Download Full Class Schedule"
+  },
+  "departments": {
+    "pageSubtitle": "Academic departments and divisions of our technicum",
+    "head": "Department Head",
+    "subjects": "Subjects",
+    "room": "Room",
+    "phone": "Phone",
+    "email": "Email",
+    "teachers": "Faculty Count"
+  },
+  "gallery": {
+    "pageSubtitle": "Highlights of student life, hands-on workshops, and campus events",
+    "photos": "photos",
+    "viewMore": "View All",
+    "date": "Date"
+  },
+  "programs": {
+    "pageSubtitle": "Full-time and dual vocational programs of Fergana City Technicum No. 5",
+    "exactSciences": {
+      "title": "Information Technology & Software",
+      "desc": "Software engineering, computer networking, web development, and fundamentals of cybersecurity."
+    },
+    "naturalSciences": {
+      "title": "Automotive Engineering & Mechanics",
+      "desc": "Automobile maintenance and repair, technical diagnostics of modern transportation vehicles."
+    },
+    "foreignLanguages": {
+      "title": "Electrical Engineering & Automation",
+      "desc": "Electrical installations, industrial power electronics, and automated control systems."
+    },
+    "socialHumanities": {
+      "title": "Economics & Accounting",
+      "desc": "Bookkeeping, financial accounting, auditing, and small business management."
+    }
+  },
+  "subjects": {
+    "pageSubtitle": "Core vocational and specialized subjects taught at our technicum",
+    "weeklyHours": "Weekly Workload",
+    "hoursPerWeek": "hours/week",
+    "math": {
+      "name": "Higher and Applied Mathematics",
+      "desc": "Engineering calculations and solving applied problems."
+    },
+    "physics": {
+      "name": "Technical Physics and Mechanics",
+      "desc": "Applied physics, mechanics, and fundamentals of electrodynamics."
+    },
+    "chemistry": {
+      "name": "Chemistry",
+      "desc": "Organic and inorganic chemistry, chemical reactions, and laboratory experiments."
+    },
+    "english": {
+      "name": "English Language",
+      "desc": "English language according to IELTS and CEFR standards, grammar, and vocabulary enhancement."
+    },
+    "it": {
+      "name": "Programming and IT Systems",
+      "desc": "Python, Web development, databases, and network technologies."
+    },
+    "biology": {
+      "name": "Biology",
+      "desc": "Molecular biology, genetics, ecology, and anatomy of living organisms."
+    }
+  },
+  "photos": {
+    "pageSubtitle": "Memorable moments and significant events from our technicum life",
+    "graduation": "Graduation Ceremony 2025",
+    "olympiad": "National Olympiad",
+    "sports": "Sports Events",
+    "stem": "STEM Laboratory Opening",
+    "others": "Other Events"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "desc": "Sorry, the page you are looking for does not exist or has been removed.",
+    "homeBtn": "Go to Home",
+    "backBtn": "Go Back"
+  }
+}

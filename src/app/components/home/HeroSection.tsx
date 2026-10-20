@@ -40,26 +40,26 @@ export function HeroSection() {
   // Show immediate fallback/default content while loading or if no sliders
   if (loading || sliders.length === 0) {
     return (
-      <section className="relative h-[85vh] md:h-[95vh] min-h-[620px] overflow-hidden bg-slate-950">
+      <section className="relative min-h-[580px] lg:min-h-[620px] py-12 md:py-16 overflow-hidden bg-slate-950 flex items-center">
         <div className="absolute inset-0">
           <ImageWithFallback
-            src="/texnikum_jamoa.jpg"
+            src="/texnikum_bino.jpg"
             alt="Farg'ona shahar 5-son texnikumi"
-            className="w-full h-full object-cover transform-gpu slide-zoom-image"
+            className="w-full h-full object-cover object-[center_35%] transform-gpu slide-zoom-image"
             priority={true}
           />
           {/* Deep Navy/Royal Blue atmospheric gradient matching the poster */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a2558]/95 via-[#0a2558]/75 to-transparent z-[1]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0a2558]/90 via-[#0a2558]/60 to-transparent z-[1]"></div>
           <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-gray-950 to-transparent z-[2]"></div>
         </div>
         <div className="relative container mx-auto px-4 h-full flex items-center z-10">
-          <div className="max-w-3xl text-white">
+          <div className="max-w-3xl text-white py-4">
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full text-xs font-black mb-6 md:mb-8 uppercase tracking-[0.25em] shadow-xl shadow-orange-500/25 border border-amber-300/30"
+              className="inline-flex items-center gap-2 px-4 py-1.5 md:px-5 md:py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full text-[11px] md:text-xs font-black mb-4 md:mb-5 uppercase tracking-[0.2em] shadow-xl shadow-orange-500/25 border border-amber-300/30"
             >
-              <span className="w-2.5 h-2.5 bg-white rounded-full animate-ping"></span>
+              <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
               {t('home.heroBadge', '9-sinf bitiruvchilari uchun')}
             </motion.div>
             
@@ -67,7 +67,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-4 leading-[1.1] uppercase text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-3 leading-[1.1] uppercase text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]"
             >
               {t('home.heroTitle', "FARG'ONA SHAHAR 5-SON TEXNIKUMI")}
             </motion.h1>
@@ -76,7 +76,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15 }}
-              className="text-amber-400 font-black text-lg sm:text-2xl md:text-3xl mb-6 uppercase tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
+              className="text-amber-400 font-black text-base sm:text-xl md:text-2xl mb-4 uppercase tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]"
             >
               {t('home.heroSubtitle', "yangi 2026-2027 o'quv yili uchun O'QISHGA TAKLIF ETADI!")}
             </motion.div>
@@ -85,9 +85,9 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="mb-8 md:mb-10 max-w-2xl bg-[#041a3d]/70 backdrop-blur-md p-5 md:p-6 rounded-2xl border-l-4 border-amber-500 border-y border-r border-white/10 shadow-2xl"
+              className="mb-6 md:mb-8 max-w-2xl bg-[#041a3d]/70 backdrop-blur-md p-4 md:p-5 rounded-2xl border-l-4 border-amber-500 border-y border-r border-white/10 shadow-2xl"
             >
-              <p className="text-base sm:text-lg md:text-xl text-slate-100 font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              <p className="text-sm sm:text-base md:text-lg text-slate-100 font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                 {t('home.heroDesc', "Siz bu yerda kunduzgi va dual ta'lim shakllarida zamonaviy IT, elektrotexnika, elektromobillar servisi va qayta tiklanuvchi energiya sohalarida nufuzli kasb egasi bo'lishingiz mumkin.")}
               </p>
             </motion.div>
@@ -96,18 +96,18 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="flex flex-wrap gap-4 md:gap-6"
+              className="flex flex-wrap gap-3 md:gap-5"
             >
               <Link
                 to="/admission"
-                className="group/btn relative inline-flex items-center gap-3 md:gap-4 px-8 py-4 md:px-12 md:py-5 bg-gradient-to-r from-amber-500 via-orange-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white rounded-xl transition-all duration-300 transform hover:-translate-y-1 font-black uppercase tracking-[0.2em] text-xs md:text-sm shadow-2xl shadow-orange-500/30"
+                className="group/btn relative inline-flex items-center gap-3 px-6 py-3.5 md:px-10 md:py-4 bg-gradient-to-r from-amber-500 via-orange-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white rounded-xl transition-all duration-300 transform hover:-translate-y-1 font-black uppercase tracking-[0.2em] text-xs md:text-sm shadow-2xl shadow-orange-500/30"
               >
                 {t('home.admissionBtn', 'Qabul 2026-2027')}
-                <ChevronRight size={20} className="md:w-5 md:h-5 group-hover/btn:translate-x-1 transition-transform" />
+                <ChevronRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
               </Link>
               <a
                 href="#specialties"
-                className="inline-flex items-center gap-3 px-8 py-4 md:px-12 md:py-5 bg-[#0a3674]/80 backdrop-blur-xl text-white rounded-xl hover:bg-[#0a3674] transition-all duration-300 transform hover:-translate-y-1 font-black uppercase tracking-[0.2em] text-xs md:text-sm border border-blue-400/30 shadow-xl"
+                className="inline-flex items-center gap-3 px-6 py-3.5 md:px-10 md:py-4 bg-[#0a3674]/80 backdrop-blur-xl text-white rounded-xl hover:bg-[#0a3674] transition-all duration-300 transform hover:-translate-y-1 font-black uppercase tracking-[0.2em] text-xs md:text-sm border border-blue-400/30 shadow-xl"
               >
                 {t('nav.programs', "Yo'nalishlar")}
               </a>
@@ -119,7 +119,7 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative h-[85vh] md:h-[95vh] min-h-[620px] overflow-hidden bg-slate-950 group">
+    <section className="relative min-h-[580px] lg:min-h-[620px] py-12 md:py-16 overflow-hidden bg-slate-950 group flex items-center">
       <Swiper
         modules={[Autoplay, Pagination, Navigation, EffectFade]}
         effect="fade"
@@ -167,36 +167,36 @@ export function HeroSection() {
 
               {/* Content Container */}
               <div className="relative z-10 container mx-auto px-4 h-full flex items-center">
-                <div className="max-w-3xl text-white">
-                  <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full text-xs font-black mb-6 md:mb-8 uppercase tracking-[0.25em] shadow-xl shadow-orange-500/25 border border-amber-300/30">
-                    <span className="w-2.5 h-2.5 bg-white rounded-full animate-ping"></span>
+                <div className="max-w-3xl text-white py-4">
+                  <div className="inline-flex items-center gap-2 px-4 py-1.5 md:px-5 md:py-2 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full text-[11px] md:text-xs font-black mb-4 md:mb-5 uppercase tracking-[0.2em] shadow-xl shadow-orange-500/25 border border-amber-300/30">
+                    <span className="w-2 h-2 bg-white rounded-full animate-ping"></span>
                     {t('home.heroBadge', '9-sinf bitiruvchilari uchun')}
                   </div>
                   
-                  <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 md:mb-8 leading-[1.1] tracking-tight uppercase text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
+                  <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 md:mb-6 leading-[1.1] tracking-tight uppercase text-white drop-shadow-[0_4px_16px_rgba(0,0,0,0.95)]">
                     <span className="block text-white">
                       {translation.title}
                     </span>
                   </h1>
                   
-                  <div className="mb-8 md:mb-10 max-w-2xl bg-[#041a3d]/70 backdrop-blur-md p-5 md:p-6 rounded-2xl border-l-4 border-amber-500 border-y border-r border-white/10 shadow-2xl">
-                    <p className="text-base sm:text-lg md:text-xl text-slate-100 leading-relaxed font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+                  <div className="mb-6 md:mb-8 max-w-2xl bg-[#041a3d]/70 backdrop-blur-md p-4 md:p-5 rounded-2xl border-l-4 border-amber-500 border-y border-r border-white/10 shadow-2xl">
+                    <p className="text-sm sm:text-base md:text-lg text-slate-100 leading-relaxed font-medium drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
                       {translation.description}
                     </p>
                   </div>
                   
-                  <div className="flex flex-wrap gap-4 md:gap-6">
+                  <div className="flex flex-wrap gap-3 md:gap-5">
                     <Link
                       to="/admission"
-                      className="group/btn relative inline-flex items-center gap-3 md:gap-4 px-8 py-4 md:px-12 md:py-5 bg-gradient-to-r from-amber-500 via-orange-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white rounded-xl transition-all duration-300 transform hover:-translate-y-1 font-black uppercase tracking-[0.2em] text-xs md:text-sm shadow-2xl shadow-orange-500/30"
+                      className="group/btn relative inline-flex items-center gap-3 px-6 py-3.5 md:px-10 md:py-4 bg-gradient-to-r from-amber-500 via-orange-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white rounded-xl transition-all duration-300 transform hover:-translate-y-1 font-black uppercase tracking-[0.2em] text-xs md:text-sm shadow-2xl shadow-orange-500/30"
                     >
                       {t('home.admissionBtn', 'Qabul 2026-2027')}
-                      <ChevronRight size={20} className="md:w-5 md:h-5 group-hover/btn:translate-x-1 transition-transform" />
+                      <ChevronRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
                     </Link>
                     
                     <a
                       href="#specialties"
-                      className="inline-flex items-center gap-3 px-8 py-4 md:px-12 md:py-5 bg-[#0a3674]/80 backdrop-blur-xl text-white rounded-xl hover:bg-[#0a3674] transition-all duration-300 transform hover:-translate-y-1 font-black uppercase tracking-[0.2em] text-xs md:text-sm border border-blue-400/30 shadow-xl"
+                      className="inline-flex items-center gap-3 px-6 py-3.5 md:px-10 md:py-4 bg-[#0a3674]/80 backdrop-blur-xl text-white rounded-xl hover:bg-[#0a3674] transition-all duration-300 transform hover:-translate-y-1 font-black uppercase tracking-[0.2em] text-xs md:text-sm border border-blue-400/30 shadow-xl"
                     >
                       {t('nav.programs', "Yo'nalishlar")}
                     </a>

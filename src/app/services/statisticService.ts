@@ -13,7 +13,7 @@ export const statisticService = {
 
   getTranslation(stat: StatItem, lang: string): StatTranslation {
     const translations = stat?.translations || ({} as any);
-    const fallback: StatTranslation = { title: '' };
+    const fallback: StatTranslation = { label: '' };
     
     // Map i18n codes to API codes
     if (lang === 'kr' || lang === 'uz_cyrl') {

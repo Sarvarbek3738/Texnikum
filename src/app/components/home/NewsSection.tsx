@@ -5,7 +5,7 @@ import { newsService } from '../../services/newsService';
 import { NewsItem } from '../../types';
 import { useTranslation } from 'react-i18next';
 import { format } from 'date-fns';
-import { uz, ru } from 'date-fns/locale';
+import { uz, ru, enUS } from 'date-fns/locale';
 import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 const defaultNewsList: NewsItem[] = [
@@ -24,6 +24,11 @@ const defaultNewsList: NewsItem[] = [
       ru: {
         title: "Начат прием документов выпускников 9-х классов на 2026-2027 учебный год",
         short_description: "В Техникуме №5 города Ферганы открыт прием заявлений на дневную и дуальную формы обучения на новый учебный год.",
+        content: ""
+      },
+      en: {
+        title: "Admission for 9th grade graduates opened for 2026-2027 academic year",
+        short_description: "Applications for full-time and dual education programs are now open at Fergana City Technicum No. 5 for the new academic year.",
         content: ""
       }
     }
@@ -44,6 +49,11 @@ const defaultNewsList: NewsItem[] = [
         title: "Современные мастерские IT, компьютерных сетей и сервиса электромобилей",
         short_description: "Для закрепления практических навыков учащихся установлены современные компьютеры и диагностические стенды.",
         content: ""
+      },
+      en: {
+        title: "Modern IT, computer networks, and electric vehicle service workshops",
+        short_description: "Modern computer equipment and diagnostic test benches have been installed for students to consolidate practical skills.",
+        content: ""
       }
     }
   },
@@ -62,6 +72,11 @@ const defaultNewsList: NewsItem[] = [
       ru: {
         title: "Дуальное обучение: Учащиеся проходят стажировку на ведущих предприятиях",
         short_description: "Учащиеся направлений швейного дела, электромонтажа и зеленой энергетики обеспечены оплачиваемыми рабочими местами.",
+        content: ""
+      },
+      en: {
+        title: "Dual education: Students undergo paid internships at leading industrial enterprises",
+        short_description: "Students in fashion & sewing, electrical installation, and renewable energy programs are provided with paid workplaces at enterprises.",
         content: ""
       }
     }
@@ -94,7 +109,7 @@ export function NewsSection() {
   const formatDate = (dateStr: string) => {
     try {
       const date = new Date(dateStr);
-      const locale = i18n.language === 'ru' ? ru : uz;
+      const locale = i18n.language === 'en' ? enUS : (i18n.language === 'ru' ? ru : uz);
       return format(date, 'd MMMM, yyyy', { locale });
     } catch {
       return dateStr;
@@ -119,7 +134,7 @@ export function NewsSection() {
             to="/news"
             className="hidden md:inline-flex items-center gap-2 text-[#0a3674] dark:text-blue-400 hover:text-amber-600 transition-all font-black uppercase tracking-widest text-xs"
           >
-            {t('home.moreBtn', 'Barcha yangiliklar')}
+            {t('home.allNews', 'Barcha yangiliklar')}
             <ArrowRight size={18} />
           </Link>
         </div>
@@ -177,7 +192,7 @@ export function NewsSection() {
             to="/news"
             className="inline-flex items-center gap-2 text-[#0a3674] dark:text-blue-400 font-black uppercase tracking-widest text-xs"
           >
-            {t('home.moreBtn', 'Barcha yangiliklar')}
+            {t('home.allNews', 'Barcha yangiliklar')}
             <ArrowRight size={18} />
           </Link>
         </div>

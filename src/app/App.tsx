@@ -7,6 +7,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'flag-icons/css/flag-icons.min.css';
 import { ThemeProvider } from 'next-themes';
+import { Toaster } from './components/ui/sonner';
 import './i18n';
 
 const queryClient = new QueryClient();
@@ -26,6 +27,7 @@ export default function App() {
       <HelmetProvider>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <RouterProvider router={router} />
+          <Toaster richColors position="top-right" />
         </ThemeProvider>
       </HelmetProvider>
     </QueryClientProvider>

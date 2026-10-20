@@ -23,6 +23,10 @@ const defaultFaqsList: FAQItem[] = [
       ru: {
         question: "Как осуществляется прием в Техникум №5 города Ферганы?",
         answer: "Прием выпускников 9-х классов осуществляется онлайн через государственный портал my.edu.uz или непосредственно в приемной комиссии в здании техникума."
+      },
+      en: {
+        question: "How is admission to Fergana City Technicum No. 5 conducted?",
+        answer: "Admission for 9th grade graduates is carried out online through the state portal my.edu.uz or directly at the admissions committee in the technicum building."
       }
     }
   },
@@ -38,6 +42,10 @@ const defaultFaqsList: FAQItem[] = [
       ru: {
         question: "Какие формы и направления обучения есть в техникуме?",
         answer: "Обучение ведется по двум формам: Дневная (8 направлений: IT, сети, швейное дело, электромонтаж, химволокно, электромобили, инфраструктура, стилистика) и Дуальная (4 направления: швейное дело, электромонтаж, электромобили, возобновляемая энергетика)."
+      },
+      en: {
+        question: "What education forms and fields of study are available at the technicum?",
+        answer: "Our technicum offers 2 forms of education: 1) Full-time education (8 specialties: IT, computer networks, fashion & sewing, electrical installation, chemical fibers, EV service, residential infrastructure, hairstyling). 2) Dual education (4 specialties: sewing, electrical installation, EV service, renewable energy)."
       }
     }
   },
@@ -53,6 +61,10 @@ const defaultFaqsList: FAQItem[] = [
       ru: {
         question: "В чем преимущество дуального образования?",
         answer: "При дуальном обучении учащиеся совмещают учебу с оплачиваемой практикой на реальных предприятиях и выпускаются с официальным трудовым стажем."
+      },
+      en: {
+        question: "What are the advantages of the dual education system?",
+        answer: "In dual education, students learn theory at the technicum and work in paid practical positions at enterprises on practice days. Upon graduation, they receive both a state diploma and 1-2 years of official work experience."
       }
     }
   },
@@ -68,6 +80,10 @@ const defaultFaqsList: FAQItem[] = [
       ru: {
         question: "Где находится техникум и как связаться?",
         answer: "Адрес: г. Фергана, ул. Ферганская, 170 (бывш. колледж Нефти и газа). Телефоны для справок: 94-512-75-53, 88-413-22-00."
+      },
+      en: {
+        question: "Where is the technicum located and how can I get in touch?",
+        answer: "Address: Fergana city, Fergana street 170 (former Oil and Gas Industry College building). Information hotlines: +998 94 512 75 53, +998 88 413 22 00."
       }
     }
   }

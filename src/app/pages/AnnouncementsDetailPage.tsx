@@ -108,7 +108,7 @@ export function AnnouncementsDetailPage() {
               </div>
               <div>
                 <p className="text-[10px] uppercase tracking-[0.2em] text-gray-400 font-black mb-1">{t('announcements.author')}</p>
-                <p className="text-gray-900 dark:text-white font-black text-lg">{announcement.created_by.split('(')[0]}</p>
+                <p className="text-gray-900 dark:text-white font-black text-lg">{(announcement.created_by || '').split('(')[0] || "Texnikum ma'muriyati"}</p>
               </div>
             </div>
           </motion.div>
