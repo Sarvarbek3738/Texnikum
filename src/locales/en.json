@@ -1,0 +1,132 @@
+{
+  "common": {
+    "appName": "Fergona City Technical School No. 5",
+    "home": "Home",
+    "about": "About",
+    "admission": "Admission",
+    "departments": "Departments",
+    "news": "News",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "search": "Search",
+    "language": "Language",
+    "theme": "Theme",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "back": "Back",
+    "next": "Next",
+    "close": "Close",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "more": "More",
+    "lessMore": "Less",
+    "noResults": "No results found",
+    "emptyState": "No data available",
+    "successMessage": "Success!",
+    "errorMessage": "An error occurred. Please try again.",
+    "confirm": "Confirm",
+    "downloadFile": "Download File",
+    "viewAll": "View All",
+    "all": "All"
+  },
+  "home": {
+    "hero": {
+      "title": "2026–2027 Academic Year Admission for 9th Grade Graduates",
+      "subtitle": "You can study in the following specialties",
+      "cta1": "Submit Documents",
+      "cta2": "View Departments"
+    },
+    "stats": {
+      "students": "Students",
+      "teachers": "Teachers",
+      "departments": "Departments",
+      "classrooms": "Classrooms",
+      "dormitoryBeds": "Dormitory Beds",
+      "graduates": "Graduates"
+    },
+    "about": {
+      "title": "About the Technical School",
+      "readMore": "Read More"
+    },
+    "departments": {
+      "title": "Choose Your Department",
+      "viewAll": "View All"
+    },
+    "benefits": {
+      "title": "Your Opportunities With Us",
+      "items": ["State-Certified Diploma", "Dual Education", "International Internship", "Higher Education Entry"]
+    },
+    "admission": {
+      "title": "Admission Steps",
+      "steps": ["Document Collection", "Application Submission", "Entrance Exam", "Enrollment"]
+    },
+    "news": {
+      "title": "Latest News"
+    },
+    "gallery": {
+      "title": "Gallery"
+    }
+  },
+  "admission": {
+    "apply": "Apply Now",
+    "status": "Application Status",
+    "step": "Step",
+    "personalInfo": "Personal Information",
+    "education": "Education",
+    "department": "Department",
+    "documents": "Documents",
+    "confirmation": "Confirmation",
+    "fullName": "Full Name",
+    "birthDate": "Date of Birth",
+    "gender": "Gender",
+    "male": "Male",
+    "female": "Female",
+    "passportNumber": "Passport/ID Number",
+    "pinfl": "PINFL",
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "school": "School",
+    "year": "Graduation Year",
+    "averageScore": "Average Certificate Score",
+    "selectDepartment": "Select Department",
+    "formOfEducation": "Form of Education",
+    "dayEducation": "Full-Time",
+    "dualEducation": "Dual",
+    "parentInfo": "Parent/Guardian Information",
+    "uploadPhoto": "Upload Photo (3x4)",
+    "uploadPassport": "Passport Copy",
+    "uploadCertificate": "Certificate Copy",
+    "consent": "I consent to personal data processing",
+    "submitted": "Successfully submitted!",
+    "trackingNumber": "Tracking Number",
+    "downloadReceipt": "Download Receipt"
+  },
+  "departments": {
+    "form": "Form of Education",
+    "duration": "Duration",
+    "level": "Level",
+    "language": "Language of Instruction",
+    "subjects": "Subjects",
+    "curriculum": "Curriculum",
+    "careers": "Careers",
+    "applyNow": "Apply Now"
+  },
+  "contact": {
+    "phone": "Phone",
+    "email": "Email",
+    "address": "Address",
+    "form": {
+      "name": "Your Name",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send"
+    }
+  }
+}

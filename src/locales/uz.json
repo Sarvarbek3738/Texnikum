@@ -1,0 +1,132 @@
+{
+  "common": {
+    "appName": "Farg'ona shahar 5-son texnikumi",
+    "home": "Bosh sahifa",
+    "about": "Haqida",
+    "admission": "Qabul",
+    "departments": "Yo'nalishlar",
+    "news": "Yangiliklar",
+    "gallery": "Galereya",
+    "contact": "Bog'lanish",
+    "search": "Qidiruv",
+    "language": "Til",
+    "theme": "Mavzu",
+    "loading": "Yuklanmoqda...",
+    "error": "Xato yuz berdi",
+    "retry": "Qayta urinish",
+    "cancel": "Bekor qilish",
+    "submit": "Yuborish",
+    "back": "Orqaga",
+    "next": "Keyingi",
+    "close": "Yopish",
+    "save": "Saqlash",
+    "delete": "O'chirish",
+    "edit": "Tahrirlash",
+    "view": "Ko'rish",
+    "more": "Ko'proq",
+    "lessMore": "Kamroq",
+    "noResults": "Natija topilmadi",
+    "emptyState": "Hozircha ma'lumot yo'q",
+    "successMessage": "Muvaffaqiyatli!",
+    "errorMessage": "Xato yuz berdi. Iltimos qayta urinib ko'ring.",
+    "confirm": "Tasdiqlash",
+    "downloadFile": "Faylni yuklab olish",
+    "viewAll": "Barchasi",
+    "all": "Barchasi"
+  },
+  "home": {
+    "hero": {
+      "title": "9-sinf bitiruvchilari uchun 2026–2027 o'quv yili qabuli",
+      "subtitle": "Siz bu yerda quyidagi yo'nalishlarda tahsil olishingiz mumkin",
+      "cta1": "Hujjat topshirish",
+      "cta2": "Yo'nalishlarni ko'rish"
+    },
+    "stats": {
+      "students": "Talabalar",
+      "teachers": "Pedagoglar",
+      "departments": "Yo'nalishlar",
+      "classrooms": "O'quv xonalari",
+      "dormitoryBeds": "Yotoqxona o'rinlari",
+      "graduates": "Bitiruvchilar"
+    },
+    "about": {
+      "title": "Texnikum haqida qisqacha",
+      "readMore": "To'liq o'qish"
+    },
+    "departments": {
+      "title": "Yo'nalishlarni tanla",
+      "viewAll": "Barchasi"
+    },
+    "benefits": {
+      "title": "Biz bilan erishadigan maqsadlaringiz",
+      "items": ["Davlat nomidagi diplom", "Dual ta'lim", "Xorijda stajirovka", "Oliy ta'limga kirish"]
+    },
+    "admission": {
+      "title": "Qabul bosqichlari",
+      "steps": ["Hujjat yig'ash", "Ariza topshirish", "Sinovdan o'tish", "Qabul qilish"]
+    },
+    "news": {
+      "title": "So'nggi yangiliklar"
+    },
+    "gallery": {
+      "title": "Galereya"
+    }
+  },
+  "admission": {
+    "apply": "Ariza topshirish",
+    "status": "Ariza holati",
+    "step": "Bosqich",
+    "personalInfo": "Shaxsiy ma'lumot",
+    "education": "Ta'lim",
+    "department": "Yo'nalish",
+    "documents": "Hujjatlar",
+    "confirmation": "Tasdiqlash",
+    "fullName": "F.I.Sh.",
+    "birthDate": "Tug'ilgan sana",
+    "gender": "Jinsi",
+    "male": "Erkak",
+    "female": "Ayol",
+    "passportNumber": "Pasport/ID raqami",
+    "pinfl": "JShShIR (PINFL)",
+    "phone": "Telefon",
+    "email": "Email",
+    "address": "Manzil",
+    "school": "Tugatgan maktab",
+    "year": "Bitirgan yil",
+    "averageScore": "Attestat o'rtacha bali",
+    "selectDepartment": "Yo'nalish tanlang",
+    "formOfEducation": "Ta'lim shakli",
+    "dayEducation": "Kunduzgi",
+    "dualEducation": "Dual",
+    "parentInfo": "Ota-ona/vasiy ma'lumoti",
+    "uploadPhoto": "Rasm yuklash (3x4)",
+    "uploadPassport": "Pasport nusxasi",
+    "uploadCertificate": "Attestat nusxasi",
+    "consent": "Shaxsiy ma'lumotlarga rozilik beraman",
+    "submitted": "Muvaffaqiyatli yuborildi!",
+    "trackingNumber": "Ariza raqami",
+    "downloadReceipt": "Kvitansiyani yuklab olish"
+  },
+  "departments": {
+    "form": "Ta'lim shakli",
+    "duration": "Muddati",
+    "level": "Daraja",
+    "language": "Ta'lim tili",
+    "subjects": "O'qitiladigan fanlar",
+    "curriculum": "O'quv rejasi",
+    "careers": "Kasblar",
+    "applyNow": "Ariza topshirish"
+  },
+  "contact": {
+    "phone": "Telefon",
+    "email": "Email",
+    "address": "Manzil",
+    "form": {
+      "name": "Ismingiz",
+      "phone": "Telefon",
+      "subject": "Mavzu",
+      "message": "Xabar",
+      "send": "Yuborish"
+    }
+  }
+}
