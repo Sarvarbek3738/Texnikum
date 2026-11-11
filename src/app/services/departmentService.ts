@@ -21,13 +21,39 @@ export const departmentService = {
 
   getTranslation(department: Department, lang: string) {
     const translations = department?.translations || ({} as any);
-    const fallback = { name: '', description: '' };
-    
-    // Map i18n codes to API codes
-    if (lang === 'kr' || lang === 'uz_cyrl') {
-      return translations.uz_cyrl || translations.uz || fallback;
-    }
-    
-    return (translations as any)[lang] || translations.uz || fallback;
+    const targetLang = (lang === 'kr' || lang === 'uz_cyrl') ? 'uz_cyrl' : (lang === 'ru' ? 'ru' : (lang === 'en' ? 'en' : 'uz'));
+
+    const chosen = (translations as any)[targetLang] || {};
+    const uz = translations.uz || {};
+    const uz_cyrl = translations.uz_cyrl || {};
+
+    const resolveField = (field: 'name' | 'description'): string => {
+      const targetVal = chosen[field];
+      if (typeof targetVal === 'string' && targetVal.trim().length > 0) {
+        return targetVal;
+      }
+      if (targetLang === 'uz_cyrl') {
+        const cyrlVal = uz_cyrl[field];
+        if (typeof cyrlVal === 'string' && cyrlVal.trim().length > 0) {
+          return cyrlVal;
+        }
+      }
+      const uzVal = uz[field];
+      if (typeof uzVal === 'string' && uzVal.trim().length > 0) {
+        return uzVal;
+      }
+      for (const k of ['ru', 'en', 'uz_cyrl', 'uz']) {
+        const candidate = (translations as any)[k];
+        if (candidate && typeof candidate[field] === 'string' && candidate[field].trim().length > 0) {
+          return candidate[field];
+        }
+      }
+      return '';
+    };
+
+    return {
+      name: resolveField('name'),
+      description: resolveField('description'),
+    };
   }
 };

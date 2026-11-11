@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router';
 import { useEffect } from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
+import { TelegramBotWidget } from '../ui/TelegramBotWidget';
 
 export function Layout() {
   const location = useLocation();
@@ -22,6 +23,7 @@ export function Layout() {
         <Outlet />
       </main>
       <Footer />
+      <TelegramBotWidget />
     </div>
   );
 }

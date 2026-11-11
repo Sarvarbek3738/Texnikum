@@ -69,24 +69,25 @@ export const settingsService = {
   },
 
   getSocialLinks(settings: SiteSettings | null) {
-    const admissionChannel = 'https://t.me/texnikum5_uz';
-    const instagramOfficial = 'https://www.instagram.com/texnikum5_uz';
+    const admissionChannel = 'https://t.me/Fargona5SonTexnikum';
+    const instagramOfficial = 'https://www.instagram.com/fargona_5_texnikum';
+    const facebookOfficial = 'https://www.facebook.com/people/Fargona-shahar-5-son-texnikumi/61587701660813/';
 
     if (!settings) {
       return {
-        telegram: 'https://t.me/texnikum5_uz',
+        telegram: 'https://t.me/Fargona5SonTexnikum',
         instagram: instagramOfficial,
-        facebook: null,
-        youtube: 'https://youtube.com',
+        facebook: facebookOfficial,
+        youtube: 'https://www.youtube.com/@Far5technicum',
         telegramAdmission: admissionChannel
       };
     }
 
     return {
-      telegram: settings.telegram || 'https://t.me/texnikum5_uz',
+      telegram: settings.telegram || 'https://t.me/Fargona5SonTexnikum',
       instagram: settings.instagram || instagramOfficial,
-      facebook: null,
-      youtube: settings.youtube || 'https://youtube.com',
+      facebook: settings.facebook || facebookOfficial,
+      youtube: settings.youtube || 'https://www.youtube.com/@Far5technicum',
       telegramAdmission: admissionChannel
     };
   },
@@ -94,9 +95,9 @@ export const settingsService = {
   getContactInfo(settings: SiteSettings | null) {
     if (!settings) {
       return {
-        phone: '+998 94 512 75 53',
-        phoneSecondary: '+998 88 413 22 00',
-        email: 'info@5texnikum.uz',
+        phone: '+998 88 413 22 00',
+        phoneSecondary: '+998 94 512 75 53',
+        email: 'far5technikum@gmail.com',
         website: 'https://5texnikum.uz',
         established_year: 1998,
         logo: '/logo.png'
@@ -104,9 +105,9 @@ export const settingsService = {
     }
 
     return {
-      phone: settings.phone || '+998 94 512 75 53',
-      phoneSecondary: '+998 88 413 22 00',
-      email: settings.email || 'info@5texnikum.uz',
+      phone: settings.phone || '+998 88 413 22 00',
+      phoneSecondary: '+998 94 512 75 53',
+      email: settings.email || 'far5technikum@gmail.com',
       website: settings.website || 'https://5texnikum.uz',
       established_year: settings.established_year || 1998,
       logo: settings.logo || '/logo.png'
@@ -130,8 +131,8 @@ export const defaultSettings: SiteSettings = {
     }
   },
   established_year: 1998,
-  phone: "+998 94 512 75 53",
-  email: "info@5texnikum.uz",
+  phone: "+998 88 413 22 00",
+  email: "far5technikum@gmail.com",
   website: "https://5texnikum.uz",
   logo: "/logo.png",
   telegram: null,

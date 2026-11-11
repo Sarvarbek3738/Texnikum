@@ -21,10 +21,45 @@ export const teacherService = {
 
   getTranslation(teacher: Teacher, lang: string): TeacherTranslation {
     const translations = teacher?.translations || ({} as any);
-    const fallback: TeacherTranslation = { position: '', subject: '', bio: '', achievements: '' };
-    if (lang === 'kr' || lang === 'uz_cyrl') {
-      return translations.uz_cyrl || translations.uz || fallback;
-    }
-    return (translations as any)[lang] || translations.uz || fallback;
+    const targetLang = (lang === 'kr' || lang === 'uz_cyrl') ? 'uz_cyrl' : (lang === 'ru' ? 'ru' : (lang === 'en' ? 'en' : 'uz'));
+
+    const chosen: any = (translations as any)[targetLang] || {};
+    const uz: any = translations.uz || {};
+    const uz_cyrl: any = translations.uz_cyrl || {};
+
+    const resolveField = (field: keyof TeacherTranslation): string => {
+      // 1. Target language value
+      const targetVal = chosen[field];
+      if (typeof targetVal === 'string' && targetVal.trim().length > 0) {
+        return targetVal;
+      }
+      // 2. If cyrillic was requested, check uz_cyrl
+      if (targetLang === 'uz_cyrl') {
+        const cyrlVal = uz_cyrl[field];
+        if (typeof cyrlVal === 'string' && cyrlVal.trim().length > 0) {
+          return cyrlVal;
+        }
+      }
+      // 3. Fallback to primary Uzbek (uz)
+      const uzVal = uz[field];
+      if (typeof uzVal === 'string' && uzVal.trim().length > 0) {
+        return uzVal;
+      }
+      // 4. Fallback to any non-empty language
+      for (const k of ['ru', 'en', 'uz_cyrl', 'uz']) {
+        const candidate = (translations as any)[k];
+        if (candidate && typeof candidate[field] === 'string' && candidate[field].trim().length > 0) {
+          return candidate[field];
+        }
+      }
+      return '';
+    };
+
+    return {
+      position: resolveField('position'),
+      subject: resolveField('subject'),
+      bio: resolveField('bio'),
+      achievements: resolveField('achievements'),
+    };
   }
 };

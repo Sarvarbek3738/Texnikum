@@ -1,10 +1,11 @@
-import { MapPin, Phone, Mail, Clock, Send, Instagram, CheckCircle, Youtube } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Instagram, CheckCircle, Youtube, Bot } from 'lucide-react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useSettings } from '../hooks/useSettings';
 import { settingsService } from '../services/settingsService';
 import { SEO } from '../components/layout/SEO';
+import { toast } from 'sonner';
 
 import { API_BASE_URL } from '../../config/api';
 
@@ -55,15 +56,18 @@ export function ContactPage() {
       if (response.ok) {
         setSubmitted(true);
         setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
-        setTimeout(() => setSubmitted(false), 4000);
+        toast.success(t('contact.success', "Xabaringiz muvaffaqiyatli yuborildi! Tez orada javob beramiz."));
+        setTimeout(() => setSubmitted(false), 5000);
       } else {
-        // Still treat nicely for user experience if server response isn't 200
-        setSubmitted(true);
-        setTimeout(() => setSubmitted(false), 4000);
+        const errorData = await response.json().catch(() => ({}));
+        const errorMsg = errorData.message || errorData.detail || errorData.non_field_errors?.[0] || t('contact.error', "Xatolik yuz berdi. Iltimos qayta urinib ko'ring.");
+        toast.error(errorMsg);
+        setSubmitted(false);
       }
-    } catch {
-      setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 4000);
+    } catch (err) {
+      console.error("Contact send error:", err);
+      toast.error(t('contact.error', "Server bilan bog'lanishda xatolik yuz berdi."));
+      setSubmitted(false);
     } finally {
       setSubmitting(false);
     }
@@ -79,6 +83,7 @@ export function ContactPage() {
   const socialIcons = [
     { icon: Instagram, label: "Instagram", href: socialLinks.instagram, color: "text-pink-600", hover: "hover:bg-pink-600", show: !!socialLinks.instagram },
     { icon: Send, label: "Telegram (Asosiy)", href: socialLinks.telegram, color: "text-sky-500", hover: "hover:bg-sky-500", show: !!socialLinks.telegram },
+    { icon: Bot, label: "Telegram Bot (@Far5techbot)", href: "https://t.me/Far5techbot", color: "text-cyan-500", hover: "hover:bg-cyan-500", show: true },
     { icon: Send, label: "Telegram (Qabul)", href: socialLinks.telegramAdmission, color: "text-blue-600", hover: "hover:bg-blue-600", show: !!socialLinks.telegramAdmission },
     { icon: Youtube, label: "YouTube", href: socialLinks.youtube, color: "text-red-600", hover: "hover:bg-red-600", show: !!socialLinks.youtube }
   ].filter(s => s.show);

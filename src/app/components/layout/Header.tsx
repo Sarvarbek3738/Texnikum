@@ -11,7 +11,9 @@ import {
   ChevronRight,
   Sun,
   Moon,
-  Globe
+  Globe,
+  Bot,
+  Facebook
 } from 'lucide-react';
 import { menuItems } from '../../data/menu';
 import { useTranslation } from 'react-i18next';
@@ -142,8 +144,18 @@ export function Header() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 ml-4 pl-4 relative">
+              <div className="flex items-center gap-3 ml-4 pl-4 relative">
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 w-1 h-1 bg-white/40 rounded-full"></div>
+                <a
+                  href="https://t.me/Far5techbot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hidden md:inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-white/10 hover:bg-[#229ED9] text-white transition-all text-xs font-semibold border border-white/20 hover:border-transparent group"
+                  title="Telegram Bot: @Far5techbot"
+                >
+                  <Bot size={13} className="text-sky-300 group-hover:text-white transition-colors" />
+                  <span>@Far5techbot</span>
+                </a>
                 {socialLinks.instagram && (
                   <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors" title="Instagram">
                     <Instagram size={15} />
@@ -157,6 +169,11 @@ export function Header() {
                 {socialLinks.youtube && (
                   <a href={socialLinks.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors" title="YouTube">
                     <Youtube size={15} />
+                  </a>
+                )}
+                {socialLinks.facebook && (
+                  <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-amber-400 transition-colors" title="Facebook">
+                    <Facebook size={15} />
                   </a>
                 )}
               </div>
@@ -357,6 +374,7 @@ export function Header() {
                 {[
                   { icon: Instagram, href: socialLinks.instagram, color: "text-pink-600", show: !!socialLinks.instagram },
                   { icon: Send, href: socialLinks.telegram, color: "text-blue-500", show: !!socialLinks.telegram },
+                  { icon: Facebook, href: socialLinks.facebook, color: "text-blue-600", show: !!socialLinks.facebook },
                   { icon: Youtube, href: socialLinks.youtube, color: "text-red-600", show: !!socialLinks.youtube }
                 ].filter(s => s.show).map((social, idx) => (
                   <a 

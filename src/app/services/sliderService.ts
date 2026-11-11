@@ -15,12 +15,28 @@ export const sliderService = {
     const translations = slider?.translations || ({} as any);
     const fallback: SliderTranslation = { title: '', description: '' };
     
-    // Map i18n codes to API codes
-    if (lang === 'kr' || lang === 'uz_cyrl') {
-      return translations.uz_cyrl || translations.uz || fallback;
+    const targetLang = (lang === 'kr' || lang === 'uz_cyrl') ? 'uz_cyrl' : (lang === 'ru' ? 'ru' : (lang === 'en' ? 'en' : 'uz'));
+
+    const chosen = (translations as any)[targetLang];
+    if (chosen && typeof chosen.title === 'string' && chosen.title.trim().length > 0) {
+      return chosen;
+    }
+
+    if (translations.uz && typeof translations.uz.title === 'string' && translations.uz.title.trim().length > 0) {
+      return translations.uz;
+    }
+
+    if (translations.uz_cyrl && typeof translations.uz_cyrl.title === 'string' && translations.uz_cyrl.title.trim().length > 0) {
+      return translations.uz_cyrl;
+    }
+
+    for (const key of ['ru', 'en', 'uz', 'uz_cyrl']) {
+      const item = (translations as any)[key];
+      if (item && typeof item.title === 'string' && item.title.trim().length > 0) {
+        return item;
+      }
     }
     
-    // Default to 'uz' if translation for the requested language doesn't exist
-    return (translations as any)[lang] || translations.uz || fallback;
+    return fallback;
   }
 };

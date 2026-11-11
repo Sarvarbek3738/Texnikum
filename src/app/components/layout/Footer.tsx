@@ -1,5 +1,5 @@
 import { Link } from 'react-router';
-import { Phone, Mail, MapPin, Instagram, Send, Youtube, Globe, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, Instagram, Send, Youtube, Globe, Clock, Bot, Facebook } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { useSettings } from '../../hooks/useSettings';
 import { settingsService } from '../../services/settingsService';
@@ -15,8 +15,10 @@ export function Footer() {
 
   const socialIcons = [
     { icon: Instagram, href: socialLinks.instagram, color: "hover:bg-pink-600", show: !!socialLinks.instagram, title: "Instagram" },
-    { icon: Send, href: socialLinks.telegram, color: "hover:bg-sky-500", show: !!socialLinks.telegram, title: "Telegram" },
-    { icon: Youtube, href: socialLinks.youtube, color: "hover:bg-red-600", show: !!socialLinks.youtube, title: "YouTube" }
+    { icon: Send, href: socialLinks.telegram, color: "hover:bg-sky-500", show: !!socialLinks.telegram, title: "Telegram kanal" },
+    { icon: Facebook, href: socialLinks.facebook, color: "hover:bg-blue-600", show: !!socialLinks.facebook, title: "Facebook" },
+    { icon: Youtube, href: socialLinks.youtube, color: "hover:bg-red-600", show: !!socialLinks.youtube, title: "YouTube" },
+    { icon: Bot, href: "https://t.me/Far5techbot", color: "hover:bg-[#229ED9]", show: true, title: "Telegram Bot (@Far5techbot)" }
   ].filter(s => s.show);
 
   return (
